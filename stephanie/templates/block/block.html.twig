@@ -29,10 +29,12 @@
 <div class="all-blocks">
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+    <h3{{ title_attributes }}>{{ label }}</h>
   {% endif %}
   {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+  <div class="all-block-content">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>

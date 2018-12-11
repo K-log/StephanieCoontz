@@ -7,4 +7,4 @@ global-styling:
 global-scripts:
   version: 1.x
   js:
-    js/navmenu.js: {}
+    js/index.js: {}
