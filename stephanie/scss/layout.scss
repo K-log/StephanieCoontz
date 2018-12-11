@@ -86,8 +86,7 @@
     .region-navbar { 
         .menu{
             justify-content: space-around;
-            flex-flow: row-reverse; 
-            //max-width: 92%;
+            flex-flow: row; 
             .menu-item{
                 a {          
                     padding: 0.5rem 2rem;
@@ -100,9 +99,8 @@
     .global-container { margin-left: 15%; margin-right: 15%; }
     .region-navbar { 
         .menu { 
-            //max-width: 70%;
             justify-content: space-between; 
-            flex-flow: row-reverse; 
+            flex-flow: row; 
             .menu-item{
                 a {          
                     padding: 0.7rem 3rem;
