@@ -157,42 +157,42 @@ p i {
   /* line 87, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
-    flex-flow: row-reverse;
+    flex-flow: row;
   }
-  /* line 92, ../scss/layout.scss */
+  /* line 91, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.5rem 2rem;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 100, ../scss/layout.scss */
+  /* line 99, ../scss/layout.scss */
   .global-container {
     margin-left: 15%;
     margin-right: 15%;
   }
 
-  /* line 102, ../scss/layout.scss */
+  /* line 101, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-between;
-    flex-flow: row-reverse;
+    flex-flow: row;
   }
-  /* line 107, ../scss/layout.scss */
+  /* line 105, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.7rem 3rem;
   }
 
-  /* line 113, ../scss/layout.scss */
+  /* line 111, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 114, ../scss/layout.scss */
+  /* line 112, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 115, ../scss/layout.scss */
+  /* line 113, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
@@ -283,14 +283,28 @@ p i {
   max-width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
+/* line 27, ../scss/_header.scss */
+.site-name {
+  font-size: 20px;
+}
+/* line 28, ../scss/_header.scss */
+.site-name a {
+  text-decoration: none;
+}
+@media screen and (min-width: 1385px) {
   /* line 27, ../scss/_header.scss */
+  .site-name {
+    font-size: 55px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* line 39, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
   }
-}
-@media all and (min-width: 1000px) {
-  /* line 33, ../scss/_header.scss */
+
+  /* line 43, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
