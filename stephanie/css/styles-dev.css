@@ -4,77 +4,30 @@
  * This is the global styling for the whole site.
  * Here is where you put anything that effects all the blocks that hold the content.
  * Example: Global grid layout for the whole site.
- * DO NOT add CSS the only effects a specific page, region, or block.
+ * DO NOT add CSS the only effects a specific page, region, or block
  */
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700,700i");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Spectral");
+/*$heading-fonts: 'Open Sans', sans-serif;
+$paragraph-fonts: 'Lato', sans-serif;*/
 /* Heading and body properties */
-@import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700,700i");
-@import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
-/* line 13, ../scss/_fonts.scss */
-h1 {
-  font-family: "Playfair Display", serif;
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Spectral");
+/* line 17, ../scss/_fonts.scss */
+h1, h1 a {
+  font-family: "Raleway", sans-serif;
   color: #f1f1f1;
-  font-style: italic;
-  font-weight: 700;
   letter-spacing: .1em;
 }
 
-/* line 21, ../scss/_fonts.scss */
-h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
-  font-family: "Playfair Display", serif;
-  color: #3c3c3c;
-  line-height: 1.3;
-  font-weight: 700;
-  font-style: italic;
+/* line 23, ../scss/_fonts.scss */
+h2 {
+  font-family: "Spectral", sans-serif;
 }
 
-/* line 28, ../scss/_fonts.scss */
-h2, h2 a {
-  font-size: 31.25px;
-}
-@media screen and (min-width: 1385px) {
-  /* line 28, ../scss/_fonts.scss */
-  h2, h2 a {
-    font-size: 45px;
-  }
-}
-
-/* line 34, ../scss/_fonts.scss */
-h3, h3 a {
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-/* line 38, ../scss/_fonts.scss */
-h4, h4 a {
-  font-size: 17px;
-}
-
-/* line 43, ../scss/_fonts.scss */
+/* line 27, ../scss/_fonts.scss */
 p {
-  font-family: "PT+Serif", serif;
-  color: #3c3c3c;
-  line-height: 1.4;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media screen and (min-width: 1385px) {
-  /* line 43, ../scss/_fonts.scss */
-  p {
-    font-size: 21px;
-  }
-}
-
-/* line 53, ../scss/_fonts.scss */
-li a {
-  font-family: "Playfair Display", serif;
-  color: #3c3c3c;
-}
-
-/* line 58, ../scss/_fonts.scss */
-p i {
-  font-style: italic;
+  font-family: "Helvetica", "Crimson Text", sans-serif;
 }
 
 /* line 14, ../scss/layout.scss */
@@ -82,20 +35,20 @@ p i {
   display: flex;
   min-height: 100vh;
   flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  text-align: center;
   border-left: 2px solid #3c3c3c;
   border-right: 2px solid #3c3c3c;
+  background-color: #f1f1f1;
 }
 
-/* line 26, ../scss/layout.scss */
+/* line 24, ../scss/layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 33, ../scss/layout.scss */
+/* line 30, ../scss/layout.scss */
 .region-header {
   background-color: #3c3c3c;
   max-width: 100vw;
@@ -103,42 +56,37 @@ p i {
   padding: 0;
 }
 
-/* line 41, ../scss/layout.scss */
+/* line 38, ../scss/layout.scss */
 .region-navbar {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: #a3a3a3;
+  background-color: #c3c3c3;
   border-bottom: 2px solid #3c3c3c;
-  max-width: 100vw;
-  transition: 0.4s;
 }
-
-/* line 51, ../scss/layout.scss */
-.region-navbar:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: rgba(0, 0, 0, 0.7);
-  transition: 0.4s;
-}
-
-/* line 57, ../scss/layout.scss */
-.menu-item:hover {
-  background-color: #a3a3a3;
-  z-index: 2;
-  transition: 0.3s;
-}
-
-/* line 64, ../scss/layout.scss */
-.region-content {
-  background-color: #f1f1f1;
+/* line 41, ../scss/layout.scss */
+.region-navbar .menu {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: column;
-  max-width: 100vw;
+  flex-flow: row;
+  justify-content: flex-start;
+  text-align: center;
+}
+/* line 47, ../scss/layout.scss */
+.region-navbar .menu .menu-item a {
+  text-decoration: none;
+  padding: 0.2rem 2rem;
+  border: 2px solid black;
+  background: #289ec4;
+  color: black;
 }
 
-/* line 75, ../scss/layout.scss */
+/**
+ TODO:
+ Hide the sidebar unless on an article page.
+*/
+/* line 66, ../scss/layout.scss */
+.region-content {
+  background-color: white;
+}
+
+/* line 70, ../scss/layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
@@ -148,51 +96,45 @@ p i {
  Configure Responsive font sizes.
 */
 @media all and (min-width: 600px) {
-  /* line 85, ../scss/layout.scss */
-  .global-container {
-    margin-left: 4%;
-    margin-right: 4%;
-  }
-
-  /* line 87, ../scss/layout.scss */
+  /* line 81, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
-    flex-flow: row-reverse;
   }
-  /* line 92, ../scss/layout.scss */
+  /* line 84, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.5rem 2rem;
   }
 }
 @media all and (min-width: 800px) {
   /* line 100, ../scss/layout.scss */
-  .global-container {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  /* line 102, ../scss/layout.scss */
   .region-navbar .menu {
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row-reverse;
   }
-  /* line 107, ../scss/layout.scss */
+  /* line 104, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
-    padding: 0.7rem 3rem;
+    padding: 0.7rem 5rem;
   }
 
-  /* line 113, ../scss/layout.scss */
+  /* line 110, ../scss/layout.scss */
   .region-content {
-    flex: 3 0px;
+    flex: 4 0px;
     min-height: 90vh;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  /* line 111, ../scss/layout.scss */
+  .region-content .node__content {
+    text-align: justify;
+    font-size: 24px;
   }
 
-  /* line 114, ../scss/layout.scss */
+  /* line 121, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 115, ../scss/layout.scss */
+  /* line 122, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
@@ -206,94 +148,72 @@ p i {
  * Note: this will not effect the actual header region, only the blocks inside it.
  * See layout.css for global styling options.
  */
+/*$heading-fonts: 'Open Sans', sans-serif;
+$paragraph-fonts: 'Lato', sans-serif;*/
 /* Heading and body properties */
-/* line 13, ../scss/_fonts.scss */
-h1 {
-  font-family: "Playfair Display", serif;
+/* line 17, ../scss/_fonts.scss */
+h1, h1 a {
+  font-family: "Raleway", sans-serif;
   color: #f1f1f1;
-  font-style: italic;
-  font-weight: 700;
   letter-spacing: .1em;
 }
 
-/* line 21, ../scss/_fonts.scss */
-h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
-  font-family: "Playfair Display", serif;
-  color: #3c3c3c;
-  line-height: 1.3;
-  font-weight: 700;
-  font-style: italic;
+/* line 23, ../scss/_fonts.scss */
+h2 {
+  font-family: "Spectral", sans-serif;
 }
 
-/* line 28, ../scss/_fonts.scss */
-h2, h2 a {
-  font-size: 31.25px;
-}
-@media screen and (min-width: 1385px) {
-  /* line 28, ../scss/_fonts.scss */
-  h2, h2 a {
-    font-size: 45px;
-  }
-}
-
-/* line 34, ../scss/_fonts.scss */
-h3, h3 a {
-  font-size: 17px;
-  text-transform: uppercase;
-}
-
-/* line 38, ../scss/_fonts.scss */
-h4, h4 a {
-  font-size: 17px;
-}
-
-/* line 43, ../scss/_fonts.scss */
+/* line 27, ../scss/_fonts.scss */
 p {
-  font-family: "PT+Serif", serif;
-  color: #3c3c3c;
-  line-height: 1.4;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media screen and (min-width: 1385px) {
-  /* line 43, ../scss/_fonts.scss */
-  p {
-    font-size: 21px;
-  }
+  font-family: "Helvetica", "Crimson Text", sans-serif;
 }
 
-/* line 53, ../scss/_fonts.scss */
-li a {
-  font-family: "Playfair Display", serif;
-  color: #3c3c3c;
-}
-
-/* line 58, ../scss/_fonts.scss */
-p i {
-  font-style: italic;
-}
-
-/* line 15, ../scss/_header.scss */
-.align-center {
+/* line 24, ../scss/_header.scss */
+.site-branding {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 3px;
+  padding: 0;
+  max-width: 100vw;
+}
+
+/* line 35, ../scss/_header.scss */
+.site-name {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin: 0;
   padding: 0;
-  max-width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
-  /* line 27, ../scss/_header.scss */
-  .site-logo {
-    flex-direction: row;
+@media screen and (min-width: 320px) {
+  /* line 45, ../scss/_header.scss */
+  h1 a {
+    text-decoration: none;
+    font-size: 9vw;
+    margin: 0;
+    padding: 0;
   }
 }
-@media all and (min-width: 1000px) {
-  /* line 33, ../scss/_header.scss */
+@media screen and (min-width: 600px) {
+  /* line 54, ../scss/_header.scss */
+  h1 a {
+    font-size: 8.9vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  /* line 59, ../scss/_header.scss */
+  h1 a {
+    font-size: 11vh;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 69, ../scss/_header.scss */
   .site-branding {
-    flex-flow: row;
-    align-items: center;
+    flex-flow: row-reverse;
+    align-items: baseline;
   }
 }
 /**
@@ -303,37 +223,6 @@ p i {
  *
  * For global styling see layout.css
  */
-/* line 11, ../scss/_navbar.scss */
-ul.menu {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  margin: 5px 0;
-  padding: 0;
-}
-
-/* line 19, ../scss/_navbar.scss */
-.menu-item, .menu-item a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 600px) {
-  /* line 28, ../scss/_navbar.scss */
-  ul.menu {
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
-
-  /* line 32, ../scss/_navbar.scss */
-  .menu-item, .menu-item a {
-    font-size: 25px;
-  }
-}
 /**
  * CONTENT
  *
@@ -344,37 +233,40 @@ ul.menu {
 /* line 11, ../scss/_content.scss */
 .field--name-body {
   margin: 0;
-  padding: 0 15px;
+  padding-top: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-/* line 16, ../scss/_content.scss */
-article {
-  max-width: 100vw;
+/* line 18, ../scss/_content.scss */
+.page-title {
+  color: black;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
 
-/* line 21, ../scss/_content.scss */
-.tabs {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  max-width: 100vw;
+/* line 24, ../scss/_content.scss */
+.node__content {
+  text-align: justify;
 }
 
-/* line 30, ../scss/_content.scss */
-.node_content {
-  display: flex;
+/* line 28, ../scss/_content.scss */
+.node__links, .field--name-field-author, .field--name-field-publication, .field--name-field-date {
+  text-align: center;
 }
 
-@media screen and (min-with: 320px) {
-  /* line 36, ../scss/_content.scss */
-  p .align-right {
-    justify-content: center;
-    align-content: center;
-    max-width: 200px;
-    margin: 0 15px;
-    padding: 0;
-  }
+/* line 33, ../scss/_content.scss */
+#content {
+  transition: margin-left .5s;
+  /* If you want a transition effect */
 }
+
+/* line 41, ../scss/_content.scss */
+.block-page-title, .form--inline {
+  text-align: center;
+  background: #bfbfbf;
+}
+
 /**
  * FOOTER
  *
