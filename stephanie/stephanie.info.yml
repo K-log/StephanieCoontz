@@ -1,0 +1,14 @@
+name: stephanie
+type: theme
+description: 'Official theme for stephanie coontz website.'
+core: 8.x
+libraries:
+  - stephanie/global-styling
+  - stephanie/article-styling
+base theme: classy
+regions:
+  header: Header
+  navbar: Navbar
+  sidebar: Sidebar
+  content: Content
+  footer: Footer

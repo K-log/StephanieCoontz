@@ -1,0 +1,132 @@
+/**
+ * LAYOUT
+ *
+ * This is the global styling for the whole site.
+ * Here is where you put anything that effects all the blocks that hold the content.
+ * Example: Global grid layout for the whole site.
+ * DO NOT add CSS the only effects a specific page, region, or block.
+ */
+
+@import "colors";
+@import 'fonts';
+
+
+.global-container {
+    display: flex;
+    min-height: 100vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    border-left: 2px solid $dark-grey;
+    border-right: 2px solid $dark-grey;
+}
+
+
+
+.global-container > * {
+    margin: 0;
+    padding: 0;
+    flex: 1 100%;
+}
+
+
+.region-header {
+    background-color: $dark-grey;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+
+.region-navbar{ 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #a3a3a3;
+    border-bottom: 2px solid $dark-grey;
+    max-width: 100vw;
+    transition: 0.4s;
+}
+
+.region-navbar:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,0.7);
+    transition: 0.4s;
+}
+
+.menu-item:hover {
+    background-color: #a3a3a3;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+
+.region-content{ 
+    background-color: $offwhite;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    max-width: 100vw;
+
+}
+
+
+.region-footer {
+    background-color: $dark-grey;
+}
+
+/**
+ TODO: 
+ Configure Responsive font sizes.
+*/
+
+@media all and (min-width: 600px) {
+    .global-container { margin-left: 4%; margin-right: 4%; }
+    .region-navbar { 
+        .menu{
+            justify-content: space-around;
+            flex-flow: row-reverse; 
+            //max-width: 92%;
+            .menu-item{
+                a {          
+                    padding: 0.5rem 2rem;
+                 }
+            }
+        } 
+    }
+}
+@media all and (min-width: 800px) {
+    .global-container { margin-left: 15%; margin-right: 15%; }
+    .region-navbar { 
+        .menu { 
+            //max-width: 70%;
+            justify-content: space-between; 
+            flex-flow: row-reverse; 
+            .menu-item{
+                a {          
+                    padding: 0.7rem 3rem;
+                 }
+            }
+        } 
+    }
+    .region-content { flex: 3 0px; min-height: 90vh; }
+    .region-content { order: 1; }
+    .region-footer { order: 2; }
+
+}
+
+
+// @media all and (min-width: 1200px) {
+//     .region-navbar { 
+//         .menu { 
+//             justify-content: space-around; 
+//             flex-flow: row-reverse; 
+//             .menu-item{
+//                 a {          
+//                     padding: 0.6rem 5rem;
+//                  }
+//             }
+//         } 
+//     }
+// }

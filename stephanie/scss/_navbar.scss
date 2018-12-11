@@ -1,0 +1,36 @@
+/**
+ * NAVBAR
+ *
+ * Any styling that effects the blocks within the Navbar regions should go here.
+ *
+ * For global styling see layout.css
+ */
+
+
+
+ul.menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 5px 0;
+    padding: 0;
+}    
+.menu-item, .menu-item a {
+    font-size: 18px;
+    text-decoration: none;
+    color: $offwhite;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+    ul.menu {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .menu-item, .menu-item a {
+        font-size: 25px;
+    }
+}
+

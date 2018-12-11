@@ -1,0 +1,37 @@
+/**
+ * HEADER
+ *
+ * Put in any header specific styling.
+ * Anything that effect elements INSIDE the header region.
+ *
+ * Note: this will not effect the actual header region, only the blocks inside it.
+ * See layout.css for global styling options.
+ */
+
+@import "fonts";
+@import "colors";
+
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    max-width: 100%;
+}
+
+@media screen and (min-width: 1000px){
+    .site-logo {
+        flex-direction: row;
+    }
+}
+ 
+@media all and (min-width: 1000px) {
+    .site-branding {
+        flex-flow: row;
+        align-items: center;
+    }
+}
