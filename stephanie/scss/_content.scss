@@ -31,6 +31,9 @@ article {
     display: flex;
 }
 
+.all-blocks, .view-filters {
+    text-align: center;
+}
 
 @media screen and (min-with: 320px) {
     p .align-right {

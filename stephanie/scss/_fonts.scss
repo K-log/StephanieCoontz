@@ -1,6 +1,7 @@
 //###########################
 // Fonts
 // Fonts used by Stephanie Coontz site
+// Using radtio Perfect 4th
 
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700,700i');
@@ -18,6 +19,18 @@ h1 {
     font-weight: 700;
     letter-spacing: .1em;
 }
+@media screen and (min-width: 320px) {
+    h1 {
+        font-size: 32px;
+    }
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 44.422px;
+    }
+}
+// @media screen and (min-width:)
+
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
     font-family: $display;
     color: $dark-grey;

@@ -17,6 +17,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+
     border-left: 2px solid $dark-grey;
     border-right: 2px solid $dark-grey;
 }
@@ -35,6 +36,7 @@
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 
@@ -42,23 +44,22 @@
     display: flex;
     justify-content: center;
     align-content: center;
+
     background-color: #a3a3a3;
     border-bottom: 2px solid $dark-grey;
+
     max-width: 100vw;
-    transition: 0.4s;
 }
 
-.region-navbar:hover {
-    background-color: rgba(0,0,0,0.5);
-    color: rgba(0,0,0,0.7);
-    transition: 0.4s;
-}
+// .region-navbar:hover {
+//     background-color: rgba(0,0,0,0.5);
+//     color: rgba(0,0,0,0.7);
+// }
 
-.menu-item:hover {
-    background-color: #a3a3a3;
-    z-index: 2;
-    transition: 0.3s;
-}
+// .menu-item:hover {
+//     background-color: #a3a3a3;
+//     z-index: 2;
+// }
 
 
 .region-content{ 
@@ -67,8 +68,12 @@
     justify-content: center;
     align-content: center;
     flex-flow: column;
-    max-width: 100vw;
 
+    max-width: 100vw;
+    h1 {
+        text-align: center;
+        color: #000000;
+    }
 }
 
 
@@ -82,11 +87,14 @@
 */
 
 @media all and (min-width: 600px) {
-    .global-container { margin-left: 4%; margin-right: 4%; }
+    .global-container { 
+        margin-left: 4%; 
+        margin-right: 4%; 
+    }
     .region-navbar { 
         .menu{
             justify-content: space-around;
-            flex-flow: row; 
+            flex-fow: row; 
             .menu-item{
                 a {          
                     padding: 0.5rem 2rem;
@@ -96,10 +104,13 @@
     }
 }
 @media all and (min-width: 800px) {
-    .global-container { margin-left: 15%; margin-right: 15%; }
+    .global-container { 
+        margin-left: 7%; 
+        margin-right: 7%;  
+    }
     .region-navbar { 
         .menu { 
-            justify-content: space-between; 
+            justify-content: space-around; 
             flex-flow: row; 
             .menu-item{
                 a {          
@@ -111,5 +122,22 @@
     .region-content { flex: 3 0px; min-height: 90vh; }
     .region-content { order: 1; }
     .region-footer { order: 2; }
+}
 
+@media all and (min-width: 1200px) {
+    .global-container { 
+        margin-left: 15%; 
+        margin-right: 15%;  
+    }
+    .region-navbar {
+        .menu {
+            justify-content: space-around;
+            flex-flow: row;
+            .menu-item {
+                a {
+                    padding: 0.6rem 4rem;
+                }
+            }
+        }
+    }
 }
