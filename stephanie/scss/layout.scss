@@ -102,7 +102,7 @@
 @media all and (min-width: 800px) {
     .region-navbar { 
         .menu { 
-            justify-content: space-between; 
+            justify-content: space-around; 
             flex-flow: row; 
         } 
     }
@@ -125,7 +125,7 @@
             flex-flow: row;
             .menu-item {
                 a {
-                    padding: 0.6rem 5rem;
+                    padding: 0.6rem 4rem;
                 }
             }
         }
