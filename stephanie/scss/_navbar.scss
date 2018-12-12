@@ -13,16 +13,40 @@ ul.menu {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+
     margin: 5px 0;
     padding: 0;
 }    
 .menu-item, .menu-item a {
+    justify-content: center;
+    text-align: center;
+
     font-size: 18px;
+    // line-height: 1.3;
     text-decoration: none;
     color: $offwhite;
+
     margin: 0;
     padding: 0;
 }
+
+.menu-item a {
+    display: block;
+}
+
+@media screen and (min-width: 320px) {
+    .menu-item:hover {
+        background-color: #3c3c3c;
+
+        min-width: 95vw;
+    }
+}
+@media screen and (min-width: 600px) {
+    .menu-item:hover {
+        min-width: 5vw;
+    }
+}
+
 
 @media screen and (min-width: 600px) {
     ul.menu {
