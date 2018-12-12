@@ -36,6 +36,7 @@
     max-width: 100vw;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 
@@ -69,6 +70,10 @@
     flex-flow: column;
 
     max-width: 100vw;
+    h1 {
+        text-align: center;
+        color: #000000;
+    }
 }
 
 
@@ -99,10 +104,7 @@
     }
 }
 @media all and (min-width: 800px) {
-    .global-container { 
-        margin-left: 7%; 
-        margin-right: 7%; 
-    }
+    .global-container { margin-left: 4%; margin-right: 4%;  }
     .region-navbar { 
         .menu { 
             justify-content: space-between; 
@@ -117,7 +119,10 @@
     .region-content { flex: 3 0px; min-height: 90vh; }
     .region-content { order: 1; }
     .region-footer { order: 2; }
+}
 
+@media all and (min-width: 1200px) {
+    .global-container { margin-left: 15%; margin-right: 15%;  }
 }
 
 @media all and (min-width: 1200px) {
