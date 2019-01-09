@@ -7,19 +7,30 @@
  * DO NOT add CSS the only effects a specific page, region, or block.
  */
 
-@import "colors";
-@import 'fonts';
+
 
 
 .global-container {
     display: flex;
-    min-height: 100vh;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
 
     border-left: 2px solid $dark-grey;
     border-right: 2px solid $dark-grey;
+
+    //Gobal container widths at breakpoints
+    @media all and (min-width: 320px){
+        margin-left: auto; 
+        margin-right: auto;
+        width: calc(100% - 2em);
+        max-width: 540px;
+    }
+    @media all and (min-width: 800px) 
+    {
+        width: calc(100% - 10em);
+        max-width: 738px;
+    }
 }
 
 
@@ -75,11 +86,7 @@
  Configure Responsive font sizes.
 */
 
-@media all and (min-width: 600px) {
-    .global-container { 
-        margin-left: 4%; 
-        margin-right: 4%; 
-    }
+@media all and (min-width: 360px) {
     .region-navbar { 
         .menu{
             justify-content: space-around;
@@ -93,19 +100,10 @@
     }
 }
 @media all and (min-width: 800px) {
-    .global-container { 
-        margin-left: 4%; 
-        margin-right: 4%;  
-    }
     .region-navbar { 
         .menu { 
             justify-content: space-between; 
             flex-flow: row; 
-            .menu-item{
-                a {          
-                    padding: 0.7rem 3rem;
-                 }
-            }
         } 
     }
     .region-content { 
@@ -117,13 +115,6 @@
     }
     .region-footer { 
         order: 2; 
-    }
-}
-
-@media all and (min-width: 1200px) {
-    .global-container { 
-        margin-left: 15%; 
-        margin-right: 15%;  
     }
 }
 
