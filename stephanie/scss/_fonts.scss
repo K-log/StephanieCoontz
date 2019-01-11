@@ -68,13 +68,13 @@ p {
         font-size: 21px;
     }
 }
+p em {
+    font-style: italic;
+}
 li a {
     font-family: $display;
     color: $dark-grey;
 }
 
-p i {
-    font-style: italic;
-}
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400i');
