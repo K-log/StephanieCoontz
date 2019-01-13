@@ -9,6 +9,5 @@ base theme: classy
 regions:
   header: Header
   navbar: Navbar
-  sidebar: Sidebar
   content: Content
   footer: Footer
