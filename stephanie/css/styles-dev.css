@@ -185,7 +185,7 @@ li a {
 @media all and (min-width: 800px) {
   /* line 100, ../scss/layout.scss */
   .region-navbar .menu {
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row;
   }
 
