@@ -373,13 +373,13 @@ ul.menu {
   }
 }
 @media screen and (min-width: 600px) {
-  /* line 52, ../scss/_navbar.scss */
+  /* line 47, ../scss/_navbar.scss */
   ul.menu {
     justify-content: space-evenly;
     flex-direction: row;
   }
 
-  /* line 56, ../scss/_navbar.scss */
+  /* line 51, ../scss/_navbar.scss */
   .menu-item, .menu-item a {
     font-size: 25px;
   }
