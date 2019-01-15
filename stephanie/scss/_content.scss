@@ -79,3 +79,34 @@ article p {
         margin-left: 15px;
     }
 }
+
+//Margins set for mobile and full screen in the Article list page.
+.view-content {
+    @media all and (min-width: 320px) {
+        margin-left: auto; 
+        margin-right: auto;
+        width: calc(100% - 3em);
+        max-width: 540px;
+    }
+    @media all and (min-width: 800px){
+        width: calc(100% - 4em);
+        max-width: 738px;
+        }
+}
+
+//Article headings on list page
+.views-field-title {
+    @media all and (min-width: 320px) {
+        font-family: $display;
+        font-size: 21px;
+    }
+}
+.views-field-field-publication {
+    @media all and (min-width:320px) {
+        display: block;
+        font-style: italic;
+    }
+    @media all and (min-width:800px) {
+        float: left;
+    }
+}
