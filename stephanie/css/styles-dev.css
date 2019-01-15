@@ -136,14 +136,14 @@ li a {
 
 /* line 41, ../scss/layout.scss */
 .region-header {
-  background-color: #3c3c3c;
+  background-color: aqua;
   max-width: 100vw;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* line 50, ../scss/layout.scss */
+/* line 51, ../scss/layout.scss */
 .region-navbar {
   display: flex;
   justify-content: space-evenly;
@@ -153,7 +153,7 @@ li a {
   max-width: 100%;
 }
 
-/* line 61, ../scss/layout.scss */
+/* line 62, ../scss/layout.scss */
 .region-content {
   background-color: #f1f1f1;
   display: flex;
@@ -162,7 +162,7 @@ li a {
   flex-flow: column;
 }
 
-/* line 76, ../scss/layout.scss */
+/* line 77, ../scss/layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
@@ -172,35 +172,35 @@ li a {
  Configure Responsive font sizes.
 */
 @media all and (min-width: 360px) {
-  /* line 87, ../scss/layout.scss */
+  /* line 88, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
     flex-fow: row;
   }
-  /* line 91, ../scss/layout.scss */
+  /* line 92, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.5rem 2rem;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 100, ../scss/layout.scss */
+  /* line 101, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
     flex-flow: row;
   }
 
-  /* line 105, ../scss/layout.scss */
+  /* line 106, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 109, ../scss/layout.scss */
+  /* line 110, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 112, ../scss/layout.scss */
+  /* line 113, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
