@@ -1,4 +1,4 @@
-.sass-cache/
+#stephanie/.sass-cache/
 
 stephanie/node_modules/
 
@@ -6,3 +6,4 @@ stephanie/css/config/
 
 
 node_modules/
+stephanie/\.sass-cache/
