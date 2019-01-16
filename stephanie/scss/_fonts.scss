@@ -34,6 +34,22 @@ h1 {
         font-size: 56.832px;
     }
 }
+.page-title {
+    @media all and (min-width: 320px) {
+        color: $dark-grey;
+        letter-spacing: .1px;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 2em);
+        max-width: 540px;
+    }
+    @media all and (min-width: 800px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - .5em);
+    }
+}
 // @media screen and (min-width:)
 
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {

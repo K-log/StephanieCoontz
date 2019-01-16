@@ -110,3 +110,24 @@ article p {
         float: left;
     }
 }
+//Field content -- Cointains Author Name and Publisher
+.field {
+    display: block;
+    float: none;
+
+    margin: 0;
+}
+.field--name-field-author {
+    width: 350px;
+}
+.field-content {
+    display: block;
+    font-family: $text;
+}
+
+//Article content
+.field--name-boy {
+    margin-left: auto;
+    margin-right: auto;
+
+}

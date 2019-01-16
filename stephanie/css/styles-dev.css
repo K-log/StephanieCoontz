@@ -37,7 +37,27 @@ h1 {
     font-size: 56.832px;
   }
 }
-/* line 39, ../scss/_fonts.scss */
+@media all and (min-width: 320px) {
+  /* line 37, ../scss/_fonts.scss */
+  .page-title {
+    color: #3c3c3c;
+    letter-spacing: .1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 2em);
+    max-width: 540px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 37, ../scss/_fonts.scss */
+  .page-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - .5em);
+  }
+}
+
+/* line 55, ../scss/_fonts.scss */
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -46,29 +66,29 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 46, ../scss/_fonts.scss */
+/* line 62, ../scss/_fonts.scss */
 h2, h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 46, ../scss/_fonts.scss */
+  /* line 62, ../scss/_fonts.scss */
   h2, h2 a {
     font-size: 45px;
   }
 }
 
-/* line 52, ../scss/_fonts.scss */
+/* line 68, ../scss/_fonts.scss */
 h3, h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 56, ../scss/_fonts.scss */
+/* line 72, ../scss/_fonts.scss */
 h4, h4 a {
   font-size: 17px;
 }
 
-/* line 61, ../scss/_fonts.scss */
+/* line 77, ../scss/_fonts.scss */
 p {
   font-family: "PT+Serif", serif;
   color: #3c3c3c;
@@ -77,18 +97,18 @@ p {
   font-weight: 400;
 }
 @media screen and (min-width: 800px) {
-  /* line 61, ../scss/_fonts.scss */
+  /* line 77, ../scss/_fonts.scss */
   p {
     font-size: 21px;
   }
 }
 
-/* line 71, ../scss/_fonts.scss */
+/* line 87, ../scss/_fonts.scss */
 p em {
   font-style: italic;
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 90, ../scss/_fonts.scss */
 li a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -242,7 +262,27 @@ h1 {
     font-size: 56.832px;
   }
 }
-/* line 39, ../scss/_fonts.scss */
+@media all and (min-width: 320px) {
+  /* line 37, ../scss/_fonts.scss */
+  .page-title {
+    color: #3c3c3c;
+    letter-spacing: .1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 2em);
+    max-width: 540px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 37, ../scss/_fonts.scss */
+  .page-title {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - .5em);
+  }
+}
+
+/* line 55, ../scss/_fonts.scss */
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -251,29 +291,29 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 46, ../scss/_fonts.scss */
+/* line 62, ../scss/_fonts.scss */
 h2, h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 46, ../scss/_fonts.scss */
+  /* line 62, ../scss/_fonts.scss */
   h2, h2 a {
     font-size: 45px;
   }
 }
 
-/* line 52, ../scss/_fonts.scss */
+/* line 68, ../scss/_fonts.scss */
 h3, h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 56, ../scss/_fonts.scss */
+/* line 72, ../scss/_fonts.scss */
 h4, h4 a {
   font-size: 17px;
 }
 
-/* line 61, ../scss/_fonts.scss */
+/* line 77, ../scss/_fonts.scss */
 p {
   font-family: "PT+Serif", serif;
   color: #3c3c3c;
@@ -282,18 +322,18 @@ p {
   font-weight: 400;
 }
 @media screen and (min-width: 800px) {
-  /* line 61, ../scss/_fonts.scss */
+  /* line 77, ../scss/_fonts.scss */
   p {
     font-size: 21px;
   }
 }
 
-/* line 71, ../scss/_fonts.scss */
+/* line 87, ../scss/_fonts.scss */
 p em {
   font-style: italic;
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 90, ../scss/_fonts.scss */
 li a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -503,6 +543,30 @@ article p {
   .views-field-field-publication {
     float: left;
   }
+}
+
+/* line 114, ../scss/_content.scss */
+.field {
+  display: block;
+  float: none;
+  margin: 0;
+}
+
+/* line 120, ../scss/_content.scss */
+.field--name-field-author {
+  width: 350px;
+}
+
+/* line 123, ../scss/_content.scss */
+.field-content {
+  display: block;
+  font-family: "PT+Serif", serif;
+}
+
+/* line 129, ../scss/_content.scss */
+.field--name-boy {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**
