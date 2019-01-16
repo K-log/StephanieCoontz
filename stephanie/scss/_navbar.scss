@@ -34,18 +34,18 @@ ul.menu {
     display: block;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 599px) {
     .menu-item:hover {
         background-color: #3c3c3c;
 
         min-width: 95vw;
     }
 }
-@media screen and (min-width: 600px) {
-    .menu-item:hover {
-        min-width: 5vw;
-    }
-}
+// @media screen and (min-width: 600px) {
+//     .menu-item:hover {
+//         min-width: 5vw;
+//     }
+// }
 
 
 @media screen and (min-width: 600px) {

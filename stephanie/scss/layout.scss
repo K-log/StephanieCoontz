@@ -7,19 +7,30 @@
  * DO NOT add CSS the only effects a specific page, region, or block.
  */
 
-@import "colors";
-@import 'fonts';
+
 
 
 .global-container {
     display: flex;
-    min-height: 100vh;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
 
     border-left: 2px solid $dark-grey;
     border-right: 2px solid $dark-grey;
+
+    //Gobal container widths at breakpoints
+    @media all and (min-width: 320px){
+        margin-left: auto; 
+        margin-right: auto;
+        width: calc(100% - 2em);
+        max-width: 540px;
+    }
+    @media all and (min-width: 800px) 
+    {
+        width: calc(100% - 10em);
+        max-width: 738px;
+    }
 }
 
 
@@ -42,25 +53,14 @@
 
 .region-navbar{ 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-content: center;
 
     background-color: #a3a3a3;
     border-bottom: 2px solid $dark-grey;
 
-    max-width: 100vw;
+    max-width: 100%;
 }
-
-// .region-navbar:hover {
-//     background-color: rgba(0,0,0,0.5);
-//     color: rgba(0,0,0,0.7);
-// }
-
-// .menu-item:hover {
-//     background-color: #a3a3a3;
-//     z-index: 2;
-// }
-
 
 .region-content{ 
     background-color: $offwhite;
@@ -86,11 +86,7 @@
  Configure Responsive font sizes.
 */
 
-@media all and (min-width: 600px) {
-    .global-container { 
-        margin-left: 4%; 
-        margin-right: 4%; 
-    }
+@media all and (min-width: 360px) {
     .region-navbar { 
         .menu{
             justify-content: space-around;
@@ -112,16 +108,18 @@
         .menu { 
             justify-content: space-around; 
             flex-flow: row; 
-            .menu-item{
-                a {          
-                    padding: 0.7rem 3rem;
-                 }
-            }
         } 
     }
-    .region-content { flex: 3 0px; min-height: 90vh; }
-    .region-content { order: 1; }
-    .region-footer { order: 2; }
+    .region-content { 
+        flex: 3 0px; 
+        min-height: 90vh; 
+    }
+    .region-content { 
+        order: 1; 
+    }
+    .region-footer { 
+        order: 2; 
+    }
 }
 
 @media all and (min-width: 1200px) {
