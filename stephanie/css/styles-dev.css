@@ -477,3 +477,7 @@ article p {
  *
  * For global styling see layout.css
  */
+/* line 9, ../scss/_footer.scss */
+.system-main-menu {
+  color: #f1f1f1;
+}
