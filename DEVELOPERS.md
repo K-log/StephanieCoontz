@@ -12,12 +12,12 @@
 
 2. Clone the SQL dump files, and the theme from the sources below:
 
-     - Clone the SQL dump from the SQL-Dump branch: [Gitlab](http://git.evergreen.edu/coontz)
+     - Clone the SQL dump from the SQL-Dump branch: [Gitlab](http://git.evergreen.edu/web-team/coontz)
 
       - Clone the theme from the development branch: [Github](http://www.github.com/k-log/StephanieCoontz-Theme)
 
 
-**Note:** Due to Github being publicly available, the database dump file is being stored on [Gitlab](http://git.evergreen.edu/coontz) and the actual theme along with these instructions are stored on [Github](http://www.github.com/k-log/StephanieCoontz-Theme).
+**Note:** Due to Github being publicly available, the database dump file is being stored on [Gitlab](http://git.evergreen.edu/web-team/coontz) and the actual theme along with these instructions are stored on [Github](http://www.github.com/k-log/StephanieCoontz-Theme).
 
 
 ## Step 2: Setup with A SQL dump file
