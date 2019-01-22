@@ -39,8 +39,7 @@
 }
 
 .region-header {
-    //background-color: $dark-grey;
-    background-color: white;
+    background-color: $dark-grey;
     max-width: 100vw;
     margin: 0;
     padding: 0;
@@ -78,16 +77,12 @@
     background-color: $dark-grey;
 }
 
-/**
- TODO: 
- Configure Responsive font sizes.
-*/
 
 @media all and (min-width: 360px) {
     .region-navbar { 
         .menu{
             justify-content: space-around;
-            flex-fow: row; 
+            flex-flow: row; 
             .menu-item{
                 a {          
                     padding: 0.5rem 2rem;
