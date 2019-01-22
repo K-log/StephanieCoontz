@@ -39,8 +39,8 @@
 }
 
 .region-header {
-    //background-color: $dark-grey;
-    background-color: white;
+    background-color: $dark-grey;
+    //background-color: white;
     max-width: 100vw;
     margin: 0;
     padding: 0;
@@ -87,7 +87,7 @@
     .region-navbar { 
         .menu{
             justify-content: space-around;
-            flex-fow: row; 
+            flex-flow: row; 
             .menu-item{
                 a {          
                     padding: 0.5rem 2rem;
