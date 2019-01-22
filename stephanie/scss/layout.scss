@@ -92,6 +92,10 @@
     }
 }
 @media all and (min-width: 800px) {
+    .global-container { 
+        margin-left: 7%; 
+        margin-right: 7%;  
+    }
     .region-navbar { 
         .menu { 
             justify-content: space-around; 
@@ -109,3 +113,22 @@
         order: 2; 
     }
 }
+
+@media all and (min-width: 1200px) {
+    .global-container { 
+        margin-left: 15%; 
+        margin-right: 15%;  
+    }
+    .region-navbar {
+        .menu {
+            justify-content: space-around;
+            flex-flow: row;
+            .menu-item {
+                a {
+                    padding: 0.6rem 4rem;
+                }
+            }
+        }
+    }
+}
+
