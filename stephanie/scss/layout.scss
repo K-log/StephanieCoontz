@@ -93,8 +93,8 @@
 }
 @media all and (min-width: 800px) {
     .global-container { 
-        margin-left: 7%; 
-        margin-right: 7%;  
+        margin-left: auto; 
+        margin-right: auto;  
     }
     .region-navbar { 
         .menu { 
@@ -113,16 +113,16 @@
         order: 2; 
     }
 }
-
+/* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
     .global-container { 
-        margin-left: 15%; 
-        margin-right: 15%;  
+        margin-left: auto; 
+        margin-right: auto;  
     }
-    .region-navbar {
+    .region-navbar { //Needs restructuring
         .menu {
-            justify-content: space-around;
-            flex-flow: row;
+            justify-content: space-evenly;
+            //flex-flow: row;
             .menu-item {
                 a {
                     padding: 0.6rem 4rem;
