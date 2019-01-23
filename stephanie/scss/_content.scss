@@ -6,17 +6,15 @@
  * For global styling see layout.css
  */
 
-@import 'colors';
 
 .field--name-body {
     margin: 0;
-    // padding: 0 15px;
 }
 
 article {
     display: flex;
     flex-direction: column;
-    //Gobal container widths at breakpoints
+    // Global container widths at breakpoints
     @media all and (min-width: 320px){
         margin-left: auto; 
         margin-right: auto;
@@ -30,7 +28,6 @@ article {
 }
 article p {
     flex-direction: column;
-    // margin: 0 15px;
 }
 
 
@@ -47,9 +44,6 @@ article p {
     display: flex;
 }
 
-// .all-blocks, .view-filters {
-//     text-align: center;
-// }
 
 @media screen and (min-width: 320px) {
     article h2 {
@@ -80,7 +74,7 @@ article p {
     }
 }
 
-//Margins set for mobile and full screen in the Article list page.
+// Margins set for mobile and full screen in the Article list page.
 .view-content {
     @media all and (min-width: 320px) {
         margin-left: auto; 
@@ -94,7 +88,7 @@ article p {
         }
 }
 
-//Article headings on list page
+// Article headings on list page
 .views-field-title {
     @media all and (min-width: 320px) {
         font-family: $display;
@@ -110,3 +104,41 @@ article p {
         float: left;
     }
 }
+
+// Field content -- Cointains Author Name and Publisher
+.field {
+    display: block;
+    float: none;
+
+    margin: 0;
+}
+.field--name-field-author {
+    width: 350px;
+}
+.field-content {
+    display: block;
+    font-family: $text;
+}
+
+// Article content
+.field--name-boy {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+// Site feedback form
+.contact-message-form {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+// Views form
+.views-exposed-form {
+    padding-right: 3em;
+    padding-left: 3em;
+}
+
+
+
+
