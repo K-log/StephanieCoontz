@@ -30,8 +30,12 @@ In the `/SITE-NAME/themes/StephanieCoontz/stephanie/` directory run the followin
 
 Now the site should be fully functional.
 
+To access the admin area, just go to the base site url and add `/admin` to the end. 
 
-Untested!
+If you are not logged in you will need to go to `/user` and login using the same username and password for devsite.stephaniecoontz.org.
+
+
+Untested past this point!
 ---
 
 # Installing from a database dump (Recommended)
