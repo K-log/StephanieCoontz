@@ -178,59 +178,74 @@ li a {
   background-color: #3c3c3c;
 }
 
+/* --- Fix nested nav and put it in the nav css --- */
 @media all and (min-width: 360px) {
   /* line 83, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
-    flex-flow: row;
   }
-  /* line 87, ../scss/layout.scss */
+  /* line 86, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.5rem 2rem;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 95, ../scss/layout.scss */
+  /* line 94, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 100, ../scss/layout.scss */
+  /* line 99, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
     flex-flow: row;
   }
 
-  /* line 105, ../scss/layout.scss */
+  /* line 104, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 109, ../scss/layout.scss */
+  /* line 108, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 112, ../scss/layout.scss */
+  /* line 111, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
+/* line 116, ../scss/layout.scss */
+.views-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+/* line 123, ../scss/layout.scss */
+.views-field-title {
+  justify-content: flex-start;
+  align-content: space-evenly;
+  margin-top: 1em;
+}
+
 /* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-  /* line 118, ../scss/layout.scss */
+  /* line 130, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 123, ../scss/layout.scss */
+  /* line 135, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-evenly;
   }
-  /* line 127, ../scss/layout.scss */
+  /* line 139, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.6rem 4rem;
   }
@@ -314,7 +329,7 @@ ul.menu {
   /* line 38, ../scss/_navbar.scss */
   .menu-item:hover {
     background-color: #3c3c3c;
-    min-width: 95vw;
+    min-width: calc(100% - 3em);
   }
 }
 @media screen and (min-width: 600px) {
@@ -437,17 +452,24 @@ article p {
   /* line 92, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
-    font-size: 21px;
+    font-size: 26px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 92, ../scss/_content.scss */
+  .views-field-title {
+    font-size: 35px;
+    letter-spacing: .3px;
   }
 }
 
-/* line 103, ../scss/_content.scss */
+/* line 109, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
 }
 
-/* line 107, ../scss/_content.scss */
+/* line 113, ../scss/_content.scss */
 .field--name-field-author {
   display: block;
   float: left;
@@ -455,7 +477,7 @@ article p {
 }
 
 @media all and (min-width: 320px) {
-  /* line 113, ../scss/_content.scss */
+  /* line 119, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -463,39 +485,39 @@ article p {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 113, ../scss/_content.scss */
+  /* line 119, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 124, ../scss/_content.scss */
+/* line 130, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 124, ../scss/_content.scss */
+  /* line 130, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 136, ../scss/_content.scss */
+/* line 142, ../scss/_content.scss */
 .field--name-boy {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 143, ../scss/_content.scss */
+/* line 149, ../scss/_content.scss */
 .contact-message-form {
   padding-left: 3em;
   padding-right: 3em;
 }
 
-/* line 149, ../scss/_content.scss */
+/* line 155, ../scss/_content.scss */
 .views-exposed-form {
   padding-right: 3em;
   padding-left: 3em;

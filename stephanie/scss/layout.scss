@@ -77,12 +77,11 @@
     background-color: $dark-grey;
 }
 
-
+/* --- Fix nested nav and put it in the nav css --- */
 @media all and (min-width: 360px) {
     .region-navbar { 
         .menu{
             justify-content: space-around;
-            flex-flow: row; 
             .menu-item{
                 a {          
                     padding: 0.5rem 2rem;
@@ -112,6 +111,19 @@
     .region-footer { 
         order: 2; 
     }
+}
+
+.views-row {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+.views-field-title {
+    justify-content: flex-start;
+    align-content: space-evenly;
+    margin-top: 1em;
 }
 /* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {

@@ -38,7 +38,7 @@ ul.menu {
     .menu-item:hover {
         background-color: #3c3c3c;
 
-        min-width: 95vw;
+        width: 85vw;
     }
 }
 
@@ -52,4 +52,10 @@ ul.menu {
         font-size: 25px;
     }
 }
+
+// //General focus style --- for now
+// *:focus {
+//     outline: 2px solid #d71ef7
+// }
+
 

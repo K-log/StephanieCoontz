@@ -95,7 +95,13 @@ article p {
 
     @media all and (min-width: 320px) {
         font-family: $display;
-        font-size: 21px;
+        font-size: 26px;
+    }
+
+    @media all and (min-width: 800px) {
+        font-size: 35px;
+        letter-spacing: .3px;
+
     }
 }
 
