@@ -1,35 +1,48 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700,700i");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
 /* Heading and body properties */
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
-/* line 14, ../scss/_fonts.scss */
+/* line 13, ../scss/_fonts.scss */
+body {
+  font-family: "PT Serif", serif;
+  color: #3c3c3c;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media screen and (min-width: 800px) {
+  /* line 13, ../scss/_fonts.scss */
+  body {
+    font-size: 21px;
+  }
+}
+
+/* line 23, ../scss/_fonts.scss */
 h1 {
   font-family: "Playfair Display", serif;
   color: #f1f1f1;
   font-style: italic;
   font-weight: 700;
-  letter-spacing: .1em;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 23, ../scss/_fonts.scss */
+  /* line 31, ../scss/_fonts.scss */
   h1 {
     font-size: 32px;
   }
 }
 @media screen and (min-width: 800px) {
-  /* line 28, ../scss/_fonts.scss */
+  /* line 36, ../scss/_fonts.scss */
   h1 {
     font-size: 44.422px;
   }
 }
 @media screen and (min-width: 1385px) {
-  /* line 33, ../scss/_fonts.scss */
+  /* line 41, ../scss/_fonts.scss */
   h1 {
     font-size: 56.832px;
   }
 }
 @media all and (min-width: 320px) {
-  /* line 37, ../scss/_fonts.scss */
+  /* line 45, ../scss/_fonts.scss */
   .page-title {
     color: #3c3c3c;
     letter-spacing: .1px;
@@ -40,7 +53,7 @@ h1 {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 37, ../scss/_fonts.scss */
+  /* line 45, ../scss/_fonts.scss */
   .page-title {
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +61,7 @@ h1 {
   }
 }
 
-/* line 55, ../scss/_fonts.scss */
+/* line 63, ../scss/_fonts.scss */
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -57,49 +70,29 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 62, ../scss/_fonts.scss */
+/* line 70, ../scss/_fonts.scss */
 h2, h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 62, ../scss/_fonts.scss */
+  /* line 70, ../scss/_fonts.scss */
   h2, h2 a {
     font-size: 45px;
   }
 }
 
-/* line 68, ../scss/_fonts.scss */
+/* line 76, ../scss/_fonts.scss */
 h3, h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 72, ../scss/_fonts.scss */
+/* line 80, ../scss/_fonts.scss */
 h4, h4 a {
   font-size: 17px;
 }
 
-/* line 77, ../scss/_fonts.scss */
-p {
-  font-family: "PT+Serif", serif;
-  color: #3c3c3c;
-  line-height: 1.4;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media screen and (min-width: 800px) {
-  /* line 77, ../scss/_fonts.scss */
-  p {
-    font-size: 21px;
-  }
-}
-
-/* line 87, ../scss/_fonts.scss */
-p em {
-  font-style: italic;
-}
-
-/* line 90, ../scss/_fonts.scss */
+/* line 84, ../scss/_fonts.scss */
 li a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -185,59 +178,74 @@ li a {
   background-color: #3c3c3c;
 }
 
+/* --- Fix nested nav and put it in the nav css --- */
 @media all and (min-width: 360px) {
   /* line 83, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
-    flex-flow: row;
   }
-  /* line 87, ../scss/layout.scss */
+  /* line 86, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.5rem 2rem;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 95, ../scss/layout.scss */
+  /* line 94, ../scss/layout.scss */
   .global-container {
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* line 100, ../scss/layout.scss */
+  /* line 99, ../scss/layout.scss */
   .region-navbar .menu {
     justify-content: space-around;
     flex-flow: row;
   }
 
-  /* line 105, ../scss/layout.scss */
+  /* line 104, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 109, ../scss/layout.scss */
+  /* line 108, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 112, ../scss/layout.scss */
+  /* line 111, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
+/* line 116, ../scss/layout.scss */
+.views-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+/* line 123, ../scss/layout.scss */
+.views-field-title {
+  justify-content: flex-start;
+  align-content: space-evenly;
+  margin-top: 1em;
+}
+
+/* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-  /* line 118, ../scss/layout.scss */
+  /* line 130, ../scss/layout.scss */
   .global-container {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* line 123, ../scss/layout.scss */
+  /* line 135, ../scss/layout.scss */
   .region-navbar .menu {
-    justify-content: space-around;
-    flex-flow: row;
+    justify-content: space-evenly;
   }
-  /* line 127, ../scss/layout.scss */
+  /* line 139, ../scss/layout.scss */
   .region-navbar .menu .menu-item a {
     padding: 0.6rem 4rem;
   }
@@ -251,7 +259,7 @@ li a {
  * Note: this will not effect the actual header region, only the blocks inside it.
  * See layout.css for global styling options.
  */
-/* line 12, ../scss/_header.scss */
+/* line 11, ../scss/_header.scss */
 .align-center {
   display: flex;
   justify-content: center;
@@ -261,24 +269,24 @@ li a {
   max-width: 100%;
 }
 
-/* line 25, ../scss/_header.scss */
+/* line 24, ../scss/_header.scss */
 .site-name a {
   text-decoration: none;
 }
 @media screen and (min-width: 1385px) {
-  /* line 24, ../scss/_header.scss */
+  /* line 23, ../scss/_header.scss */
   .site-name {
     font-size: 55px;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  /* line 36, ../scss/_header.scss */
+  /* line 35, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
   }
 
-  /* line 40, ../scss/_header.scss */
+  /* line 39, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
@@ -321,7 +329,7 @@ ul.menu {
   /* line 38, ../scss/_navbar.scss */
   .menu-item:hover {
     background-color: #3c3c3c;
-    min-width: 95vw;
+    min-width: calc(100% - 3em);
   }
 }
 @media screen and (min-width: 600px) {
@@ -435,59 +443,81 @@ article p {
   }
 }
 
+/* line 92, ../scss/_content.scss */
+.views-field-title {
+  display: block;
+  float: left;
+}
 @media all and (min-width: 320px) {
   /* line 92, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
-    font-size: 21px;
+    font-size: 26px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 92, ../scss/_content.scss */
+  .views-field-title {
+    font-size: 35px;
+    letter-spacing: .3px;
   }
 }
 
+/* line 109, ../scss/_content.scss */
+.field-content {
+  display: block;
+  float: left;
+}
+
+/* line 113, ../scss/_content.scss */
+.field--name-field-author {
+  display: block;
+  float: left;
+  width: 350px;
+}
+
 @media all and (min-width: 320px) {
-  /* line 98, ../scss/_content.scss */
+  /* line 119, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
+    float: left;
     font-style: italic;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 98, ../scss/_content.scss */
+  /* line 119, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 109, ../scss/_content.scss */
-.field {
+/* line 130, ../scss/_content.scss */
+.views-field-body {
   display: block;
-  float: none;
-  margin: 0;
+  float: left;
+  font-family: "PT Serif", serif;
+}
+@media all and (min-width: 320px) {
+  /* line 130, ../scss/_content.scss */
+  .views-field-body {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
-/* line 115, ../scss/_content.scss */
-.field--name-field-author {
-  width: 350px;
-}
-
-/* line 118, ../scss/_content.scss */
-.field-content {
-  display: block;
-  font-family: "PT+Serif", serif;
-}
-
-/* line 124, ../scss/_content.scss */
+/* line 142, ../scss/_content.scss */
 .field--name-boy {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 131, ../scss/_content.scss */
+/* line 149, ../scss/_content.scss */
 .contact-message-form {
   padding-left: 3em;
   padding-right: 3em;
 }
 
-/* line 137, ../scss/_content.scss */
+/* line 155, ../scss/_content.scss */
 .views-exposed-form {
   padding-right: 3em;
   padding-left: 3em;

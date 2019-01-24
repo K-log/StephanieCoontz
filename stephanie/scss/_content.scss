@@ -90,14 +90,36 @@ article p {
 
 // Article headings on list page
 .views-field-title {
+    display: block;
+    float: left;
+
     @media all and (min-width: 320px) {
         font-family: $display;
-        font-size: 21px;
+        font-size: 26px;
+    }
+
+    @media all and (min-width: 800px) {
+        font-size: 35px;
+        letter-spacing: .3px;
+
     }
 }
+
+// Field content -- Cointains Author Name and Publisher
+.field-content {
+    display: block;
+    float: left;
+}
+.field--name-field-author {
+    display: block;
+    float: left;
+    width: 350px;
+}
+
 .views-field-field-publication {
     @media all and (min-width:320px) {
         display: block;
+        float: left;
         font-style: italic;
     }
     @media all and (min-width:800px) {
@@ -105,19 +127,15 @@ article p {
     }
 }
 
-// Field content -- Cointains Author Name and Publisher
-.field {
+.views-field-body {
     display: block;
-    float: none;
-
-    margin: 0;
-}
-.field--name-field-author {
-    width: 350px;
-}
-.field-content {
-    display: block;
+    float: left;
     font-family: $text;
+
+    @media all and (min-width: 320px) {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
 }
 
 // Article content
