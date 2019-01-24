@@ -329,7 +329,7 @@ ul.menu {
   /* line 38, ../scss/_navbar.scss */
   .menu-item:hover {
     background-color: #3c3c3c;
-    min-width: calc(100% - 3em);
+    width: 85vw;
   }
 }
 @media screen and (min-width: 600px) {
