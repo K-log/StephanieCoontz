@@ -44,48 +44,52 @@ article p {
     display: flex;
 }
 
-
-@media screen and (min-width: 320px) {
-    article h2 {
-        text-align: center;
-    }
+article h2 {  // It's pretty dangerous to scope this so generally unless it's what you really want. Article elements could show up in places that aren't just the main articles on the website. Consider scoping it to a class name instead. -jkm
+	// Should there be a default style for screens smaller than 320px? -jkm
+	
+	@media screen and (min-width: 320px) {
+    text-align: center;
+	}
+	
+	@media screen and (min-width: 760px) {
+    text-align: left;
+	}
 }
-@media screen and (min-width: 760px) {
-    article h2 {
-        text-align: left;
-    }
-}
-@media screen and (min-width: 320px) {
-    .align-right {
-        display: block;
-        float: none;
-        justify-content: center;
 
-        width: 230px;
-        margin: 0 auto;
-    }
-}
-@media screen and (min-width: 700px) {
-    .align-right {
-        float: right;
+.align-right {
+	// What happens to these elements below 320px? -jkm
+	
+	@media screen and (min-width: 320px) {
+    display: block;
+    float: none;
+    justify-content: center;
 
-        width: 220px;
-        margin-left: 15px;
-    }
+    width: 230px;
+    margin: 0 auto;
+  }
+
+	@media screen and (min-width: 700px) {
+    float: right;
+
+    width: 220px;
+    margin-left: 15px;
+	}
 }
 
 // Margins set for mobile and full screen in the Article list page.
 .view-content {
-    @media all and (min-width: 320px) {
-        margin-left: auto; 
-        margin-right: auto;
-        width: calc(100% - 3em);
-        max-width: 540px;
-    }
-    @media all and (min-width: 800px){
-        width: calc(100% - 4em);
-        max-width: 738px;
-        }
+	
+  @media all and (min-width: 320px) {
+    margin-left: auto; 
+    margin-right: auto;
+    width: calc(100% - 3em);
+    max-width: 540px;
+  }
+    
+  @media all and (min-width: 800px){
+    width: calc(100% - 4em);
+    max-width: 738px;
+  }
 }
 
 // Article headings on list page
@@ -94,14 +98,13 @@ article p {
     float: left;
 
     @media all and (min-width: 320px) {
-        font-family: $display;
-        font-size: 26px;
+      font-family: $display;
+      font-size: 26px;
     }
 
     @media all and (min-width: 800px) {
-        font-size: 35px;
-        letter-spacing: .3px;
-
+      font-size: 35px;
+      letter-spacing: .3px;
     }
 }
 

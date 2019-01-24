@@ -1,52 +1,55 @@
-//###########################
-// Fonts
-// Fonts used by Stephanie Coontz site
-// Using radtio Perfect 4th
+/**
+ * Fonts
+ *
+ * Fonts used by Stephanie Coontz site
+ *
+ * Using ratio Perfect 4th
+ * Where is the link to the modular scale? -jkm
+ */
 
 
+// Import fonts from Google Fonts
 @import url('https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i');
 
-
 /* Heading and body properties */
+// Move these to your _tools file.
 $display: 'Playfair Display', serif; 
 $text: 'PT Serif', serif;
+
 body {
-    font-family: $text;
-    color: $dark-grey;
-    line-height: 1.4;
-    font-weight: 400;
+	font-family: $text;
+	color: $dark-grey;
+	line-height: 1.4;
 
-    @media screen and (min-width: 800px) {
-        font-size: 21px;
-    }
+	@media screen and (min-width: 800px) {
+		font-size: 21px;
+	}
 }
+
 h1 {
+	font-family: $display;
+	color: $offwhite;
+	font-style: italic;
+	font-weight: 700;
 
-    font-family: $display;
-    color: $offwhite;
-    font-style: italic;
-    font-weight: 700;
+	@media screen and (min-width: 320px) {
+		font-size: 32px;
+
+	@media screen and (min-width: 800px) {
+    font-size: 44.422px;
+	}
+
+	@media screen and (min-width: 1385px) {
+    font-size: 56.832px;
+  }
 }
-@media screen and (min-width: 320px) {
-    h1 {
-        font-size: 32px;
-    }
-}
-@media screen and (min-width: 800px) {
-    h1 {
-        font-size: 44.422px;
-    }
-}
-@media screen and (min-width: 1385px) {
-    h1 {
-        font-size: 56.832px;
-    }
-}
+
 .page-title {
     @media all and (min-width: 320px) {
         color: $dark-grey;
         letter-spacing: .1px;
 
+				// layout rules should probably not be in your _fonts.scss file.
         margin-left: auto;
         margin-right: auto;
         width: calc(100% - 2em);
@@ -58,8 +61,8 @@ h1 {
         width: calc(100% - .5em);
     }
 }
-// @media screen and (min-width:)
 
+// Link text size will inherit from its parent, so you don't need to set the heading size AND the link size within the heading. -jkm
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
     font-family: $display;
     color: $dark-grey;
@@ -67,16 +70,21 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
     font-weight: 700;
     font-style: italic;
 }
+
 h2, h2 a {
-    font-size: 31.25px;
-    @media screen and (min-width: 1385px) {
-        font-size: 45px;
-    }
+  font-size: 31.25px;
+
+	// leave a blank space above nested media queries for readability -jkm
+  @media screen and (min-width: 1385px) {
+    font-size: 45px;
+  }
 }
+
 h3, h3 a {
     font-size: 17px;
     text-transform: uppercase;
 }
+
 h4, h4 a {
     font-size: 17px;
 }
@@ -86,4 +94,5 @@ li a {
     color: $dark-grey;
 }
 
+// Is this font imported twice? -jkm
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400i');
