@@ -9,12 +9,12 @@
 
 
 // Import fonts from Google Fonts
-@import url('https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i');
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
 
 /* Heading and body properties */
 // Move these to your _tools file. -jkm
-$display: 'Playfair Display', serif; 
-$text: 'PT Serif', serif;
+$display: "Playfair Display", serif;
+$text: "PT Serif", serif;
 
 body {
 	font-family: $text;
@@ -46,7 +46,7 @@ h1 {
 }
 
 .page-title {
-	
+
 	// Do you really want this to be dark grey only at certain screen sizes? -jkm
 	@media all and (min-width: 320px) {
 		color: $dark-grey;
@@ -91,4 +91,4 @@ li a {
 }
 
 // Is this font imported twice? -jkm
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:400i');
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");

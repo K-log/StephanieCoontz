@@ -10,7 +10,7 @@
 	width: 100%;
 }
 
-.region-navbar{ 
+.region-navbar {
     background-color: $turquoise-dark;
     border-bottom: 2px solid $turquoise;
 }
@@ -24,7 +24,7 @@
     margin: 5px 0;
     padding: 0;
     list-style-type: none;
-    
+
     @media screen and (min-width: 600px) {
         justify-content: space-evenly;
         flex-direction: row;
@@ -51,7 +51,7 @@
     font-size: 18px;
     // line-height: 1.3;
     text-align: center;
-    
+
     @media screen and (min-width: 600px) {
         font-size: 25px;
     }
@@ -65,7 +65,7 @@
     text-decoration: none;
     // decoration
     border-radius: 1ch;
-    
+
     &:hover {
         background-color: #3c3c3c;
     }
@@ -73,7 +73,7 @@
 
 .region-navbar .menu-item a {
 	padding: 0.5em 0.5ch;
-	
+
 	@media all and (min-width: 800px) {
 		padding: 0.33333em 1ch;
 	}

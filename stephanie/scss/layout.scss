@@ -22,7 +22,7 @@
 body {
 	background-color: $turquoise-light;
 }
- 
+
 .global-container {
     display: flex;
     flex-flow: row wrap;
@@ -33,14 +33,13 @@ body {
     border-right: 2px solid $turquoise;
 
     //Gobal container widths at breakpoints
-    @media all and (min-width: 320px){
-        margin-left: auto; 
+    @media all and (min-width: 320px) {
+        margin-left: auto;
         margin-right: auto;
         max-width: 540px;
-    }
-    @media all and (min-width: 800px) 
-    {
-	    margin-left: auto; 
+    }  // Separate media queries with a blank line for better readability. -jkm
+    @media all and (min-width: 800px) {
+	    margin-left: auto;
         margin-right: auto;
         width: calc(100% - 10em);
         max-width: 738px;
@@ -53,13 +52,13 @@ body {
     flex: 1 100%;
 }
 
-.region-content{ 
+.region-content {
 	background-color: white;
 }
 
 .content-content {
 	margin: 0 2ch;
-	
+
 	@media all and (min-width: 800px) {
 		margin: 0 4ch;
 	}
@@ -71,11 +70,12 @@ body {
 
 // Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 @media all and (min-width: 800px) {
-    .region-content { 
-        order: 1; 
+    .region-content {
+        order: 1;
     }
-    .region-footer { 
-        order: 2; 
+
+    .region-footer {
+        order: 2;
     }
 }
 
@@ -84,8 +84,9 @@ body {
     flex-direction: column;
 
     margin-top: 1em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
 }
+
 .views-field-title {
     justify-content: flex-start;
     align-content: space-evenly;
@@ -96,9 +97,8 @@ body {
 // Also, if you're going to do this kind of nesting (which you shouldn't), you need to put spaces between selectors for better readability. -jkm
 /* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-    .global-container { 
-        margin-left: auto; 
-        margin-right: auto;  
+    .global-container {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
