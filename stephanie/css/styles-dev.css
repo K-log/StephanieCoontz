@@ -122,16 +122,21 @@ li a {
 }
 
 /* line 22, ../scss/layout.scss */
+body {
+  background-color: #dff0f6;
+}
+
+/* line 26, ../scss/layout.scss */
 .global-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  border-left: 2px solid #3c3c3c;
-  border-right: 2px solid #3c3c3c;
+  border-left: 2px solid #289ec4;
+  border-right: 2px solid #289ec4;
 }
 @media all and (min-width: 320px) {
-  /* line 22, ../scss/layout.scss */
+  /* line 26, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -139,7 +144,7 @@ li a {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 22, ../scss/layout.scss */
+  /* line 26, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -148,59 +153,50 @@ li a {
   }
 }
 
-/* line 46, ../scss/layout.scss */
+/* line 50, ../scss/layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 52, ../scss/layout.scss */
-.region-header {
-  background-color: #3c3c3c;
-  max-width: 100vw;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* line 60, ../scss/layout.scss */
+/* line 56, ../scss/layout.scss */
 .region-content {
-  background-color: #f1f1f1;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: column;
 }
 
-/* line 68, ../scss/layout.scss */
+/* line 64, ../scss/layout.scss */
 .content-content {
   margin: 0 4ch;
 }
 
-/* line 72, ../scss/layout.scss */
+/* line 68, ../scss/layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
 
 @media all and (min-width: 800px) {
-  /* line 78, ../scss/layout.scss */
+  /* line 74, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 82, ../scss/layout.scss */
+  /* line 78, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 85, ../scss/layout.scss */
+  /* line 81, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
-/* line 90, ../scss/layout.scss */
+/* line 86, ../scss/layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -208,7 +204,7 @@ li a {
   margin-bottom: .5em;
 }
 
-/* line 97, ../scss/layout.scss */
+/* line 93, ../scss/layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -217,7 +213,7 @@ li a {
 
 /* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-  /* line 107, ../scss/layout.scss */
+  /* line 103, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -233,6 +229,15 @@ li a {
  * See layout.css for global styling options.
  */
 /* line 11, ../scss/_header.scss */
+.region-header {
+  background-color: #289ec4;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 20, ../scss/_header.scss */
 .align-center {
   display: flex;
   justify-content: center;
@@ -242,24 +247,25 @@ li a {
   max-width: 100%;
 }
 
-/* line 24, ../scss/_header.scss */
-.site-name a {
-  text-decoration: none;
-}
 @media screen and (min-width: 1385px) {
-  /* line 23, ../scss/_header.scss */
+  /* line 32, ../scss/_header.scss */
   .site-name {
     font-size: 55px;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  /* line 35, ../scss/_header.scss */
+/* line 39, ../scss/_header.scss */
+.site-name a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1385px) {
+  /* line 44, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
   }
 
-  /* line 39, ../scss/_header.scss */
+  /* line 48, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
@@ -279,8 +285,8 @@ li a {
 
 /* line 13, ../scss/_navbar.scss */
 .region-navbar {
-  background-color: #a3a3a3;
-  border-bottom: 2px solid #3c3c3c;
+  background-color: #1b6a83;
+  border-bottom: 2px solid #289ec4;
 }
 
 /* line 18, ../scss/_navbar.scss */
@@ -334,15 +340,22 @@ li a {
   display: block;
   color: #f1f1f1;
   text-decoration: none;
+  border-radius: 1ch;
 }
-/* line 67, ../scss/_navbar.scss */
+/* line 69, ../scss/_navbar.scss */
 .menu-item > a:hover {
   background-color: #3c3c3c;
 }
 
-/* line 72, ../scss/_navbar.scss */
+/* line 74, ../scss/_navbar.scss */
 .region-navbar .menu-item a {
   padding: 0.5em 0.5ch;
+}
+@media all and (min-width: 800px) {
+  /* line 74, ../scss/_navbar.scss */
+  .region-navbar .menu-item a {
+    padding: 0.33333em 1ch;
+  }
 }
 
 /**
@@ -352,7 +365,12 @@ li a {
  * Content is things such as articles, books, interviews. Anything that fills most of the page.
  * For global styling see layout.css
  */
-/* line 10, ../scss/_content.scss */
+/* line 9, ../scss/_content.scss */
+a {
+  color: #1b6a83;
+}
+
+/* line 21, ../scss/_content.scss */
 .field--name-body {
   margin: 0;
 }
@@ -375,7 +393,7 @@ li a {
 /*article p {
     flex-direction: column;
 }*/
-/* line 37, ../scss/_content.scss */
+/* line 48, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -383,26 +401,26 @@ li a {
   max-width: 100vw;
 }
 
-/* line 46, ../scss/_content.scss */
+/* line 57, ../scss/_content.scss */
 .node__content {
   display: flex;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 50, ../scss/_content.scss */
+  /* line 61, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 50, ../scss/_content.scss */
+  /* line 61, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 62, ../scss/_content.scss */
+  /* line 73, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -412,7 +430,7 @@ li a {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 62, ../scss/_content.scss */
+  /* line 73, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -420,50 +438,33 @@ li a {
   }
 }
 
-@media all and (min-width: 320px) {
-  /* line 83, ../scss/_content.scss */
-  .view-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 3em);
-    max-width: 540px;
-  }
-}
-@media all and (min-width: 800px) {
-  /* line 83, ../scss/_content.scss */
-  .view-content {
-    width: calc(100% - 4em);
-    max-width: 738px;
-  }
-}
-
-/* line 99, ../scss/_content.scss */
+/* line 94, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 99, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 99, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
     letter-spacing: .3px;
   }
 }
 
-/* line 115, ../scss/_content.scss */
+/* line 110, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
 }
 
-/* line 119, ../scss/_content.scss */
+/* line 114, ../scss/_content.scss */
 .field--name-field-author {
   display: block;
   float: left;
@@ -471,7 +472,7 @@ li a {
 }
 
 @media all and (min-width: 320px) {
-  /* line 125, ../scss/_content.scss */
+  /* line 120, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -479,42 +480,30 @@ li a {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 125, ../scss/_content.scss */
+  /* line 120, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 136, ../scss/_content.scss */
+/* line 131, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 136, ../scss/_content.scss */
+  /* line 131, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 148, ../scss/_content.scss */
+/* line 143, ../scss/_content.scss */
 .field--name-boy {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* line 155, ../scss/_content.scss */
-.contact-message-form {
-  padding-left: 3em;
-  padding-right: 3em;
-}
-
-/* line 161, ../scss/_content.scss */
-.views-exposed-form {
-  padding-right: 3em;
-  padding-left: 3em;
 }
 
 /**
