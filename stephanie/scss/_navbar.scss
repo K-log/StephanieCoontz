@@ -63,6 +63,8 @@
     // typography
     color: $offwhite;
     text-decoration: none;
+    // decoration
+    border-radius: 1ch;
     
     &:hover {
         background-color: #3c3c3c;
@@ -71,4 +73,8 @@
 
 .region-navbar .menu-item a {
 	padding: 0.5em 0.5ch;
+	
+	@media all and (min-width: 800px) {
+		padding: 0.33333em 1ch;
+	}
 }
