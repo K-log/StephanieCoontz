@@ -79,22 +79,6 @@ article h2 {  // It's pretty dangerous to scope this so generally unless it's wh
 	}
 }
 
-// Margins set for mobile and full screen in the Article list page.
-.view-content {
-	
-  @media all and (min-width: 320px) {
-    margin-left: auto; 
-    margin-right: auto;
-    width: calc(100% - 3em);
-    max-width: 540px;
-  }
-    
-  @media all and (min-width: 800px){
-    width: calc(100% - 4em);
-    max-width: 738px;
-  }
-}
-
 // Article headings on list page
 .views-field-title {
     display: block;
@@ -148,21 +132,4 @@ article h2 {  // It's pretty dangerous to scope this so generally unless it's wh
 .field--name-boy {
     margin-left: auto;
     margin-right: auto;
-
 }
-
-// Site feedback form
-.contact-message-form {
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
-// Views form
-.views-exposed-form {
-    padding-right: 3em;
-    padding-left: 3em;
-}
-
-
-
-
