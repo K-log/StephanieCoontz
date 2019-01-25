@@ -26,6 +26,8 @@
     }
     @media all and (min-width: 800px) 
     {
+	    margin-left: auto; 
+        margin-right: auto;
         width: calc(100% - 10em);
         max-width: 738px;
     }
@@ -58,30 +60,23 @@
 }
 
 .region-content{ 
-    background-color: $offwhite;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column;
-
-    // max-width: 100vw;
-    // h1 {
-    //     text-align: center;
-    //     color: #000000;
-    //}
+	background-color: $offwhite;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-flow: column;
 }
 
+.content-content {
+	margin: 0 4ch;
+}
 
 .region-footer {
-    background-color: $dark-grey;
+	background-color: $dark-grey;
 }
 
 // Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 @media all and (min-width: 800px) {
-    .global-container { 
-        margin-left: auto; 
-        margin-right: auto;  
-    }
     .region-content { 
         flex: 3 0px; 
         min-height: 90vh; 

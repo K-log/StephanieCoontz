@@ -42,7 +42,6 @@ ul.menu {
     }
 }
 
-
 @media screen and (min-width: 600px) {
     ul.menu {
         justify-content: space-evenly;
@@ -53,10 +52,6 @@ ul.menu {
     }
 }
 
-// //General focus style --- for now
-// *:focus {
-//     outline: 2px solid #d71ef7
-// }
 .region-navbar .menu {
 
 	@media all and (min-width: 360px) {
