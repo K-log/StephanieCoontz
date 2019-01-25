@@ -55,14 +55,14 @@ body {
 
 .region-content{ 
 	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	flex-flow: column;
 }
 
 .content-content {
-	margin: 0 4ch;
+	margin: 0 2ch;
+	
+	@media all and (min-width: 800px) {
+		margin: 0 4ch;
+	}
 }
 
 .region-footer {
@@ -71,10 +71,6 @@ body {
 
 // Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 @media all and (min-width: 800px) {
-    .region-content { 
-        flex: 3 0px; 
-        min-height: 90vh; 
-    }
     .region-content { 
         order: 1; 
     }

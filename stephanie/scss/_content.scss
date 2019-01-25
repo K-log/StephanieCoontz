@@ -6,9 +6,6 @@
  * For global styling see layout.css
  */
 
-
-.field--name-body {
-    margin: 0;
 }
 
 // It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't just the main articles on the website. I've simplified your layout styles, so these can all be deleted -jkm
@@ -42,10 +39,10 @@
     max-width: 100vw;
 }
 
-
-.node__content {
+// Why is this a flex layout? -jkm
+/*.node__content {
     display: flex;
-}
+}*/
 
 article h2 {  // It's pretty dangerous to scope this so generally unless it's what you really want. Article elements could show up in places that aren't just the main articles on the website. Consider scoping it to a class name instead. -jkm
 	// Should there be a default style for screens smaller than 320px? -jkm
