@@ -115,6 +115,7 @@ article h2 {  // It's pretty dangerous to scope this so generally unless it's wh
 }
 
 .views-field-field-publication {
+	// Separate media queries with a space so that they're easier to scan. -jkm
     @media all and (min-width:320px) {
         display: block;
         float: left;
@@ -137,7 +138,7 @@ article h2 {  // It's pretty dangerous to scope this so generally unless it's wh
 }
 
 // Article content
-.field--name-boy {
+.field--name-boy {  // Is this supposed to be .field--name-body? Either way, you probably don't need these properties. -jkm
     margin-left: auto;
     margin-right: auto;
 }
