@@ -6,13 +6,16 @@
 # the default .gitignore rules.
 ##
 
+#CSS development file
+stephanie/css/styles-dev.css
+
+#Sass files
 #stephanie/.sass-cache/
-
-stephanie/node_modules/
-
-stephanie/css/config/
-node_modules/
 stephanie/\.sass-cache/
+
+#Node modules
+node_modules/
+stephanie/node_modules/
 
 # Sasslint report
 **/scss/config/report.html
