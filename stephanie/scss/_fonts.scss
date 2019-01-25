@@ -54,6 +54,7 @@ h1 {
 }
 
 // Link text size will inherit from its parent, so you don't need to set the heading size AND the link size within the heading. -jkm
+// Put each selector on its own line for better readability. -jkm
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
     font-family: $display;
     color: $dark-grey;
@@ -62,6 +63,7 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
     font-style: italic;
 }
 
+// Put each selector on its own line for better readability. -jkm
 h2, h2 a {
   font-size: 31.25px;
 
@@ -71,15 +73,18 @@ h2, h2 a {
   }
 }
 
+// Put each selector on its own line for better readability. -jkm
 h3, h3 a {
     font-size: 17px;
     text-transform: uppercase;
 }
 
+// Put each selector on its own line for better readability. -jkm
 h4, h4 a {
     font-size: 17px;
 }
 
+// Do you REALLY want to change the font for every link inside a list? -jkm
 li a {
     font-family: $display;
     color: $dark-grey;
