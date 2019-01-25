@@ -8,6 +8,16 @@
  *
  * This is a Sass partial, should the filename have an underscore? -jkm
  */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* > * {
+	box-sizing: inherit;
+}
  
 .global-container {
     display: flex;
