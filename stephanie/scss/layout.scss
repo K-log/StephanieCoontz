@@ -76,30 +76,11 @@
     background-color: $dark-grey;
 }
 
-/* --- Fix nested nav and put it in the nav css --- */
-@media all and (min-width: 360px) {
-    .region-navbar { 
-        .menu{
-            justify-content: space-around;
-            .menu-item{
-                a {          
-                    padding: 0.5rem 2rem;
-                 }
-            }
-        } 
-    }
-}
 // Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 @media all and (min-width: 800px) {
     .global-container { 
         margin-left: auto; 
         margin-right: auto;  
-    }
-    .region-navbar { 
-        .menu { 
-            justify-content: space-around; 
-            flex-flow: row; 
-        } 
     }
     .region-content { 
         flex: 3 0px; 
@@ -133,17 +114,6 @@
     .global-container { 
         margin-left: auto; 
         margin-right: auto;  
-    }
-    .region-navbar { //Needs restructuring
-        .menu {
-            justify-content: space-evenly;
-            //flex-flow: row;
-            .menu-item {
-                a {
-                    padding: 0.6rem 4rem;
-                }
-            }
-        }
     }
 }
 

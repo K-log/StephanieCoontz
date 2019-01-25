@@ -57,5 +57,29 @@ ul.menu {
 // *:focus {
 //     outline: 2px solid #d71ef7
 // }
+.region-navbar .menu {
 
+	@media all and (min-width: 360px) {
+    justify-content: space-around;
+	}
 
+	@media all and (min-width: 800px) {
+		justify-content: space-around; 
+		flex-flow: row;
+	}
+
+	@media all and (min-width: 1200px) {
+		justify-content: space-evenly;
+	}
+}
+
+.region-navbar .menu-item a {
+
+	@media all and (min-width: 360px) {
+		padding: 0.5rem 2rem;
+	}
+	
+	@media all and (min-width: 1200px) {
+		padding: 0.6rem 4rem;
+	}
+}
