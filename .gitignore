@@ -1,3 +1,11 @@
+##
+# Custom Rules
+#
+# Place all new rules here that have not been copied from another source
+# (i.e. standard Drupal, Apple, or Windows files below) or included with
+# the default .gitignore rules.
+##
+
 #stephanie/.sass-cache/
 
 stephanie/node_modules/
@@ -6,3 +14,77 @@ stephanie/css/config/
 node_modules/
 stephanie/\.sass-cache/
 
+# Sasslint report
+**/scss/config/report.html
+
+###########################################################################
+
+##
+# Ignore Drupal files
+#
+# Rules from https://github.com/github/gitignore/blob/master/Drupal.gitignore
+##
+
+##
+# Ignore MacOS files
+#
+# Rules from https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+##
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+##
+# Ignore Windows files
+#
+# Rules from https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+##
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

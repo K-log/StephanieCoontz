@@ -6,12 +6,21 @@
  * For global styling see layout.css
  */
 
+a {
+	color: $turquoise-dark;
+	text-decoration-skip: ink;
 
-.field--name-body {
-    margin: 0;
+	/*&:hover {
+
+	}
+
+	&:active {
+
+	}*/
 }
 
-article {
+// It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't just the main articles on the website. I've simplified your layout styles, so these can all be deleted -jkm
+/*article {
     display: flex;
     flex-direction: column;
     // Global container widths at breakpoints
@@ -25,10 +34,12 @@ article {
         width: calc(100% - 4em);
         max-width: 738px;
         }
-}
-article p {
+}*/
+
+// This isn't doing anything without display:flex, but you don't want this anyway, so just delete it. -jkm
+/*article p {
     flex-direction: column;
-}
+}*/
 
 
 .tabs {
@@ -39,53 +50,41 @@ article p {
     max-width: 100vw;
 }
 
-
-.node__content {
+// Why is this a flex layout? -jkm
+/*.node__content {
     display: flex;
+}*/
+
+article h2 {  // It's pretty dangerous to scope this so generally unless it's what you really want. Article elements could show up in places that aren't just the main articles on the website. Consider scoping it to a class name instead. -jkm
+	// Should there be a default style for screens smaller than 320px? -jkm
+
+	@media screen and (min-width: 320px) {
+    text-align: center;
+	}
+
+	@media screen and (min-width: 760px) {
+    text-align: left;
+	}
 }
 
+.align-right {
+	// What happens to these elements below 320px? -jkm
 
-@media screen and (min-width: 320px) {
-    article h2 {
-        text-align: center;
-    }
-}
-@media screen and (min-width: 760px) {
-    article h2 {
-        text-align: left;
-    }
-}
-@media screen and (min-width: 320px) {
-    .align-right {
-        display: block;
-        float: none;
-        justify-content: center;
+	@media screen and (min-width: 320px) {
+    display: block;
+    float: none;
+    justify-content: center;
 
-        width: 230px;
-        margin: 0 auto;
-    }
-}
-@media screen and (min-width: 700px) {
-    .align-right {
-        float: right;
+    width: 230px;
+    margin: 0 auto;
+  }
 
-        width: 220px;
-        margin-left: 15px;
-    }
-}
+	@media screen and (min-width: 700px) {
+    float: right;
 
-// Margins set for mobile and full screen in the Article list page.
-.view-content {
-    @media all and (min-width: 320px) {
-        margin-left: auto; 
-        margin-right: auto;
-        width: calc(100% - 3em);
-        max-width: 540px;
-    }
-    @media all and (min-width: 800px){
-        width: calc(100% - 4em);
-        max-width: 738px;
-        }
+    width: 220px;
+    margin-left: 15px;
+	}
 }
 
 // Article headings on list page
@@ -94,14 +93,13 @@ article p {
     float: left;
 
     @media all and (min-width: 320px) {
-        font-family: $display;
-        font-size: 26px;
+      font-family: $display;
+      font-size: 26px;
     }
 
     @media all and (min-width: 800px) {
-        font-size: 35px;
-        letter-spacing: .3px;
-
+      font-size: 35px;
+      letter-spacing: 0.3px;  // Don't use letter-spacing unless they're strings of all caps. -jkm
     }
 }
 
@@ -110,19 +108,19 @@ article p {
     display: block;
     float: left;
 }
-.field--name-field-author {
-    display: block;
-    float: left;
-    width: 350px;
-}
+
+/*.field--name-field-author {
+
+}*/
 
 .views-field-field-publication {
-    @media all and (min-width:320px) {
+	// Separate media queries with a space so that they're easier to scan. -jkm
+    @media all and (min-width: 320px) {
         display: block;
         float: left;
         font-style: italic;
     }
-    @media all and (min-width:800px) {
+    @media all and (min-width: 800px) {
         float: left;
     }
 }
@@ -139,24 +137,7 @@ article p {
 }
 
 // Article content
-.field--name-boy {
+.field--name-boy {  // Is this supposed to be .field--name-body? Either way, you probably don't need these properties. -jkm
     margin-left: auto;
     margin-right: auto;
-
 }
-
-// Site feedback form
-.contact-message-form {
-    padding-left: 3em;
-    padding-right: 3em;
-}
-
-// Views form
-.views-exposed-form {
-    padding-right: 3em;
-    padding-left: 3em;
-}
-
-
-
-

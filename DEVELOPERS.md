@@ -4,6 +4,42 @@
 
 **Note:** There are two different ways to setup the site. The first requires there be a database dump available on gitlab. The second requires performing the migration by hand using drush.
 
+
+
+# Temporary instructions for setting up the Devsite.
+
+Go into Acquia DevDesktop and click the small plus (+) button in the bottom left and select `New Drupal Site ...`.
+
+- Select Drupal 8.
+
+- Change the PHP version to the latest and change the site name to whatever you want it to be.
+
+- Select `Start with MySQL Database dump file` from the Database option and find the database dump file on your local machine after downloading it from the Docs & Files section of the Stephanie Website Revamp project on Basecamp.
+
+- Hit finish.
+
+Now navigate to where the site was install. On Mac this defaults to `~/Sites/devdesktop/SITE-NAME`.
+
+In the themes folder clone the following git repository: `http://github.com/k-log/StephanieCoontz-Theme.git`
+
+- Make sure your are on the development branch or have created a new branch from the development branch.
+
+In the `/SITE-NAME/themes/StephanieCoontz/stephanie/` directory run the following commands from a terminal.
+
+- `npm install`
+
+- `sh comp.sh`
+
+Now the site should be fully functional.
+
+To access the admin area, just go to the base site url and add `/admin` to the end. 
+
+If you are not logged in you will need to go to `/user` and login using the same username and password for devsite.stephaniecoontz.org.
+
+
+Untested past this point!
+---
+
 # Installing from a database dump (Recommended)
 
 ## Step 1: Getting the source
