@@ -32,7 +32,7 @@ rules:
     -
       style: lowercase
   indentation:
-    - 2
+    - 1
     -
       size: tab
   leading-zero:
@@ -66,7 +66,10 @@ rules:
       allow-element-with-attribute: true
   no-trailing-whitespace: 2
   no-trailing-zero: 2
-  no-url-protocols: 2
+  no-url-protocols:
+    - 2
+    -
+      allow-protocol-relative-urls: true
   no-vendor-prefixes:
     - 1
     -
@@ -104,7 +107,7 @@ rules:
   #      - background-color
   zero-unit: 2
   property-sort-order:
-    - 2
+    - 1
     -
       order:
       	# ordered by
