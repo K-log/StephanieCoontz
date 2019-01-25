@@ -1,9 +1,10 @@
 @import "colors";
-@import 'fonts';
-@import 'tools';
-@import 'layout';
-@import 'header';
-@import 'navbar';
-@import 'content';
-@import 'footer';
+@import "fonts";
+@import "tools";
+// This is a Sass partial, should the filename have an underscore? -jkm
+@import "layout";
+@import "header";
+@import "navbar";
+@import "content";
+@import "footer";
 

@@ -1,54 +1,61 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700,700i");
+/**
+ * Fonts
+ *
+ * Fonts used by Stephanie Coontz site
+ *
+ * Using ratio Perfect 4th
+ * Where is the link to the modular scale? -jkm
+ */
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
 /* Heading and body properties */
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
-/* line 14, ../scss/_fonts.scss */
+/* line 19, ../scss/_fonts.scss */
+body {
+  font-family: "PT Serif", serif;
+  color: #3c3c3c;
+  line-height: 1.4;
+}
+@media screen and (min-width: 800px) {
+  /* line 19, ../scss/_fonts.scss */
+  body {
+    font-size: 21px;
+  }
+}
+
+/* line 29, ../scss/_fonts.scss */
 h1 {
   font-family: "Playfair Display", serif;
   color: #f1f1f1;
   font-style: italic;
   font-weight: 700;
-  letter-spacing: .1em;
 }
-
 @media screen and (min-width: 320px) {
-  /* line 23, ../scss/_fonts.scss */
+  /* line 29, ../scss/_fonts.scss */
   h1 {
     font-size: 32px;
   }
 }
 @media screen and (min-width: 800px) {
-  /* line 28, ../scss/_fonts.scss */
+  /* line 29, ../scss/_fonts.scss */
   h1 {
     font-size: 44.422px;
   }
 }
 @media screen and (min-width: 1385px) {
-  /* line 33, ../scss/_fonts.scss */
+  /* line 29, ../scss/_fonts.scss */
   h1 {
     font-size: 56.832px;
   }
 }
+
 @media all and (min-width: 320px) {
-  /* line 37, ../scss/_fonts.scss */
+  /* line 48, ../scss/_fonts.scss */
   .page-title {
     color: #3c3c3c;
-    letter-spacing: .1px;
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 2em);
-    max-width: 540px;
-  }
-}
-@media all and (min-width: 800px) {
-  /* line 37, ../scss/_fonts.scss */
-  .page-title {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - .5em);
   }
 }
 
-/* line 55, ../scss/_fonts.scss */
+/* line 58, ../scss/_fonts.scss */
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -57,49 +64,29 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 62, ../scss/_fonts.scss */
+/* line 67, ../scss/_fonts.scss */
 h2, h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 62, ../scss/_fonts.scss */
+  /* line 67, ../scss/_fonts.scss */
   h2, h2 a {
     font-size: 45px;
   }
 }
 
-/* line 68, ../scss/_fonts.scss */
+/* line 77, ../scss/_fonts.scss */
 h3, h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 72, ../scss/_fonts.scss */
+/* line 83, ../scss/_fonts.scss */
 h4, h4 a {
   font-size: 17px;
 }
 
-/* line 77, ../scss/_fonts.scss */
-p {
-  font-family: "PT+Serif", serif;
-  color: #3c3c3c;
-  line-height: 1.4;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media screen and (min-width: 800px) {
-  /* line 77, ../scss/_fonts.scss */
-  p {
-    font-size: 21px;
-  }
-}
-
-/* line 87, ../scss/_fonts.scss */
-p em {
-  font-style: italic;
-}
-
-/* line 90, ../scss/_fonts.scss */
+/* line 88, ../scss/_fonts.scss */
 li a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -119,18 +106,37 @@ li a {
  * Here is where you put anything that effects all the blocks that hold the content.
  * Example: Global grid layout for the whole site.
  * DO NOT add CSS the only effects a specific page, region, or block.
+ *
+ * This is a Sass partial, should the filename have an underscore? -jkm
  */
-/* line 13, ../scss/layout.scss */
+/* line 12, ../scss/layout.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 18, ../scss/layout.scss */
+* > * {
+  box-sizing: inherit;
+}
+
+/* line 22, ../scss/layout.scss */
+body {
+  background-color: #dff0f6;
+}
+
+/* line 26, ../scss/layout.scss */
 .global-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  border-left: 2px solid #3c3c3c;
-  border-right: 2px solid #3c3c3c;
+  border-left: 2px solid #289ec4;
+  border-right: 2px solid #289ec4;
 }
 @media all and (min-width: 320px) {
-  /* line 13, ../scss/layout.scss */
+  /* line 26, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -138,108 +144,79 @@ li a {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 13, ../scss/layout.scss */
+  /* line 26, ../scss/layout.scss */
   .global-container {
+    margin-left: auto;
+    margin-right: auto;
     width: calc(100% - 10em);
     max-width: 738px;
   }
 }
 
-/* line 35, ../scss/layout.scss */
+/* line 50, ../scss/layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 41, ../scss/layout.scss */
-.region-header {
-  background-color: #3c3c3c;
-  max-width: 100vw;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* line 50, ../scss/layout.scss */
-.region-navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  background-color: #a3a3a3;
-  border-bottom: 2px solid #3c3c3c;
-  max-width: 100%;
-}
-
-/* line 61, ../scss/layout.scss */
+/* line 56, ../scss/layout.scss */
 .region-content {
-  background-color: #f1f1f1;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-flow: column;
 }
 
-/* line 76, ../scss/layout.scss */
+/* line 64, ../scss/layout.scss */
+.content-content {
+  margin: 0 4ch;
+}
+
+/* line 68, ../scss/layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
 
-@media all and (min-width: 360px) {
-  /* line 83, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-around;
-    flex-flow: row;
-  }
-  /* line 87, ../scss/layout.scss */
-  .region-navbar .menu .menu-item a {
-    padding: 0.5rem 2rem;
-  }
-}
 @media all and (min-width: 800px) {
-  /* line 95, ../scss/layout.scss */
-  .global-container {
-    margin-left: 7%;
-    margin-right: 7%;
-  }
-
-  /* line 100, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-around;
-    flex-flow: row;
-  }
-
-  /* line 105, ../scss/layout.scss */
+  /* line 74, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 109, ../scss/layout.scss */
+  /* line 78, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 112, ../scss/layout.scss */
+  /* line 81, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
-@media all and (min-width: 1200px) {
-  /* line 118, ../scss/layout.scss */
-  .global-container {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
+/* line 86, ../scss/layout.scss */
+.views-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
 
-  /* line 123, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-around;
-    flex-flow: row;
-  }
-  /* line 127, ../scss/layout.scss */
-  .region-navbar .menu .menu-item a {
-    padding: 0.6rem 4rem;
+/* line 93, ../scss/layout.scss */
+.views-field-title {
+  justify-content: flex-start;
+  align-content: space-evenly;
+  margin-top: 1em;
+}
+
+/* --- Correct, there is code that is being repeted --- */
+@media all and (min-width: 1200px) {
+  /* line 103, ../scss/layout.scss */
+  .global-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /**
@@ -251,7 +228,16 @@ li a {
  * Note: this will not effect the actual header region, only the blocks inside it.
  * See layout.css for global styling options.
  */
-/* line 12, ../scss/_header.scss */
+/* line 11, ../scss/_header.scss */
+.region-header {
+  background-color: #289ec4;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* line 20, ../scss/_header.scss */
 .align-center {
   display: flex;
   justify-content: center;
@@ -261,24 +247,25 @@ li a {
   max-width: 100%;
 }
 
-/* line 25, ../scss/_header.scss */
-.site-name a {
-  text-decoration: none;
-}
 @media screen and (min-width: 1385px) {
-  /* line 24, ../scss/_header.scss */
+  /* line 32, ../scss/_header.scss */
   .site-name {
     font-size: 55px;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  /* line 36, ../scss/_header.scss */
+/* line 39, ../scss/_header.scss */
+.site-name a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1385px) {
+  /* line 44, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
   }
 
-  /* line 40, ../scss/_header.scss */
+  /* line 48, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
@@ -291,51 +278,86 @@ li a {
  *
  * For global styling see layout.css
  */
-/* line 11, ../scss/_navbar.scss */
-ul.menu {
+/* line 9, ../scss/_navbar.scss */
+.system-main-menu {
+  width: 100%;
+}
+
+/* line 13, ../scss/_navbar.scss */
+.region-navbar {
+  background-color: #1b6a83;
+  border-bottom: 2px solid #289ec4;
+}
+
+/* line 18, ../scss/_navbar.scss */
+.menu {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   margin: 5px 0;
   padding: 0;
-}
-
-/* line 20, ../scss/_navbar.scss */
-.menu-item, .menu-item a {
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none;
-  color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 33, ../scss/_navbar.scss */
-.menu-item a {
-  display: block;
-}
-
-@media screen and (max-width: 599px) {
-  /* line 38, ../scss/_navbar.scss */
-  .menu-item:hover {
-    background-color: #3c3c3c;
-    min-width: 95vw;
-  }
+  list-style-type: none;
 }
 @media screen and (min-width: 600px) {
-  /* line 47, ../scss/_navbar.scss */
-  ul.menu {
+  /* line 18, ../scss/_navbar.scss */
+  .menu {
     justify-content: space-evenly;
     flex-direction: row;
   }
+}
 
-  /* line 51, ../scss/_navbar.scss */
-  .menu-item, .menu-item a {
+@media all and (min-width: 360px) {
+  /* line 34, ../scss/_navbar.scss */
+  .region-navbar .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 34, ../scss/_navbar.scss */
+  .region-navbar .menu {
+    justify-content: space-evenly;
+  }
+}
+
+/* line 46, ../scss/_navbar.scss */
+.menu-item {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  /* line 46, ../scss/_navbar.scss */
+  .menu-item {
     font-size: 25px;
   }
 }
+
+/* line 60, ../scss/_navbar.scss */
+.menu-item > a {
+  display: block;
+  color: #f1f1f1;
+  text-decoration: none;
+  border-radius: 1ch;
+}
+/* line 69, ../scss/_navbar.scss */
+.menu-item > a:hover {
+  background-color: #3c3c3c;
+}
+
+/* line 74, ../scss/_navbar.scss */
+.region-navbar .menu-item a {
+  padding: 0.5em 0.5ch;
+}
+@media all and (min-width: 800px) {
+  /* line 74, ../scss/_navbar.scss */
+  .region-navbar .menu-item a {
+    padding: 0.33333em 1ch;
+  }
+}
+
 /**
  * CONTENT
  *
@@ -343,39 +365,35 @@ ul.menu {
  * Content is things such as articles, books, interviews. Anything that fills most of the page.
  * For global styling see layout.css
  */
-/* line 10, ../scss/_content.scss */
+/* line 9, ../scss/_content.scss */
+a {
+  color: #1b6a83;
+}
+
+/* line 21, ../scss/_content.scss */
 .field--name-body {
   margin: 0;
 }
 
-/* line 14, ../scss/_content.scss */
-article {
-  display: flex;
-  flex-direction: column;
-}
-@media all and (min-width: 320px) {
-  /* line 14, ../scss/_content.scss */
-  article {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 3em);
-    max-width: 540px;
-  }
-}
-@media all and (min-width: 800px) {
-  /* line 14, ../scss/_content.scss */
-  article {
-    width: calc(100% - 4em);
-    max-width: 738px;
-  }
-}
-
-/* line 29, ../scss/_content.scss */
-article p {
-  flex-direction: column;
-}
-
-/* line 34, ../scss/_content.scss */
+/*article {
+    display: flex;
+    flex-direction: column;
+    // Global container widths at breakpoints
+    @media all and (min-width: 320px){
+        margin-left: auto; 
+        margin-right: auto;
+        width: calc(100% - 3em);
+        max-width: 540px;
+        }
+    @media all and (min-width: 800px){
+        width: calc(100% - 4em);
+        max-width: 738px;
+        }
+}*/
+/*article p {
+    flex-direction: column;
+}*/
+/* line 48, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -383,25 +401,26 @@ article p {
   max-width: 100vw;
 }
 
-/* line 43, ../scss/_content.scss */
+/* line 57, ../scss/_content.scss */
 .node__content {
   display: flex;
 }
 
 @media screen and (min-width: 320px) {
-  /* line 49, ../scss/_content.scss */
+  /* line 61, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 54, ../scss/_content.scss */
+  /* line 61, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
+
 @media screen and (min-width: 320px) {
-  /* line 59, ../scss/_content.scss */
+  /* line 73, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -411,86 +430,80 @@ article p {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 69, ../scss/_content.scss */
+  /* line 73, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
     margin-left: 15px;
   }
 }
+
+/* line 94, ../scss/_content.scss */
+.views-field-title {
+  display: block;
+  float: left;
+}
 @media all and (min-width: 320px) {
-  /* line 78, ../scss/_content.scss */
-  .view-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: calc(100% - 3em);
-    max-width: 540px;
+  /* line 94, ../scss/_content.scss */
+  .views-field-title {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 78, ../scss/_content.scss */
-  .view-content {
-    width: calc(100% - 4em);
-    max-width: 738px;
-  }
-}
-
-@media all and (min-width: 320px) {
-  /* line 92, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .views-field-title {
-    font-family: "Playfair Display", serif;
-    font-size: 21px;
+    font-size: 35px;
+    letter-spacing: .3px;
   }
 }
 
+/* line 110, ../scss/_content.scss */
+.field-content {
+  display: block;
+  float: left;
+}
+
+/* line 114, ../scss/_content.scss */
+.field--name-field-author {
+  display: block;
+  float: left;
+  width: 350px;
+}
+
 @media all and (min-width: 320px) {
-  /* line 98, ../scss/_content.scss */
+  /* line 120, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
+    float: left;
     font-style: italic;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 98, ../scss/_content.scss */
+  /* line 120, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 109, ../scss/_content.scss */
-.field {
+/* line 131, ../scss/_content.scss */
+.views-field-body {
   display: block;
-  float: none;
-  margin: 0;
+  float: left;
+  font-family: "PT Serif", serif;
+}
+@media all and (min-width: 320px) {
+  /* line 131, ../scss/_content.scss */
+  .views-field-body {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
-/* line 115, ../scss/_content.scss */
-.field--name-field-author {
-  width: 350px;
-}
-
-/* line 118, ../scss/_content.scss */
-.field-content {
-  display: block;
-  font-family: "PT+Serif", serif;
-}
-
-/* line 124, ../scss/_content.scss */
+/* line 143, ../scss/_content.scss */
 .field--name-boy {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* line 131, ../scss/_content.scss */
-.contact-message-form {
-  padding-left: 3em;
-  padding-right: 3em;
-}
-
-/* line 137, ../scss/_content.scss */
-.views-exposed-form {
-  padding-right: 3em;
-  padding-left: 3em;
 }
 
 /**

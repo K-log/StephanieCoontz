@@ -5,10 +5,23 @@
  * Here is where you put anything that effects all the blocks that hold the content.
  * Example: Global grid layout for the whole site.
  * DO NOT add CSS the only effects a specific page, region, or block.
+ *
+ * This is a Sass partial, should the filename have an underscore? -jkm
  */
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 
+* > * {
+	box-sizing: inherit;
+}
 
+body {
+	background-color: $turquoise-light;
+}
 
 .global-container {
     display: flex;
@@ -16,17 +29,18 @@
     justify-content: center;
     align-content: center;
 
-    border-left: 2px solid $dark-grey;
-    border-right: 2px solid $dark-grey;
+    border-left: 2px solid $turquoise;
+    border-right: 2px solid $turquoise;
 
     //Gobal container widths at breakpoints
-    @media all and (min-width: 320px){
-        margin-left: auto; 
+    @media all and (min-width: 320px) {
+        margin-left: auto;
         margin-right: auto;
         max-width: 540px;
-    }
-    @media all and (min-width: 800px) 
-    {
+    }  // Separate media queries with a blank line for better readability. -jkm
+    @media all and (min-width: 800px) {
+	    margin-left: auto;
+        margin-right: auto;
         width: calc(100% - 10em);
         max-width: 738px;
     }
@@ -38,97 +52,53 @@
     flex: 1 100%;
 }
 
-.region-header {
-    background-color: $dark-grey;
-    max-width: 100vw;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.region-content {
+	background-color: white;
 }
 
+.content-content {
+	margin: 0 2ch;
 
-.region-navbar{ 
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-
-    background-color: #a3a3a3;
-    border-bottom: 2px solid $dark-grey;
-
-    max-width: 100%;
+	@media all and (min-width: 800px) {
+		margin: 0 4ch;
+	}
 }
-
-.region-content{ 
-    background-color: $offwhite;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column;
-
-    // max-width: 100vw;
-    // h1 {
-    //     text-align: center;
-    //     color: #000000;
-    //}
-}
-
 
 .region-footer {
-    background-color: $dark-grey;
+	background-color: $dark-grey;
 }
 
-
-@media all and (min-width: 360px) {
-    .region-navbar { 
-        .menu{
-            justify-content: space-around;
-            flex-flow: row; 
-            .menu-item{
-                a {          
-                    padding: 0.5rem 2rem;
-                 }
-            }
-        } 
-    }
-}
+// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 @media all and (min-width: 800px) {
-    .global-container { 
-        margin-left: 7%; 
-        margin-right: 7%;  
+    .region-content {
+        order: 1;
     }
-    .region-navbar { 
-        .menu { 
-            justify-content: space-around; 
-            flex-flow: row; 
-        } 
-    }
-    .region-content { 
-        flex: 3 0px; 
-        min-height: 90vh; 
-    }
-    .region-content { 
-        order: 1; 
-    }
-    .region-footer { 
-        order: 2; 
+
+    .region-footer {
+        order: 2;
     }
 }
 
+.views-row {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.views-field-title {
+    justify-content: flex-start;
+    align-content: space-evenly;
+    margin-top: 1em;
+}
+
+// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
+// Also, if you're going to do this kind of nesting (which you shouldn't), you need to put spaces between selectors for better readability. -jkm
+/* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-    .global-container { 
-        margin-left: 15%; 
-        margin-right: 15%;  
-    }
-    .region-navbar {
-        .menu {
-            justify-content: space-around;
-            flex-flow: row;
-            .menu-item {
-                a {
-                    padding: 0.6rem 4rem;
-                }
-            }
-        }
+    .global-container {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
