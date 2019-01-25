@@ -7,6 +7,10 @@
  */
 
 
+.region-navbar{ 
+    background-color: #a3a3a3;  // Magic number. Where does this come from? Is this in the _colors partial? -jkm
+    border-bottom: 2px solid $dark-grey;
+}
 
 ul.menu {
     display: flex;
