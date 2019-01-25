@@ -55,7 +55,7 @@ h1 {
   }
 }
 
-/* line 57, ../scss/_fonts.scss */
+/* line 58, ../scss/_fonts.scss */
 h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -64,29 +64,29 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 65, ../scss/_fonts.scss */
+/* line 67, ../scss/_fonts.scss */
 h2, h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 65, ../scss/_fonts.scss */
+  /* line 67, ../scss/_fonts.scss */
   h2, h2 a {
     font-size: 45px;
   }
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 77, ../scss/_fonts.scss */
 h3, h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 79, ../scss/_fonts.scss */
+/* line 83, ../scss/_fonts.scss */
 h4, h4 a {
   font-size: 17px;
 }
 
-/* line 83, ../scss/_fonts.scss */
+/* line 88, ../scss/_fonts.scss */
 li a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
@@ -110,6 +110,18 @@ li a {
  * This is a Sass partial, should the filename have an underscore? -jkm
  */
 /* line 12, ../scss/layout.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 18, ../scss/layout.scss */
+* > * {
+  box-sizing: inherit;
+}
+
+/* line 22, ../scss/layout.scss */
 .global-container {
   display: flex;
   flex-flow: row wrap;
@@ -119,7 +131,7 @@ li a {
   border-right: 2px solid #3c3c3c;
 }
 @media all and (min-width: 320px) {
-  /* line 12, ../scss/layout.scss */
+  /* line 22, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -127,7 +139,7 @@ li a {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 12, ../scss/layout.scss */
+  /* line 22, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -136,14 +148,14 @@ li a {
   }
 }
 
-/* line 36, ../scss/layout.scss */
+/* line 46, ../scss/layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 42, ../scss/layout.scss */
+/* line 52, ../scss/layout.scss */
 .region-header {
   background-color: #3c3c3c;
   max-width: 100vw;
@@ -152,17 +164,7 @@ li a {
   text-align: center;
 }
 
-/* line 51, ../scss/layout.scss */
-.region-navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  background-color: #a3a3a3;
-  border-bottom: 2px solid #3c3c3c;
-  max-width: 100%;
-}
-
-/* line 62, ../scss/layout.scss */
+/* line 60, ../scss/layout.scss */
 .region-content {
   background-color: #f1f1f1;
   display: flex;
@@ -171,68 +173,34 @@ li a {
   flex-flow: column;
 }
 
-/* line 70, ../scss/layout.scss */
+/* line 68, ../scss/layout.scss */
 .content-content {
   margin: 0 4ch;
 }
 
-/* line 74, ../scss/layout.scss */
+/* line 72, ../scss/layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
 
-/* --- Fix nested nav and put it in the nav css --- */
-@media all and (min-width: 360px) {
-  /* line 79, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-around;
-  }
-}
 @media all and (min-width: 800px) {
-  /* line 79, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-around;
-    flex-flow: row;
-  }
-}
-@media all and (min-width: 1200px) {
-  /* line 79, ../scss/layout.scss */
-  .region-navbar .menu {
-    justify-content: space-evenly;
-  }
-}
-
-@media all and (min-width: 360px) {
-  /* line 95, ../scss/layout.scss */
-  .region-navbar .menu-item a {
-    padding: 0.5rem 2rem;
-  }
-}
-@media all and (min-width: 1200px) {
-  /* line 95, ../scss/layout.scss */
-  .region-navbar .menu-item a {
-    padding: 0.6rem 4rem;
-  }
-}
-
-@media all and (min-width: 800px) {
-  /* line 108, ../scss/layout.scss */
+  /* line 78, ../scss/layout.scss */
   .region-content {
     flex: 3 0px;
     min-height: 90vh;
   }
 
-  /* line 112, ../scss/layout.scss */
+  /* line 82, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
 
-  /* line 115, ../scss/layout.scss */
+  /* line 85, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
-/* line 120, ../scss/layout.scss */
+/* line 90, ../scss/layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -240,7 +208,7 @@ li a {
   margin-bottom: .5em;
 }
 
-/* line 127, ../scss/layout.scss */
+/* line 97, ../scss/layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -249,7 +217,7 @@ li a {
 
 /* --- Correct, there is code that is being repeted --- */
 @media all and (min-width: 1200px) {
-  /* line 137, ../scss/layout.scss */
+  /* line 107, ../scss/layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -304,51 +272,79 @@ li a {
  *
  * For global styling see layout.css
  */
-/* line 11, ../scss/_navbar.scss */
-ul.menu {
+/* line 9, ../scss/_navbar.scss */
+.system-main-menu {
+  width: 100%;
+}
+
+/* line 13, ../scss/_navbar.scss */
+.region-navbar {
+  background-color: #a3a3a3;
+  border-bottom: 2px solid #3c3c3c;
+}
+
+/* line 18, ../scss/_navbar.scss */
+.menu {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   margin: 5px 0;
   padding: 0;
-}
-
-/* line 20, ../scss/_navbar.scss */
-.menu-item, .menu-item a {
-  justify-content: center;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none;
-  color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 33, ../scss/_navbar.scss */
-.menu-item a {
-  display: block;
-}
-
-@media screen and (max-width: 599px) {
-  /* line 38, ../scss/_navbar.scss */
-  .menu-item:hover {
-    background-color: #3c3c3c;
-    width: 85vw;
-  }
+  list-style-type: none;
 }
 @media screen and (min-width: 600px) {
-  /* line 47, ../scss/_navbar.scss */
-  ul.menu {
+  /* line 18, ../scss/_navbar.scss */
+  .menu {
     justify-content: space-evenly;
     flex-direction: row;
   }
+}
 
-  /* line 51, ../scss/_navbar.scss */
-  .menu-item, .menu-item a {
+@media all and (min-width: 360px) {
+  /* line 34, ../scss/_navbar.scss */
+  .region-navbar .menu {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 34, ../scss/_navbar.scss */
+  .region-navbar .menu {
+    justify-content: space-evenly;
+  }
+}
+
+/* line 46, ../scss/_navbar.scss */
+.menu-item {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  /* line 46, ../scss/_navbar.scss */
+  .menu-item {
     font-size: 25px;
   }
 }
+
+/* line 60, ../scss/_navbar.scss */
+.menu-item > a {
+  display: block;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+/* line 67, ../scss/_navbar.scss */
+.menu-item > a:hover {
+  background-color: #3c3c3c;
+}
+
+/* line 72, ../scss/_navbar.scss */
+.region-navbar .menu-item a {
+  padding: 0.5em 0.5ch;
+}
+
 /**
  * CONTENT
  *
