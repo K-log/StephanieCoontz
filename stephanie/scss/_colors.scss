@@ -9,6 +9,8 @@ $light-white: #edeae0;
 
 // Border covers
 $turquoise: #289ec4;
+$turquoise-light: mix(white, $turquoise, 85%);
+$turquoise-dark: mix(black, $turquoise, 33%);
 
 // Header, Footer, Content Text color
 $dark-grey: #3c3c3c;
