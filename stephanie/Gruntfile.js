@@ -63,9 +63,9 @@ module.exports = function(grunt) {
 		 */
 		sasslint: {
 			options: {
-				configFile: 'css/config/.sass-lint.yml',
+				configFile: 'scss/config/.sass-lint.yml',
 				formatter: 'html',
-				outputFile: 'css/config/report.html',
+				outputFile: 'scss/config/report.html',
 			},
 			target: ['scss/*.scss', 'css/smacss/**/*.scss', 'css/custom-css/**/*.scss'],
     },
