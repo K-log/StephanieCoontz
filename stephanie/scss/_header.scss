@@ -31,7 +31,7 @@
 
 .site-name {
 
-    @media screen and (min-width: 1385px) {
+    @media all and (min-width: 1385px) {
         font-size: 55px;
     }
 }
@@ -40,7 +40,7 @@
 	text-decoration: none;
 }
 
-@media screen and (min-width: 1385px) {
+@media all and (min-width: 1385px) {
     .site-logo {
         flex-direction: row;
     }
