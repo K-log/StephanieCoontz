@@ -37,10 +37,10 @@ body {
         margin-left: auto;
         margin-right: auto;
         max-width: 540px;
-    }  // Separate media queries with a blank line for better readability. -jkm
+    }
+     // Separate media queries with a blank line for better readability. -jkm
+     // Removed unneeded min-width: 1200px, and repetative margin-left and right, because they were repeating. - FEV
     @media all and (min-width: 800px) {
-	    margin-left: auto;
-        margin-right: auto;
         width: calc(100% - 10em);
         max-width: 738px;
     }
@@ -53,7 +53,11 @@ body {
 }
 
 .region-content {
-	background-color: white;
+    background-color: white;
+
+    @media all and (min-width: 800px) {
+        order: 1;
+    }
 }
 
 .content-content {
@@ -65,19 +69,15 @@ body {
 }
 
 .region-footer {
-	background-color: $dark-grey;
-}
+    background-color: $dark-grey;
 
-// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
-@media all and (min-width: 800px) {
-    .region-content {
-        order: 1;
-    }
-
-    .region-footer {
+    @media all and (min-width: 800px) {
         order: 2;
     }
 }
+
+// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
+// Removed, and consolidated under appropriate selectors. - FEV
 
 .views-row {
     display: flex;
@@ -96,9 +96,5 @@ body {
 // Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
 // Also, if you're going to do this kind of nesting (which you shouldn't), you need to put spaces between selectors for better readability. -jkm
 /* --- Correct, there is code that is being repeted --- */
-@media all and (min-width: 1200px) {
-    .global-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
+/* Consolidated code into corect selectors --FEV */
