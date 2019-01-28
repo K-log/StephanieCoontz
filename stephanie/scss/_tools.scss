@@ -8,3 +8,17 @@
 
 // I thought your colors were here. -jkm
 // Fonts should be here, too. - jkm
+
+//Fonts and colors were moved in on 28 Jan, 2019
+@import "colors";
+@import "fonts";
+
+// Import fonts from Google Fonts
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
+
+// Is this font imported twice? -jkm
+// This font is imported as needed. This is the italic font for PT Serif. By importing
+// as needed, I hope that this will keep the loading time down for these fonts. -- FEV 
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
+
+

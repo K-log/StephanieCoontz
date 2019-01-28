@@ -44,7 +44,7 @@
 }
 
 .menu-item {
-		// box model
+	    // box model
     margin: 0;
     padding: 0;
     // typography
@@ -61,6 +61,7 @@
 		// layout
     display: block;
     // typography
+    font-family: $display;
     color: $offwhite;
     text-decoration: none;
     // decoration

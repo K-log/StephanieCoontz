@@ -1,7 +1,10 @@
-@import "colors";
-@import "fonts";
+/* Tools file host import of the colors and fonts styles for the page. */
+// - FEV
 @import "tools";
 // This is a Sass partial, should the filename have an underscore? -jkm
+//
+// When I initially placed the files with the underscores it would not be read properlly.
+// If there it does need it, I will make changes. - FEV
 @import "layout";
 @import "header";
 @import "navbar";
