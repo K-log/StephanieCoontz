@@ -88,14 +88,14 @@ article h2 {
         display: block;
         float: none;
         justify-content: center;
-    
+
         width: 230px;
         margin: 0 auto;
     }
 
     @media screen and (min-width: 700px) {
         float: right;
-    
+
         width: 220px;
         margin-left: 15px;
     }
@@ -107,12 +107,12 @@ article h2 {
     float: left;
 
     @media all and (min-width: 320px) {
-      font-family: $display;
-      font-size: 26px;
+        font-family: $display;
+        font-size: 26px;
     }
 
     @media all and (min-width: 800px) {
-      font-size: 35px;
+        font-size: 35px;
     }
 }
 

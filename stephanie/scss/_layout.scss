@@ -37,7 +37,7 @@ body {
         margin-right: auto;
         max-width: 540px;
     }
-    
+
     @media all and (min-width: 800px) {
         width: calc(100% - 10em);
         max-width: 738px;
@@ -59,11 +59,11 @@ body {
 }
 
 .content-content {
-  margin: 0 2ch;
+    margin: 0 2ch;
 
-  @media all and (min-width: 800px) {
-    margin: 0 4ch;
-  }
+    @media all and (min-width: 800px) {
+        margin: 0 4ch;
+    }
 }
 
 .region-footer {

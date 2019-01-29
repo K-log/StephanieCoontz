@@ -7,7 +7,7 @@
  */
 
 .system-main-menu {
-	width: 100%;
+    width: 100%;
 }
 
 .region-navbar {
@@ -33,18 +33,18 @@
 
 .region-navbar .menu {
 
-	@media all and (min-width: 360px) {
-		flex-direction: row;
-    justify-content: space-around;
-	}
+    @media all and (min-width: 360px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-	@media all and (min-width: 800px) {
-		justify-content: space-evenly;
-	}
+    @media all and (min-width: 800px) {
+        justify-content: space-evenly;
+    }
 }
 
 .menu-item {
-	  // box model
+    // box model
     margin: 0;
     padding: 0;
     // typography
@@ -58,7 +58,7 @@
 }
 
 .menu-item > a {
-		// layout
+    // layout
     display: block;
     // typography
     font-family: $display;
@@ -68,14 +68,15 @@
     border-radius: 1ch;
 
     &:hover {
+        // Where does this color come from? Is it in the colors file?
         background-color: #3c3c3c;
     }
 }
 
 .region-navbar .menu-item a {
-	padding: 0.5em 0.5ch;
+    padding: 0.5em 0.5ch;
 
-	@media all and (min-width: 800px) {
-		padding: 0.33333em 1ch;
-	}
+    @media all and (min-width: 800px) {
+        padding: 0.33333em 1ch;
+    }
 }
