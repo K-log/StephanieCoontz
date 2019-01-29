@@ -32,9 +32,9 @@ rules:
     -
       style: lowercase
   indentation:
-    - 1
+    - 2
     -
-      size: tab
+      size: 4
   leading-zero:
     - 2
     -

@@ -7,16 +7,16 @@
  */
 
 a {
-	color: $turquoise-dark;
-	text-decoration-skip: ink;
+    color: $turquoise-dark;
+    text-decoration-skip: ink;
 
-	/*&:hover {
+    /*&:hover {
 
-	}
+    }
 
-	&:active {
+    &:active {
 
-	}*/
+    }*/
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -57,39 +57,48 @@ just the main articles on the website. I've simplified your layout styles, so th
 }*/
 
 article h2 {
-    // It's pretty dangerous to scope this so generally unless it's what you really want.
-    // Article elements could show up in places that aren't just the main articles on the website. 
-    // Consider scoping it to a class name instead. -jkm
-    // Should there be a default style for screens smaller than 320px? -jkm
-    // Are screens smaller than 320px going to access the site? --FEV
+    /**
+     * It's pretty dangerous to scope this so generally unless it's what you really want.
+     * Article elements could show up in places that aren't just the main articles on the website. 
+     * Consider scoping it to a class name instead. -jkm
+     * Should there be a default style for screens smaller than 320px? -jkm
+     * Are screens smaller than 320px going to access the site? --FEV
+     *
+     * On the web, it's not up to you to dictate what screen size people
+     * use, and there is at least one reason beyond physical screen size
+     * why someone might get a layout for a smaller breakpoint. Generally,
+     * if it doesn't need to be explicitly declared to work some way at a
+     * minimum of 320px, you should just remove the breakpoint and set its
+     * contents as the default. -jkm
+     */
 
-	@media screen and (min-width: 320px) {
-    text-align: center;
-	}
+    @media screen and (min-width: 320px) {
+        text-align: center;
+    }
 
-	@media screen and (min-width: 760px) {
-    text-align: left;
-	}
+    @media screen and (min-width: 760px) {
+        text-align: left;
+    }
 }
 
 .align-right {
-	// What happens to these elements below 320px? -jkm
+    // What happens to these elements below 320px? -jkm
 
-	@media screen and (min-width: 320px) {
-    display: block;
-    float: none;
-    justify-content: center;
+    @media screen and (min-width: 320px) {
+        display: block;
+        float: none;
+        justify-content: center;
 
-    width: 230px;
-    margin: 0 auto;
-  }
+        width: 230px;
+        margin: 0 auto;
+    }
 
-	@media screen and (min-width: 700px) {
-    float: right;
+    @media screen and (min-width: 700px) {
+        float: right;
 
-    width: 220px;
-    margin-left: 15px;
-	}
+        width: 220px;
+        margin-left: 15px;
+    }
 }
 
 // Article headings on list page
@@ -98,14 +107,12 @@ article h2 {
     float: left;
 
     @media all and (min-width: 320px) {
-      font-family: $display;
-      font-size: 26px;
+        font-family: $display;
+        font-size: 26px;
     }
 
     @media all and (min-width: 800px) {
-      font-size: 35px;
-    // Don't use letter-spacing unless they're strings of all caps. -jkm
-    // Removed letter-space from code. --FEV
+        font-size: 35px;
     }
 }
 
@@ -116,11 +123,10 @@ article h2 {
 }
 
 /*.field--name-field-author {
-
+    We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 
 .views-field-field-publication {
-	// Separate media queries with a space so that they're easier to scan. -jkm
     @media all and (min-width: 320px) {
         display: block;
         float: left;
@@ -145,8 +151,7 @@ article h2 {
 
 // Article content
 .field--name-body {
-    // Is this supposed to be .field--name-body? Either way, you probably don't need these properties. -jkm
-    // Thank you for the text editing. --FEV
+    // Do you need these properties? -jkm
     margin-left: auto;
     margin-right: auto;
 }
