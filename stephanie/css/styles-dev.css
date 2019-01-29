@@ -1,3 +1,11 @@
+/* Tools file host import of the colors and fonts styles for the page. */
+/*
+** Breakpoints
+
+** Main breakpoints: 320px, 800px, 1385px
+** Breakpoints calc widths for Article: (min)320px - (max)540px, (min)800px - (max)738px.
+
+*/
 /**
  * Fonts
  *
@@ -5,10 +13,12 @@
  *
  * Using ratio Perfect 4th
  * Where is the link to the modular scale? -jkm
+ * Added link with to modular scale - FEV
+ * https://www.modularscale.com/?16,31&px&1.333
  */
-@import url("https://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
 /* Heading and body properties */
-@import url("https://fonts.googleapis.com/css?family=PT+Serif:400i");
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
 /* line 19, ../scss/_fonts.scss */
 body {
   font-family: "PT Serif", serif;
@@ -48,15 +58,22 @@ h1 {
   }
 }
 
-@media all and (min-width: 320px) {
-  /* line 48, ../scss/_fonts.scss */
-  .page-title {
-    color: #3c3c3c;
-  }
+/* line 48, ../scss/_fonts.scss */
+.page-title {
+  color: #3c3c3c;
 }
 
-/* line 58, ../scss/_fonts.scss */
-h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
+/* line 57, ../scss/_fonts.scss */
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
   line-height: 1.3;
@@ -64,41 +81,39 @@ h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
   font-style: italic;
 }
 
-/* line 67, ../scss/_fonts.scss */
-h2, h2 a {
+/* line 74, ../scss/_fonts.scss */
+h2,
+h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 67, ../scss/_fonts.scss */
-  h2, h2 a {
+  /* line 74, ../scss/_fonts.scss */
+  h2,
+  h2 a {
     font-size: 45px;
   }
 }
 
-/* line 77, ../scss/_fonts.scss */
-h3, h3 a {
+/* line 83, ../scss/_fonts.scss */
+h3,
+h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 83, ../scss/_fonts.scss */
-h4, h4 a {
+/* line 89, ../scss/_fonts.scss */
+h4,
+h4 a {
   font-size: 17px;
 }
 
-/* line 88, ../scss/_fonts.scss */
-li a {
-  font-family: "Playfair Display", serif;
+/* line 96, ../scss/_fonts.scss */
+li {
+  font-family: "PT Serif", serif;
   color: #3c3c3c;
+  font-style: italic;
 }
 
-/*
-** Breakpoints
-
-** Main breakpoints: 320px, 800px, 1385px
-** Breakpoints calc widths for Article: (min)320px - (max)540px, (min)800px - (max)738px.
-
-*/
 /**
  * LAYOUT
  *
@@ -146,65 +161,60 @@ body {
 @media all and (min-width: 800px) {
   /* line 26, ../scss/layout.scss */
   .global-container {
-    margin-left: auto;
-    margin-right: auto;
     width: calc(100% - 10em);
     max-width: 738px;
   }
 }
 
-/* line 50, ../scss/layout.scss */
+/* line 49, ../scss/layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 56, ../scss/layout.scss */
+/* line 55, ../scss/layout.scss */
 .region-content {
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-flow: column;
 }
-
-/* line 64, ../scss/layout.scss */
-.content-content {
-  margin: 0 4ch;
-}
-
-/* line 68, ../scss/layout.scss */
-.region-footer {
-  background-color: #3c3c3c;
-}
-
 @media all and (min-width: 800px) {
-  /* line 74, ../scss/layout.scss */
-  .region-content {
-    flex: 3 0px;
-    min-height: 90vh;
-  }
-
-  /* line 78, ../scss/layout.scss */
+  /* line 55, ../scss/layout.scss */
   .region-content {
     order: 1;
   }
+}
 
-  /* line 81, ../scss/layout.scss */
+/* line 63, ../scss/layout.scss */
+.content-content {
+  margin: 0 2ch;
+}
+@media all and (min-width: 800px) {
+  /* line 63, ../scss/layout.scss */
+  .content-content {
+    margin: 0 4ch;
+  }
+}
+
+/* line 71, ../scss/layout.scss */
+.region-footer {
+  background-color: #3c3c3c;
+}
+@media all and (min-width: 800px) {
+  /* line 71, ../scss/layout.scss */
   .region-footer {
     order: 2;
   }
 }
-/* line 86, ../scss/layout.scss */
+
+/* line 82, ../scss/layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
   margin-top: 1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-/* line 93, ../scss/layout.scss */
+/* line 90, ../scss/layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -212,13 +222,7 @@ body {
 }
 
 /* --- Correct, there is code that is being repeted --- */
-@media all and (min-width: 1200px) {
-  /* line 103, ../scss/layout.scss */
-  .global-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
+/* Consolidated code into corect selectors --FEV */
 /**
  * HEADER
  *
@@ -247,7 +251,7 @@ body {
   max-width: 100%;
 }
 
-@media screen and (min-width: 1385px) {
+@media all and (min-width: 1385px) {
   /* line 32, ../scss/_header.scss */
   .site-name {
     font-size: 55px;
@@ -259,7 +263,7 @@ body {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1385px) {
+@media all and (min-width: 1385px) {
   /* line 44, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
@@ -295,7 +299,7 @@ body {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 5px 0;
+  margin: 5px 1em;
   padding: 0;
   list-style-type: none;
 }
@@ -338,21 +342,22 @@ body {
 /* line 60, ../scss/_navbar.scss */
 .menu-item > a {
   display: block;
+  font-family: "Playfair Display", serif;
   color: #f1f1f1;
   text-decoration: none;
   border-radius: 1ch;
 }
-/* line 69, ../scss/_navbar.scss */
+/* line 70, ../scss/_navbar.scss */
 .menu-item > a:hover {
   background-color: #3c3c3c;
 }
 
-/* line 74, ../scss/_navbar.scss */
+/* line 75, ../scss/_navbar.scss */
 .region-navbar .menu-item a {
   padding: 0.5em 0.5ch;
 }
 @media all and (min-width: 800px) {
-  /* line 74, ../scss/_navbar.scss */
+  /* line 75, ../scss/_navbar.scss */
   .region-navbar .menu-item a {
     padding: 0.33333em 1ch;
   }
@@ -368,13 +373,18 @@ body {
 /* line 9, ../scss/_content.scss */
 a {
   color: #1b6a83;
+  text-decoration-skip: ink;
+  	/*&:hover {
+  
+  	}
+  
+  	&:active {
+  
+  	}*/
 }
 
-/* line 21, ../scss/_content.scss */
-.field--name-body {
-  margin: 0;
-}
-
+/* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
+just the main articles on the website. I've simplified your layout styles, so these can all be deleted -jkm */
 /*article {
     display: flex;
     flex-direction: column;
@@ -393,7 +403,7 @@ a {
 /*article p {
     flex-direction: column;
 }*/
-/* line 48, ../scss/_content.scss */
+/* line 46, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -401,26 +411,24 @@ a {
   max-width: 100vw;
 }
 
-/* line 57, ../scss/_content.scss */
-.node__content {
-  display: flex;
-}
-
+/*.node__content {
+    display: flex;
+}*/
 @media screen and (min-width: 320px) {
-  /* line 61, ../scss/_content.scss */
+  /* line 59, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 61, ../scss/_content.scss */
+  /* line 59, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 73, ../scss/_content.scss */
+  /* line 75, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -430,7 +438,7 @@ a {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 73, ../scss/_content.scss */
+  /* line 75, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -438,41 +446,36 @@ a {
   }
 }
 
-/* line 94, ../scss/_content.scss */
+/* line 96, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 94, ../scss/_content.scss */
+  /* line 96, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 94, ../scss/_content.scss */
+  /* line 96, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
-    letter-spacing: .3px;
   }
 }
 
-/* line 110, ../scss/_content.scss */
+/* line 113, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
 }
 
-/* line 114, ../scss/_content.scss */
-.field--name-field-author {
-  display: block;
-  float: left;
-  width: 350px;
-}
+/*.field--name-field-author {
 
+}*/
 @media all and (min-width: 320px) {
-  /* line 120, ../scss/_content.scss */
+  /* line 122, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -480,28 +483,28 @@ a {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 120, ../scss/_content.scss */
+  /* line 122, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 131, ../scss/_content.scss */
+/* line 135, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 131, ../scss/_content.scss */
+  /* line 135, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 143, ../scss/_content.scss */
-.field--name-boy {
+/* line 147, ../scss/_content.scss */
+.field--name-body {
   margin-left: auto;
   margin-right: auto;
 }
