@@ -67,7 +67,9 @@ body {
 }
 
 .region-footer {
-    background-color: $dark-grey;
+    background-color: $turquoise-dark;
+
+    height: 6em;
 
     @media all and (min-width: 800px) {
         order: 2;

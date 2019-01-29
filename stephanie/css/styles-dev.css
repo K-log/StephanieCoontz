@@ -250,7 +250,8 @@ body {
 
 /* line 69, ../scss/_layout.scss */
 .region-footer {
-  background-color: #3c3c3c;
+  background-color: #1b6a83;
+  height: 6em;
 }
 @media all and (min-width: 800px) {
   /* line 69, ../scss/_layout.scss */
@@ -259,7 +260,7 @@ body {
   }
 }
 
-/* line 77, ../scss/_layout.scss */
+/* line 79, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -267,7 +268,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 85, ../scss/_layout.scss */
+/* line 87, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -581,7 +582,3 @@ article h2 {
  *
  * For global styling see layout.css
  */
-/* line 9, ../scss/_footer.scss */
-.system-main-menu {
-  color: #f1f1f1;
-}
