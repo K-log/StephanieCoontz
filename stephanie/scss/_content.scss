@@ -7,16 +7,16 @@
  */
 
 a {
-	color: $turquoise-dark;
-	text-decoration-skip: ink;
+    color: $turquoise-dark;
+    text-decoration-skip: ink;
 
-	/*&:hover {
+    /*&:hover {
 
-	}
+    }
 
-	&:active {
+    &:active {
 
-	}*/
+    }*/
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -63,33 +63,33 @@ article h2 {
     // Should there be a default style for screens smaller than 320px? -jkm
     // Are screens smaller than 320px going to access the site? --FEV
 
-	@media screen and (min-width: 320px) {
-    text-align: center;
-	}
+    @media screen and (min-width: 320px) {
+        text-align: center;
+    }
 
-	@media screen and (min-width: 760px) {
-    text-align: left;
-	}
+    @media screen and (min-width: 760px) {
+        text-align: left;
+    }
 }
 
 .align-right {
-	// What happens to these elements below 320px? -jkm
+    // What happens to these elements below 320px? -jkm
 
-	@media screen and (min-width: 320px) {
-    display: block;
-    float: none;
-    justify-content: center;
+    @media screen and (min-width: 320px) {
+        display: block;
+        float: none;
+        justify-content: center;
+    
+        width: 230px;
+        margin: 0 auto;
+    }
 
-    width: 230px;
-    margin: 0 auto;
-  }
-
-	@media screen and (min-width: 700px) {
-    float: right;
-
-    width: 220px;
-    margin-left: 15px;
-	}
+    @media screen and (min-width: 700px) {
+        float: right;
+    
+        width: 220px;
+        margin-left: 15px;
+    }
 }
 
 // Article headings on list page
@@ -104,8 +104,6 @@ article h2 {
 
     @media all and (min-width: 800px) {
       font-size: 35px;
-    // Don't use letter-spacing unless they're strings of all caps. -jkm
-    // Removed letter-space from code. --FEV
     }
 }
 
@@ -120,7 +118,6 @@ article h2 {
 }*/
 
 .views-field-field-publication {
-	// Separate media queries with a space so that they're easier to scan. -jkm
     @media all and (min-width: 320px) {
         display: block;
         float: left;
