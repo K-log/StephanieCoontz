@@ -9,25 +9,12 @@
  */
 
 .region-header {
-    background-color: $turquoise;
-    max-width: 100vw;
+    background-color: $offwhite;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
-// Is this really header-specific? Does this belong in this partial? -jkm
-.align-center {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    margin: 0;
-    padding: 0;
-
-    max-width: 100%;
-}
-
 
 .site-name {
 
@@ -49,4 +36,10 @@
         flex-flow: row;
         align-items: center;
     }
+}
+
+/* Header logo */
+.site-logo img {
+    height: auto;
+    max-width: 100%;
 }

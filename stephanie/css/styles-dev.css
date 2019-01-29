@@ -1,4 +1,4 @@
-/* Tools file host import of the colors and fonts styles for the page. */
+@charset "UTF-8";
 /*
 ** Breakpoints
 
@@ -7,32 +7,64 @@
 
 */
 /**
+ * Colors
+ *
+ * All website colors should be stored here as constamts and may be freely
+ * used in other files.
+ * 
+ * Note: Use use a variable name that matches the color. (Example: #ffffff
+ * would be $white.)
+ */
+/**
+ * Fonts for headers and text
+ *
+ * I’m guessing the reason this had an error is you were calling the
+ * $constants in your fonts import before you had set them. Putting them in
+ * this order makes it work perfectly. -jkm
+ */
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
+/**
+ * Is this font imported twice? -jkm
+ *
+ * This font is imported as needed. This is the italic font for PT Serif. By importing
+ * as needed, I hope that this will keep the loading time down for these fonts. -- FEV
+ *
+ * CSS unfortunately isn't that sophisticated, and will download everything
+ * as it comes to it, whether it's present on the page or not, so it's just
+ * something we have to deal with. Feel free to delete this comment. -jkm
+ */
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
+/**
+ * This is a minor semantic thing, but since "fonts" is no longer dealing
+ * with downloading and declaring fonts, you ought to rename the file to
+ * "typography", because it's about typographic style of your headings.
+ * (You can put other typographic styles in it, too.) -jkm
+ */
+/**
  * Fonts
  *
- * Fonts used by Stephanie Coontz site
- *
- * Using ratio Perfect 4th
- * Where is the link to the modular scale? -jkm
- * Added link with to modular scale - FEV
+ * Fonts on this website follow a modular scale.
+ * Mobile font size: 16px
+ * Desktop font size: 21px
+ * --Where does the 31px number come from? -jkm
+ * Size ratio: 1.333 (perfect 4th)
  * https://www.modularscale.com/?16,31&px&1.333
  */
 /* Heading and body properties */
-@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
-@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
-/* line 19, ../scss/_fonts.scss */
+/* line 14, ../scss/_fonts.scss */
 body {
   font-family: "PT Serif", serif;
   color: #3c3c3c;
   line-height: 1.4;
 }
 @media screen and (min-width: 800px) {
-  /* line 19, ../scss/_fonts.scss */
+  /* line 14, ../scss/_fonts.scss */
   body {
     font-size: 21px;
   }
 }
 
-/* line 29, ../scss/_fonts.scss */
+/* line 24, ../scss/_fonts.scss */
 h1 {
   font-family: "Playfair Display", serif;
   color: #f1f1f1;
@@ -40,30 +72,30 @@ h1 {
   font-weight: 700;
 }
 @media screen and (min-width: 320px) {
-  /* line 29, ../scss/_fonts.scss */
+  /* line 24, ../scss/_fonts.scss */
   h1 {
     font-size: 32px;
   }
 }
 @media screen and (min-width: 800px) {
-  /* line 29, ../scss/_fonts.scss */
+  /* line 24, ../scss/_fonts.scss */
   h1 {
     font-size: 44.422px;
   }
 }
 @media screen and (min-width: 1385px) {
-  /* line 29, ../scss/_fonts.scss */
+  /* line 24, ../scss/_fonts.scss */
   h1 {
     font-size: 56.832px;
   }
 }
 
-/* line 48, ../scss/_fonts.scss */
+/* line 43, ../scss/_fonts.scss */
 .page-title {
   color: #3c3c3c;
 }
 
-/* line 57, ../scss/_fonts.scss */
+/* line 48, ../scss/_fonts.scss */
 h2,
 h2 a,
 h3,
@@ -81,33 +113,46 @@ h6 a {
   font-style: italic;
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 65, ../scss/_fonts.scss */
 h2,
 h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 74, ../scss/_fonts.scss */
+  /* line 65, ../scss/_fonts.scss */
   h2,
   h2 a {
     font-size: 45px;
   }
 }
 
-/* line 83, ../scss/_fonts.scss */
+/* line 74, ../scss/_fonts.scss */
 h3,
 h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 89, ../scss/_fonts.scss */
+/* line 80, ../scss/_fonts.scss */
 h4,
 h4 a {
   font-size: 17px;
 }
 
-/* line 96, ../scss/_fonts.scss */
+/**
+ * Do you REALLY want to change the font for every link inside a list? -jkm
+ *
+ * I made changes to the list style. I changed font to text/italic. --FEV
+ *
+ * I don't think this is a good idea, either. List items could be a generic
+ * bulleted or numbered list. Unless you have a VERY compelling reason to
+ * make ALL lists italic, you should tread lightly here. If your navbar
+ * menu needs to be italic, declare that there. Also, your li will inherit
+ * its $text font-family from the body, so you don't need to declare it
+ * here, and it will be harder to track down when the inevitable bug crops
+ * up. -jkm
+ */
+/* line 98, ../scss/_fonts.scss */
 li {
   font-family: "PT Serif", serif;
   color: #3c3c3c;
@@ -115,33 +160,41 @@ li {
 }
 
 /**
+ * "Layout" is a Sass partial, should the filename have an underscore? -jkm
+ *
+ * When I initially placed the files with the underscores it would not be read properlly.
+ * If there it does need it, I will make changes. - FEV
+ *
+ * For whatever reason, I got this to work now. Maybe a typo? You can
+ * delete this comment. -jkm
+ */
+/**
  * LAYOUT
  *
- * This is the global styling for the whole site.
- * Here is where you put anything that effects all the blocks that hold the content.
- * Example: Global grid layout for the whole site.
- * DO NOT add CSS the only effects a specific page, region, or block.
+ * This file contains the style for the site's layout structure. Here is
+ * where you put anything that effects all the blocks that hold the content.
  *
- * This is a Sass partial, should the filename have an underscore? -jkm
+ * Example: Global grid layout for the whole site.
+ * DO NOT add CSS that only affects a specific page, region, or block.
  */
-/* line 12, ../scss/layout.scss */
+/* line 11, ../scss/_layout.scss */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* line 18, ../scss/layout.scss */
+/* line 17, ../scss/_layout.scss */
 * > * {
   box-sizing: inherit;
 }
 
-/* line 22, ../scss/layout.scss */
+/* line 21, ../scss/_layout.scss */
 body {
   background-color: #dff0f6;
 }
 
-/* line 26, ../scss/layout.scss */
+/* line 25, ../scss/_layout.scss */
 .global-container {
   display: flex;
   flex-flow: row wrap;
@@ -151,7 +204,7 @@ body {
   border-right: 2px solid #289ec4;
 }
 @media all and (min-width: 320px) {
-  /* line 26, ../scss/layout.scss */
+  /* line 25, ../scss/_layout.scss */
   .global-container {
     margin-left: auto;
     margin-right: auto;
@@ -159,54 +212,54 @@ body {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 26, ../scss/layout.scss */
+  /* line 25, ../scss/_layout.scss */
   .global-container {
     width: calc(100% - 10em);
     max-width: 738px;
   }
 }
 
-/* line 49, ../scss/layout.scss */
+/* line 47, ../scss/_layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
   flex: 1 100%;
 }
 
-/* line 55, ../scss/layout.scss */
+/* line 53, ../scss/_layout.scss */
 .region-content {
   background-color: white;
 }
 @media all and (min-width: 800px) {
-  /* line 55, ../scss/layout.scss */
+  /* line 53, ../scss/_layout.scss */
   .region-content {
     order: 1;
   }
 }
 
-/* line 63, ../scss/layout.scss */
+/* line 61, ../scss/_layout.scss */
 .content-content {
   margin: 0 2ch;
 }
 @media all and (min-width: 800px) {
-  /* line 63, ../scss/layout.scss */
+  /* line 61, ../scss/_layout.scss */
   .content-content {
     margin: 0 4ch;
   }
 }
 
-/* line 71, ../scss/layout.scss */
+/* line 69, ../scss/_layout.scss */
 .region-footer {
   background-color: #3c3c3c;
 }
 @media all and (min-width: 800px) {
-  /* line 71, ../scss/layout.scss */
+  /* line 69, ../scss/_layout.scss */
   .region-footer {
     order: 2;
   }
 }
 
-/* line 82, ../scss/layout.scss */
+/* line 77, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -214,15 +267,13 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 90, ../scss/layout.scss */
+/* line 85, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
   margin-top: 1em;
 }
 
-/* --- Correct, there is code that is being repeted --- */
-/* Consolidated code into corect selectors --FEV */
 /**
  * HEADER
  *
@@ -234,47 +285,44 @@ body {
  */
 /* line 11, ../scss/_header.scss */
 .region-header {
-  background-color: #289ec4;
-  max-width: 100vw;
+  background-color: #f1f1f1;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* line 20, ../scss/_header.scss */
-.align-center {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-}
-
 @media all and (min-width: 1385px) {
-  /* line 32, ../scss/_header.scss */
+  /* line 19, ../scss/_header.scss */
   .site-name {
     font-size: 55px;
   }
 }
 
-/* line 39, ../scss/_header.scss */
+/* line 26, ../scss/_header.scss */
 .site-name a {
   text-decoration: none;
 }
 
 @media all and (min-width: 1385px) {
-  /* line 44, ../scss/_header.scss */
+  /* line 31, ../scss/_header.scss */
   .site-logo {
     flex-direction: row;
   }
 
-  /* line 48, ../scss/_header.scss */
+  /* line 35, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
   }
 }
+/* Header logo */
+/* line 42, ../scss/_header.scss */
+.site-logo img {
+  height: auto;
+  max-width: 100%;
+}
+
 /**
  * NAVBAR
  *
@@ -352,12 +400,12 @@ body {
   background-color: #3c3c3c;
 }
 
-/* line 75, ../scss/_navbar.scss */
+/* line 76, ../scss/_navbar.scss */
 .region-navbar .menu-item a {
   padding: 0.5em 0.5ch;
 }
 @media all and (min-width: 800px) {
-  /* line 75, ../scss/_navbar.scss */
+  /* line 76, ../scss/_navbar.scss */
   .region-navbar .menu-item a {
     padding: 0.33333em 1ch;
   }
@@ -374,13 +422,13 @@ body {
 a {
   color: #1b6a83;
   text-decoration-skip: ink;
-  	/*&:hover {
-  
-  	}
-  
-  	&:active {
-  
-  	}*/
+    /*&:hover {
+
+    }
+
+    &:active {
+
+    }*/
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -414,6 +462,23 @@ just the main articles on the website. I've simplified your layout styles, so th
 /*.node__content {
     display: flex;
 }*/
+/* line 59, ../scss/_content.scss */
+article h2 {
+  /**
+   * It's pretty dangerous to scope this so generally unless it's what you really want.
+   * Article elements could show up in places that aren't just the main articles on the website. 
+   * Consider scoping it to a class name instead. -jkm
+   * Should there be a default style for screens smaller than 320px? -jkm
+   * Are screens smaller than 320px going to access the site? --FEV
+   *
+   * On the web, it's not up to you to dictate what screen size people
+   * use, and there is at least one reason beyond physical screen size
+   * why someone might get a layout for a smaller breakpoint. Generally,
+   * if it doesn't need to be explicitly declared to work some way at a
+   * minimum of 320px, you should just remove the breakpoint and set its
+   * contents as the default. -jkm
+   */
+}
 @media screen and (min-width: 320px) {
   /* line 59, ../scss/_content.scss */
   article h2 {
@@ -428,7 +493,7 @@ just the main articles on the website. I've simplified your layout styles, so th
 }
 
 @media screen and (min-width: 320px) {
-  /* line 75, ../scss/_content.scss */
+  /* line 84, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -438,7 +503,7 @@ just the main articles on the website. I've simplified your layout styles, so th
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 75, ../scss/_content.scss */
+  /* line 84, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -446,36 +511,36 @@ just the main articles on the website. I've simplified your layout styles, so th
   }
 }
 
-/* line 96, ../scss/_content.scss */
+/* line 105, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 96, ../scss/_content.scss */
+  /* line 105, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 96, ../scss/_content.scss */
+  /* line 105, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 113, ../scss/_content.scss */
+/* line 120, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
 }
 
 /*.field--name-field-author {
-
+    We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 122, ../scss/_content.scss */
+  /* line 129, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -483,27 +548,27 @@ just the main articles on the website. I've simplified your layout styles, so th
   }
 }
 @media all and (min-width: 800px) {
-  /* line 122, ../scss/_content.scss */
+  /* line 129, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 135, ../scss/_content.scss */
+/* line 141, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 135, ../scss/_content.scss */
+  /* line 141, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 147, ../scss/_content.scss */
+/* line 153, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
