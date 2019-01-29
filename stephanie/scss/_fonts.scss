@@ -41,10 +41,10 @@ h1 {
 }
 
 .page-title {
-	color: $dark-grey;
+    color: $dark-grey;
 }
 
-// Link text size will inherit from its parent, so you don't need to set the heading size AND the link size within the heading. -jkm
+// Link text size will inherit from its parent (and if it's not, you've done something wrong), so you don't need to set the heading size AND the link size within the heading. -jkm
 h2,
 h2 a,
 h3,
@@ -82,8 +82,19 @@ h4 a {
     font-size: 17px;
 }
 
-// Do you REALLY want to change the font for every link inside a list? -jkm
-// I made changes to the list style. I changed font to text/italic. --FEV
+/**
+ * Do you REALLY want to change the font for every link inside a list? -jkm
+ *
+ * I made changes to the list style. I changed font to text/italic. --FEV
+ *
+ * I don't think this is a good idea, either. List items could be a generic
+ * bulleted or numbered list. Unless you have a VERY compelling reason to
+ * make ALL lists italic, you should tread lightly here. If your navbar
+ * menu needs to be italic, declare that there. Also, your li will inherit
+ * its $text font-family from the body, so you don't need to declare it
+ * here, and it will be harder to track down when the inevitable bug crops
+ * up. -jkm
+ */
 li {
     font-family: $text;
     color: $dark-grey;
