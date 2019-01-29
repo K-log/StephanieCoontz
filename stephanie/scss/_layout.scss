@@ -1,26 +1,25 @@
 /**
  * LAYOUT
  *
- * This is the global styling for the whole site.
- * Here is where you put anything that effects all the blocks that hold the content.
- * Example: Global grid layout for the whole site.
- * DO NOT add CSS the only effects a specific page, region, or block.
+ * This file contains the style for the site's layout structure. Here is
+ * where you put anything that effects all the blocks that hold the content.
  *
- * This is a Sass partial, should the filename have an underscore? -jkm
+ * Example: Global grid layout for the whole site.
+ * DO NOT add CSS that only affects a specific page, region, or block.
  */
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * > * {
-	box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-	background-color: $turquoise-light;
+    background-color: $turquoise-light;
 }
 
 .global-container {
@@ -32,14 +31,13 @@ body {
     border-left: 2px solid $turquoise;
     border-right: 2px solid $turquoise;
 
-    //Gobal container widths at breakpoints
+    // Gobal container widths at breakpoints
     @media all and (min-width: 320px) {
         margin-left: auto;
         margin-right: auto;
         max-width: 540px;
     }
-     // Separate media queries with a blank line for better readability. -jkm
-     // Removed unneeded min-width: 1200px, and repetative margin-left and right, because they were repeating. - FEV
+    
     @media all and (min-width: 800px) {
         width: calc(100% - 10em);
         max-width: 738px;
@@ -61,11 +59,11 @@ body {
 }
 
 .content-content {
-	margin: 0 2ch;
+  margin: 0 2ch;
 
-	@media all and (min-width: 800px) {
-		margin: 0 4ch;
-	}
+  @media all and (min-width: 800px) {
+    margin: 0 4ch;
+  }
 }
 
 .region-footer {
@@ -75,9 +73,6 @@ body {
         order: 2;
     }
 }
-
-// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
-// Removed, and consolidated under appropriate selectors. - FEV
 
 .views-row {
     display: flex;
@@ -92,9 +87,3 @@ body {
     align-content: space-evenly;
     margin-top: 1em;
 }
-
-// Consolidate these so that they are in the context of the selectors, not the context of the media query. -jkm
-// Also, if you're going to do this kind of nesting (which you shouldn't), you need to put spaces between selectors for better readability. -jkm
-/* --- Correct, there is code that is being repeted --- */
-
-/* Consolidated code into corect selectors --FEV */
