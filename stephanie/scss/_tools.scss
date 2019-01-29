@@ -6,9 +6,6 @@
 
 */
 
-// I thought your colors were here. -jkm
-// Fonts should be here, too. - jkm
-
 //Fonts and colors were moved in on 28 Jan, 2019
 @import "colors";
 
@@ -21,11 +18,21 @@
  */
 
 // Import fonts from Google Fonts
+// Playfair Display - used primarily for headings and other display needs
 @import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
 
-// Is this font imported twice? -jkm
-// This font is imported as needed. This is the italic font for PT Serif. By importing
-// as needed, I hope that this will keep the loading time down for these fonts. -- FEV 
+/**
+ * Is this font imported twice? -jkm
+ *
+ * This font is imported as needed. This is the italic font for PT Serif. By importing
+ * as needed, I hope that this will keep the loading time down for these fonts. -- FEV
+ *
+ * CSS unfortunately isn't that sophisticated, and will download everything
+ * as it comes to it, whether it's present on the page or not, so it's just
+ * something we have to deal with. Feel free to delete this comment. -jkm
+ */
+
+// PT Serif - used for body text
 @import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
 
 $display: "Playfair Display", serif;
