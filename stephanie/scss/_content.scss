@@ -57,11 +57,20 @@ just the main articles on the website. I've simplified your layout styles, so th
 }*/
 
 article h2 {
-    // It's pretty dangerous to scope this so generally unless it's what you really want.
-    // Article elements could show up in places that aren't just the main articles on the website. 
-    // Consider scoping it to a class name instead. -jkm
-    // Should there be a default style for screens smaller than 320px? -jkm
-    // Are screens smaller than 320px going to access the site? --FEV
+    /**
+     * It's pretty dangerous to scope this so generally unless it's what you really want.
+     * Article elements could show up in places that aren't just the main articles on the website. 
+     * Consider scoping it to a class name instead. -jkm
+     * Should there be a default style for screens smaller than 320px? -jkm
+     * Are screens smaller than 320px going to access the site? --FEV
+     *
+     * On the web, it's not up to you to dictate what screen size people
+     * use, and there is at least one reason beyond physical screen size
+     * why someone might get a layout for a smaller breakpoint. Generally,
+     * if it doesn't need to be explicitly declared to work some way at a
+     * minimum of 320px, you should just remove the breakpoint and set its
+     * contents as the default. -jkm
+     */
 
     @media screen and (min-width: 320px) {
         text-align: center;
@@ -114,7 +123,7 @@ article h2 {
 }
 
 /*.field--name-field-author {
-
+    We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 
 .views-field-field-publication {
@@ -142,8 +151,7 @@ article h2 {
 
 // Article content
 .field--name-body {
-    // Is this supposed to be .field--name-body? Either way, you probably don't need these properties. -jkm
-    // Thank you for the text editing. --FEV
+    // Do you need these properties? -jkm
     margin-left: auto;
     margin-right: auto;
 }
