@@ -11,7 +11,14 @@
 
 //Fonts and colors were moved in on 28 Jan, 2019
 @import "colors";
-@import "fonts";
+
+/**
+ * Fonts for headers and text
+ *
+ * I’m guessing the reason this had an error is you were calling the
+ * $constants in your fonts import before you had set them. Putting them in
+ * this order makes it work perfectly. -jkm
+ */
 
 // Import fonts from Google Fonts
 @import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
@@ -21,4 +28,13 @@
 // as needed, I hope that this will keep the loading time down for these fonts. -- FEV 
 @import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
 
+$display: "Playfair Display", serif;
+$text: "PT Serif", serif;
 
+/**
+ * This is a minor semantic thing, but since "fonts" is no longer dealing
+ * with downloading and declaring fonts, you ought to rename the file to
+ * "typography", because it's about typographic style of your headings.
+ * (You can put other typographic styles in it, too.) -jkm
+ */
+@import "fonts";

@@ -11,11 +11,6 @@
 
 /* Heading and body properties */
 
-//Fonts for headers and text
-// originally moved to the tools file, moving $display and $text caused cascaded compiling issues where Grunt exited process. --FEV
-$display: "Playfair Display", serif;
-$text: "PT Serif", serif;
-
 body {
 	font-family: $text;
 	color: $dark-grey;
