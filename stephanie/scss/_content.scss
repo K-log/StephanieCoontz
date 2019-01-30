@@ -9,14 +9,6 @@
 a {
     color: $turquoise-dark;
     text-decoration-skip: ink;
-
-    /*&:hover {
-
-    }
-
-    &:active {
-
-    }*/
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -50,11 +42,6 @@ just the main articles on the website. I've simplified your layout styles, so th
 
     max-width: 100vw;
 }
-
-// Why is this a flex layout? -jkm
-/*.node__content {
-    display: flex;
-}*/
 
 article h2 {
     /**

@@ -68,8 +68,7 @@
     border-radius: 1ch;
 
     &:hover {
-        // Where does this color come from? Is it in the colors file?
-        background-color: #3c3c3c;
+        background-color: $dark-grey;
     }
 }
 
