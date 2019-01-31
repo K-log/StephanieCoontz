@@ -68,7 +68,23 @@ body {
 
 .region-footer {
     background-color: $turquoise-dark;
-
+		
+		/**
+		 * If you set an explicit height now, what happens if, later you fill
+		 * the footer up with more content than the height can contain? It will
+		 * overflow the 6em container and look wrong. The web inherently grows
+		 * vertically. That's why you're always scrolling up and down, rarely
+		 * left and right.
+		 *
+		 * Explicit widths: good.
+		 * Explicit heights: bad.
+		 *
+		 * Better to create breathing room with margins or padding, which will
+		 * allow height to grow, but still push the content away from the edges
+		 * of the box.
+		 *
+		 * And also, 6em is a bit too big. About 2 or 3 times too big. ;-) -jkm
+		 */
     height: 6em;
 
     @media all and (min-width: 800px) {
