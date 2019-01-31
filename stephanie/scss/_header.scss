@@ -16,7 +16,16 @@
     text-align: center;
 }
 
+.site-branding {
+
+		@media all and (min-width: 1385px) {
+        flex-flow: row;
+        align-items: center;
+    }
+}
+
 .site-name {
+	  // Inherits styles from h1
 
     @media all and (min-width: 1385px) {
         font-size: 55px;
@@ -27,18 +36,14 @@
     text-decoration: none;
 }
 
-@media all and (min-width: 1385px) {
-    .site-logo {
-        flex-direction: row;
-    }
+/* Header logo */
+.site-logo {
 
-    .site-branding {
-        flex-flow: row;
-        align-items: center;
+		@media all and (min-width: 1385px) {
+        flex-direction: row;
     }
 }
 
-/* Header logo */
 .site-logo img {
     height: auto;
     max-width: 100%;
