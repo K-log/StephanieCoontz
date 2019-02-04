@@ -6,8 +6,10 @@
  * For global styling see layout.css
  */
 
-
+/* Footer content */
 .footer-content .menu {
     justify-content: space-evenly;
     flex-flow: column wrap;
+
+    margin-top: 0.5em;
  }

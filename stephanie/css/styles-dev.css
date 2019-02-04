@@ -634,8 +634,10 @@ article h2 {
  *
  * For global styling see layout.css
  */
+/* Footer content */
 /* line 10, ../scss/_footer.scss */
-.footer-content > .menu {
+.footer-content .menu {
   justify-content: space-evenly;
   flex-flow: column wrap;
+  margin-top: 0.5em;
 }
