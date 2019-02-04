@@ -85,7 +85,8 @@ body {
      *
      * And also, 6em is a bit too big. About 2 or 3 times too big. ;-) -jkm
      */
-    height: 6em;
+    height: auto;
+    width: 100%;
 
     @media all and (min-width: 800px) {
         order: 2;

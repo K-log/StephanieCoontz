@@ -246,7 +246,24 @@ body {
 /* line 69, ../scss/_layout.scss */
 .region-footer {
   background-color: #1b6a83;
-  height: 6em;
+  /**
+   * If you set an explicit height now, what happens if, later you fill
+   * the footer up with more content than the height can contain? It will
+   * overflow the 6em container and look wrong. The web inherently grows
+   * vertically. That's why you're always scrolling up and down, rarely
+   * left and right.
+   *
+   * Explicit widths: good.
+   * Explicit heights: bad.
+   *
+   * Better to create breathing room with margins or padding, which will
+   * allow height to grow, but still push the content away from the edges
+   * of the box.
+   *
+   * And also, 6em is a bit too big. About 2 or 3 times too big. ;-) -jkm
+   */
+  height: auto;
+  width: 100%;
 }
 @media all and (min-width: 800px) {
   /* line 69, ../scss/_layout.scss */
@@ -255,7 +272,7 @@ body {
   }
 }
 
-/* line 79, ../scss/_layout.scss */
+/* line 96, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -263,7 +280,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 87, ../scss/_layout.scss */
+/* line 104, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -290,33 +307,58 @@ body {
 
 @media all and (min-width: 1385px) {
   /* line 19, ../scss/_header.scss */
-  .site-name {
-    font-size: 55px;
-  }
-}
-
-/* line 26, ../scss/_header.scss */
-.site-name a {
-  text-decoration: none;
-}
-
-@media all and (min-width: 1385px) {
-  /* line 31, ../scss/_header.scss */
-  .site-logo {
-    flex-direction: row;
-  }
-
-  /* line 35, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
   }
 }
+
+@media all and (min-width: 1385px) {
+  /* line 27, ../scss/_header.scss */
+  .site-name {
+    font-size: 55px;
+  }
+}
+
+/* line 35, ../scss/_header.scss */
+.site-name a {
+  text-decoration: none;
+}
+
 /* Header logo */
-/* line 42, ../scss/_header.scss */
+/* line 40, ../scss/_header.scss */
+.site-logo {
+  display: block;
+}
+@media all and (min-width: 1385px) {
+  /* line 40, ../scss/_header.scss */
+  .site-logo {
+    flex-direction: row;
+  }
+}
+
+/**
+ * These responsive images styles should be applied to all img elements by
+ * default, not scoped to the .site-logo only. This will make all of your
+ * images responsive automatically. -jkm
+ */
+/* line 53, ../scss/_header.scss */
 .site-logo img {
   height: auto;
   max-width: 100%;
+}
+
+/* line 58, ../scss/_header.scss */
+.site-logo > img {
+  margin: 0.33333em auto;
+  width: 90%;
+  display: block;
+}
+@media all and (min-width: 800px) {
+  /* line 58, ../scss/_header.scss */
+  .site-logo > img {
+    width: 80%;
+  }
 }
 
 /**
@@ -396,12 +438,12 @@ body {
   background-color: #3c3c3c;
 }
 
-/* line 76, ../scss/_navbar.scss */
+/* line 75, ../scss/_navbar.scss */
 .region-navbar .menu-item a {
   padding: 0.5em 0.5ch;
 }
 @media all and (min-width: 800px) {
-  /* line 76, ../scss/_navbar.scss */
+  /* line 75, ../scss/_navbar.scss */
   .region-navbar .menu-item a {
     padding: 0.33333em 1ch;
   }
@@ -418,13 +460,31 @@ body {
 a {
   color: #1b6a83;
   text-decoration-skip: ink;
-    /*&:hover {
+}
 
-    }
+/* line 14, ../scss/_content.scss */
+input,
+select,
+textarea {
+  border: 1px solid #c3c3c3;
+  margin-bottom: 1em;
+  padding: 0.25em 1ch;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+/* line 26, ../scss/_content.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #289ec4;
+}
 
-    &:active {
-
-    }*/
+/* line 31, ../scss/_content.scss */
+input[type="button"],
+input[type="submit"],
+button {
+  width: auto;
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -447,7 +507,7 @@ just the main articles on the website. I've simplified your layout styles, so th
 /*article p {
     flex-direction: column;
 }*/
-/* line 46, ../scss/_content.scss */
+/* line 61, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -455,10 +515,7 @@ just the main articles on the website. I've simplified your layout styles, so th
   max-width: 100vw;
 }
 
-/*.node__content {
-    display: flex;
-}*/
-/* line 59, ../scss/_content.scss */
+/* line 69, ../scss/_content.scss */
 article h2 {
   /**
    * It's pretty dangerous to scope this so generally unless it's what you really want.
@@ -476,20 +533,20 @@ article h2 {
    */
 }
 @media screen and (min-width: 320px) {
-  /* line 59, ../scss/_content.scss */
+  /* line 69, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 59, ../scss/_content.scss */
+  /* line 69, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 84, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -499,7 +556,7 @@ article h2 {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 84, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -507,26 +564,26 @@ article h2 {
   }
 }
 
-/* line 105, ../scss/_content.scss */
+/* line 115, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 105, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 105, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 120, ../scss/_content.scss */
+/* line 130, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
@@ -536,7 +593,7 @@ article h2 {
     We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 129, ../scss/_content.scss */
+  /* line 139, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -544,27 +601,27 @@ article h2 {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 129, ../scss/_content.scss */
+  /* line 139, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 141, ../scss/_content.scss */
+/* line 151, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 141, ../scss/_content.scss */
+  /* line 151, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 153, ../scss/_content.scss */
+/* line 163, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
@@ -577,3 +634,8 @@ article h2 {
  *
  * For global styling see layout.css
  */
+/* line 10, ../scss/_footer.scss */
+.footer-content > .menu {
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+}
