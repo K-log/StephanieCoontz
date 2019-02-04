@@ -16,7 +16,16 @@
     text-align: center;
 }
 
+.site-branding {
+
+    @media all and (min-width: 1385px) {
+        flex-flow: row;
+        align-items: center;
+    }
+}
+
 .site-name {
+    // Inherits styles from h1
 
     @media all and (min-width: 1385px) {
         font-size: 55px;
@@ -27,19 +36,33 @@
     text-decoration: none;
 }
 
-@media all and (min-width: 1385px) {
-    .site-logo {
-        flex-direction: row;
-    }
+/* Header logo */
+.site-logo {
+    display: block;
 
-    .site-branding {
-        flex-flow: row;
-        align-items: center;
+    @media all and (min-width: 1385px) {
+        flex-direction: row;
     }
 }
 
-/* Header logo */
+/**
+ * These responsive images styles should be applied to all img elements by
+ * default, not scoped to the .site-logo only. This will make all of your
+ * images responsive automatically. -jkm
+ */
 .site-logo img {
     height: auto;
     max-width: 100%;
+}
+
+.site-logo > img {
+    // box model
+    margin: 0.33333em auto;
+    width: 90%;
+    // layout
+    display: block;
+
+    @media all and (min-width: 800px) {
+        width: 80%;
+    }
 }
