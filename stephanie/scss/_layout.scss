@@ -69,6 +69,8 @@ body {
 .region-footer {
     background-color: $turquoise-dark;
 
+    padding: 0.5em;
+
     /**
      * If you set an explicit height now, what happens if, later you fill
      * the footer up with more content than the height can contain? It will

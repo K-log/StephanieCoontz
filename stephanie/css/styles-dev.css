@@ -246,6 +246,7 @@ body {
 /* line 69, ../scss/_layout.scss */
 .region-footer {
   background-color: #1b6a83;
+  padding: 0.5em;
   /**
    * If you set an explicit height now, what happens if, later you fill
    * the footer up with more content than the height can contain? It will
@@ -272,7 +273,7 @@ body {
   }
 }
 
-/* line 96, ../scss/_layout.scss */
+/* line 98, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -280,7 +281,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 104, ../scss/_layout.scss */
+/* line 106, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -624,5 +625,5 @@ article h2 {
 .footer-content .menu {
   justify-content: space-evenly;
   flex-flow: column wrap;
-  margin-top: 0.5em;
+  padding: 0.5em;
 }
