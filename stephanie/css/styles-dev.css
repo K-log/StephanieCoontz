@@ -351,13 +351,14 @@ body {
 /* line 58, ../scss/_header.scss */
 .site-logo > img {
   margin: 0.33333em auto;
-  width: 90%;
+  width: 50%;
   display: block;
 }
 @media all and (min-width: 800px) {
   /* line 58, ../scss/_header.scss */
   .site-logo > img {
-    width: 80%;
+    margin: 0.5em auto;
+    width: 66.66667%;
   }
 }
 
@@ -380,73 +381,57 @@ body {
 }
 
 /* line 18, ../scss/_navbar.scss */
-.menu {
+ul.menu {
+  margin: 5px 1ch;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 5px 1em;
-  padding: 0;
   list-style-type: none;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 320px) {
   /* line 18, ../scss/_navbar.scss */
-  .menu {
+  ul.menu {
     justify-content: space-evenly;
     flex-direction: row;
   }
 }
 
-@media all and (min-width: 360px) {
-  /* line 34, ../scss/_navbar.scss */
-  .region-navbar .menu {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-@media all and (min-width: 800px) {
-  /* line 34, ../scss/_navbar.scss */
-  .region-navbar .menu {
-    justify-content: space-evenly;
-  }
-}
-
-/* line 46, ../scss/_navbar.scss */
+/* line 36, ../scss/_navbar.scss */
 .menu-item {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
 }
 @media screen and (min-width: 600px) {
-  /* line 46, ../scss/_navbar.scss */
+  /* line 36, ../scss/_navbar.scss */
   .menu-item {
-    font-size: 25px;
+    font-size: 23.256px;
   }
 }
 
-/* line 60, ../scss/_navbar.scss */
+/* line 50, ../scss/_navbar.scss */
 .menu-item > a {
+  padding: 0.15em 1ch;
   display: block;
   font-family: "Playfair Display", serif;
   color: #f1f1f1;
   text-decoration: none;
   border-radius: 1ch;
-}
-/* line 70, ../scss/_navbar.scss */
-.menu-item > a:hover {
-  background-color: #3c3c3c;
-}
-
-/* line 75, ../scss/_navbar.scss */
-.region-navbar .menu-item a {
-  padding: 0.5em 0.5ch;
+  transition: background-color 0.15s ease-in-out;
 }
 @media all and (min-width: 800px) {
-  /* line 75, ../scss/_navbar.scss */
-  .region-navbar .menu-item a {
+  /* line 50, ../scss/_navbar.scss */
+  .menu-item > a {
     padding: 0.33333em 1ch;
   }
+}
+/* line 67, ../scss/_navbar.scss */
+.menu-item > a:hover {
+  background-color: #3c3c3c;
+  transition: background-color 0.05s ease-in-out;
 }
 
 /**
@@ -634,8 +619,10 @@ article h2 {
  *
  * For global styling see layout.css
  */
+/* Footer content */
 /* line 10, ../scss/_footer.scss */
-.footer-content > .menu {
+.footer-content .menu {
   justify-content: space-evenly;
   flex-flow: column wrap;
+  margin-top: 0.5em;
 }
