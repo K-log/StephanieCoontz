@@ -192,9 +192,7 @@ body {
 /* line 25, ../scss/_layout.scss */
 .global-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
   border-left: 2px solid #289ec4;
   border-right: 2px solid #289ec4;
 }
@@ -214,19 +212,20 @@ body {
   }
 }
 
-/* line 47, ../scss/_layout.scss */
+/* line 45, ../scss/_layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
-  flex: 1 100%;
 }
 
-/* line 53, ../scss/_layout.scss */
+/* line 50, ../scss/_layout.scss */
 .region-content {
   background-color: white;
+  flex: 1;
+  min-height: 100vh;
 }
 @media all and (min-width: 800px) {
-  /* line 53, ../scss/_layout.scss */
+  /* line 50, ../scss/_layout.scss */
   .region-content {
     order: 1;
   }

@@ -24,9 +24,7 @@ body {
 
 .global-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
 
     border-left: 2px solid $turquoise;
     border-right: 2px solid $turquoise;
@@ -47,11 +45,13 @@ body {
 .global-container > * {
     margin: 0;
     padding: 0;
-    flex: 1 100%;
 }
 
 .region-content {
     background-color: white;
+
+    flex: 1;
+    min-height: 100vh;
 
     @media all and (min-width: 800px) {
         order: 1;
