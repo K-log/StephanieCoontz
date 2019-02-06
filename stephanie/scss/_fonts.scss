@@ -24,8 +24,10 @@ body {
 h1 {
     font-family: $display;
     color: $dark-grey;
+    font-size: initial;
     font-style: italic;
     font-weight: 700;
+    line-height: 1;
 
     @media screen and (min-width: 320px) {
         font-size: 32px;

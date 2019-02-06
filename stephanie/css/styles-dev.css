@@ -67,8 +67,10 @@ body {
 h1 {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
+  font-size: initial;
   font-style: italic;
   font-weight: 700;
+  line-height: 1;
 }
 @media screen and (min-width: 320px) {
   /* line 24, ../scss/_fonts.scss */
@@ -89,12 +91,12 @@ h1 {
   }
 }
 
-/* line 43, ../scss/_fonts.scss */
+/* line 45, ../scss/_fonts.scss */
 .page-title {
   color: #3c3c3c;
 }
 
-/* line 48, ../scss/_fonts.scss */
+/* line 50, ../scss/_fonts.scss */
 h2,
 h2 a,
 h3,
@@ -112,27 +114,27 @@ h6 a {
   font-style: italic;
 }
 
-/* line 65, ../scss/_fonts.scss */
+/* line 67, ../scss/_fonts.scss */
 h2,
 h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 65, ../scss/_fonts.scss */
+  /* line 67, ../scss/_fonts.scss */
   h2,
   h2 a {
     font-size: 45px;
   }
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 76, ../scss/_fonts.scss */
 h3,
 h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 80, ../scss/_fonts.scss */
+/* line 82, ../scss/_fonts.scss */
 h4,
 h4 a {
   font-size: 17px;
