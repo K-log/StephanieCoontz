@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 ** Breakpoints
 
@@ -18,7 +17,7 @@
 /**
  * Fonts for headers and text
  *
- * I’m guessing the reason this had an error is you were calling the
+ * I'm guessing the reason this had an error is you were calling the
  * $constants in your fonts import before you had set them. Putting them in
  * this order makes it work perfectly. -jkm
  */
