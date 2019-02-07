@@ -385,7 +385,7 @@ ul.menu {
 }
 
 /* line 36, ../scss/_navbar.scss */
-.sytem-main-menu .menu-item {
+.menu .menu-item {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -393,13 +393,13 @@ ul.menu {
 }
 @media screen and (min-width: 600px) {
   /* line 36, ../scss/_navbar.scss */
-  .sytem-main-menu .menu-item {
+  .menu .menu-item {
     font-size: 23.256px;
   }
 }
 
 /* line 50, ../scss/_navbar.scss */
-.sytem-main-menu .menu-item > a {
+.menu .menu-item > a {
   padding: 0.15em 1ch;
   display: block;
   font-family: "Playfair Display", serif;
@@ -410,12 +410,12 @@ ul.menu {
 }
 @media all and (min-width: 800px) {
   /* line 50, ../scss/_navbar.scss */
-  .sytem-main-menu .menu-item > a {
+  .menu .menu-item > a {
     padding: 0.33333em 1ch;
   }
 }
 /* line 67, ../scss/_navbar.scss */
-.sytem-main-menu .menu-item > a:hover {
+.menu .menu-item > a:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
 }
