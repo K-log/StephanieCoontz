@@ -66,9 +66,11 @@ body {
 /* line 24, ../scss/_fonts.scss */
 h1 {
   font-family: "Playfair Display", serif;
-  color: #f1f1f1;
+  color: #3c3c3c;
+  font-size: initial;
   font-style: italic;
   font-weight: 700;
+  line-height: 1;
 }
 @media screen and (min-width: 320px) {
   /* line 24, ../scss/_fonts.scss */
@@ -89,12 +91,12 @@ h1 {
   }
 }
 
-/* line 43, ../scss/_fonts.scss */
+/* line 45, ../scss/_fonts.scss */
 .page-title {
   color: #3c3c3c;
 }
 
-/* line 48, ../scss/_fonts.scss */
+/* line 50, ../scss/_fonts.scss */
 h2,
 h2 a,
 h3,
@@ -112,27 +114,27 @@ h6 a {
   font-style: italic;
 }
 
-/* line 65, ../scss/_fonts.scss */
+/* line 67, ../scss/_fonts.scss */
 h2,
 h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 65, ../scss/_fonts.scss */
+  /* line 67, ../scss/_fonts.scss */
   h2,
   h2 a {
     font-size: 45px;
   }
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 76, ../scss/_fonts.scss */
 h3,
 h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 80, ../scss/_fonts.scss */
+/* line 82, ../scss/_fonts.scss */
 h4,
 h4 a {
   font-size: 17px;
@@ -150,14 +152,10 @@ h4 a {
  * its $text font-family from the body, so you don't need to declare it
  * here, and it will be harder to track down when the inevitable bug crops
  * up. -jkm
+ *
+ * I removed the li properties. List items will receive their properties
+ * from the body. The menu items are addressed in _navbar. --fev
  */
-/* line 98, ../scss/_fonts.scss */
-li {
-  font-family: "PT Serif", serif;
-  color: #3c3c3c;
-  font-style: italic;
-}
-
 /**
  * "Layout" is a Sass partial, should the filename have an underscore? -jkm
  *
@@ -196,9 +194,7 @@ body {
 /* line 25, ../scss/_layout.scss */
 .global-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
+  flex-direction: column;
   border-left: 2px solid #289ec4;
   border-right: 2px solid #289ec4;
 }
@@ -218,19 +214,20 @@ body {
   }
 }
 
-/* line 47, ../scss/_layout.scss */
+/* line 45, ../scss/_layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
-  flex: 1 100%;
 }
 
-/* line 53, ../scss/_layout.scss */
+/* line 50, ../scss/_layout.scss */
 .region-content {
   background-color: white;
+  flex: 1;
+  min-height: 100vh;
 }
 @media all and (min-width: 800px) {
-  /* line 53, ../scss/_layout.scss */
+  /* line 50, ../scss/_layout.scss */
   .region-content {
     order: 1;
   }
@@ -250,7 +247,25 @@ body {
 /* line 69, ../scss/_layout.scss */
 .region-footer {
   background-color: #1b6a83;
-  height: 6em;
+  padding: 0.5em;
+  /**
+   * If you set an explicit height now, what happens if, later you fill
+   * the footer up with more content than the height can contain? It will
+   * overflow the 6em container and look wrong. The web inherently grows
+   * vertically. That's why you're always scrolling up and down, rarely
+   * left and right.
+   *
+   * Explicit widths: good.
+   * Explicit heights: bad.
+   *
+   * Better to create breathing room with margins or padding, which will
+   * allow height to grow, but still push the content away from the edges
+   * of the box.
+   *
+   * And also, 6em is a bit too big. About 2 or 3 times too big. ;-) -jkm
+   */
+  height: auto;
+  width: 100%;
 }
 @media all and (min-width: 800px) {
   /* line 69, ../scss/_layout.scss */
@@ -259,7 +274,7 @@ body {
   }
 }
 
-/* line 79, ../scss/_layout.scss */
+/* line 98, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -267,7 +282,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 87, ../scss/_layout.scss */
+/* line 106, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
@@ -294,33 +309,59 @@ body {
 
 @media all and (min-width: 1385px) {
   /* line 19, ../scss/_header.scss */
-  .site-name {
-    font-size: 55px;
-  }
-}
-
-/* line 26, ../scss/_header.scss */
-.site-name a {
-  text-decoration: none;
-}
-
-@media all and (min-width: 1385px) {
-  /* line 31, ../scss/_header.scss */
-  .site-logo {
-    flex-direction: row;
-  }
-
-  /* line 35, ../scss/_header.scss */
   .site-branding {
     flex-flow: row;
     align-items: center;
   }
 }
+
+@media all and (min-width: 1385px) {
+  /* line 27, ../scss/_header.scss */
+  .site-name {
+    font-size: 55px;
+  }
+}
+
+/* line 35, ../scss/_header.scss */
+.site-name a {
+  text-decoration: none;
+}
+
 /* Header logo */
-/* line 42, ../scss/_header.scss */
+/* line 40, ../scss/_header.scss */
+.site-logo {
+  display: block;
+}
+@media all and (min-width: 1385px) {
+  /* line 40, ../scss/_header.scss */
+  .site-logo {
+    flex-direction: row;
+  }
+}
+
+/**
+ * These responsive images styles should be applied to all img elements by
+ * default, not scoped to the .site-logo only. This will make all of your
+ * images responsive automatically. -jkm
+ */
+/* line 53, ../scss/_header.scss */
 .site-logo img {
   height: auto;
   max-width: 100%;
+}
+
+/* line 58, ../scss/_header.scss */
+.site-logo > img {
+  margin: 0.33333em auto;
+  width: 50%;
+  display: block;
+}
+@media all and (min-width: 800px) {
+  /* line 58, ../scss/_header.scss */
+  .site-logo > img {
+    margin: 0.5em auto;
+    width: 66.66667%;
+  }
 }
 
 /**
@@ -342,73 +383,57 @@ body {
 }
 
 /* line 18, ../scss/_navbar.scss */
-.menu {
+ul.menu {
+  margin: 5px 1ch;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin: 5px 1em;
-  padding: 0;
   list-style-type: none;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 320px) {
   /* line 18, ../scss/_navbar.scss */
-  .menu {
+  ul.menu {
     justify-content: space-evenly;
     flex-direction: row;
   }
 }
 
-@media all and (min-width: 360px) {
-  /* line 34, ../scss/_navbar.scss */
-  .region-navbar .menu {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-}
-@media all and (min-width: 800px) {
-  /* line 34, ../scss/_navbar.scss */
-  .region-navbar .menu {
-    justify-content: space-evenly;
-  }
-}
-
-/* line 46, ../scss/_navbar.scss */
+/* line 36, ../scss/_navbar.scss */
 .menu-item {
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
 }
 @media screen and (min-width: 600px) {
-  /* line 46, ../scss/_navbar.scss */
+  /* line 36, ../scss/_navbar.scss */
   .menu-item {
-    font-size: 25px;
+    font-size: 23.256px;
   }
 }
 
-/* line 60, ../scss/_navbar.scss */
+/* line 50, ../scss/_navbar.scss */
 .menu-item > a {
+  padding: 0.15em 1ch;
   display: block;
   font-family: "Playfair Display", serif;
   color: #f1f1f1;
   text-decoration: none;
   border-radius: 1ch;
-}
-/* line 70, ../scss/_navbar.scss */
-.menu-item > a:hover {
-  background-color: #3c3c3c;
-}
-
-/* line 76, ../scss/_navbar.scss */
-.region-navbar .menu-item a {
-  padding: 0.5em 0.5ch;
+  transition: background-color 0.15s ease-in-out;
 }
 @media all and (min-width: 800px) {
-  /* line 76, ../scss/_navbar.scss */
-  .region-navbar .menu-item a {
+  /* line 50, ../scss/_navbar.scss */
+  .menu-item > a {
     padding: 0.33333em 1ch;
   }
+}
+/* line 67, ../scss/_navbar.scss */
+.menu-item > a:hover {
+  background-color: #3c3c3c;
+  transition: background-color 0.05s ease-in-out;
 }
 
 /**
@@ -422,13 +447,31 @@ body {
 a {
   color: #1b6a83;
   text-decoration-skip: ink;
-    /*&:hover {
+}
 
-    }
+/* line 14, ../scss/_content.scss */
+input,
+select,
+textarea {
+  border: 1px solid #c3c3c3;
+  margin-bottom: 1em;
+  padding: 0.25em 1ch;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+/* line 26, ../scss/_content.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #289ec4;
+}
 
-    &:active {
-
-    }*/
+/* line 31, ../scss/_content.scss */
+input[type="button"],
+input[type="submit"],
+button {
+  width: auto;
 }
 
 /* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
@@ -451,7 +494,7 @@ just the main articles on the website. I've simplified your layout styles, so th
 /*article p {
     flex-direction: column;
 }*/
-/* line 46, ../scss/_content.scss */
+/* line 61, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -459,10 +502,7 @@ just the main articles on the website. I've simplified your layout styles, so th
   max-width: 100vw;
 }
 
-/*.node__content {
-    display: flex;
-}*/
-/* line 59, ../scss/_content.scss */
+/* line 69, ../scss/_content.scss */
 article h2 {
   /**
    * It's pretty dangerous to scope this so generally unless it's what you really want.
@@ -480,20 +520,20 @@ article h2 {
    */
 }
 @media screen and (min-width: 320px) {
-  /* line 59, ../scss/_content.scss */
+  /* line 69, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 59, ../scss/_content.scss */
+  /* line 69, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 84, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -503,7 +543,7 @@ article h2 {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 84, ../scss/_content.scss */
+  /* line 94, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -511,26 +551,26 @@ article h2 {
   }
 }
 
-/* line 105, ../scss/_content.scss */
+/* line 115, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 105, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 105, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 120, ../scss/_content.scss */
+/* line 130, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
@@ -540,7 +580,7 @@ article h2 {
     We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 129, ../scss/_content.scss */
+  /* line 139, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -548,27 +588,27 @@ article h2 {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 129, ../scss/_content.scss */
+  /* line 139, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 141, ../scss/_content.scss */
+/* line 151, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 141, ../scss/_content.scss */
+  /* line 151, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 153, ../scss/_content.scss */
+/* line 163, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
@@ -581,3 +621,10 @@ article h2 {
  *
  * For global styling see layout.css
  */
+/* Footer content */
+/* line 10, ../scss/_footer.scss */
+.footer-content .menu {
+  justify-content: space-evenly;
+  flex-flow: column wrap;
+  padding: 0.5em;
+}

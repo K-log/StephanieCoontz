@@ -24,9 +24,7 @@ body {
 
 .global-container {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
 
     border-left: 2px solid $turquoise;
     border-right: 2px solid $turquoise;
@@ -47,11 +45,13 @@ body {
 .global-container > * {
     margin: 0;
     padding: 0;
-    flex: 1 100%;
 }
 
 .region-content {
     background-color: white;
+
+    flex: 1;
+    min-height: 100vh;
 
     @media all and (min-width: 800px) {
         order: 1;
@@ -69,7 +69,26 @@ body {
 .region-footer {
     background-color: $turquoise-dark;
 
-    height: 6em;
+    padding: 0.5em;
+
+    /**
+     * If you set an explicit height now, what happens if, later you fill
+     * the footer up with more content than the height can contain? It will
+     * overflow the 6em container and look wrong. The web inherently grows
+     * vertically. That's why you're always scrolling up and down, rarely
+     * left and right.
+     *
+     * Explicit widths: good.
+     * Explicit heights: bad.
+     *
+     * Better to create breathing room with margins or padding, which will
+     * allow height to grow, but still push the content away from the edges
+     * of the box.
+     *
+     * And also, 6em is a bit too big. About 2 or 3 times too big. ;-) -jkm
+     */
+    height: auto;
+    width: 100%;
 
     @media all and (min-width: 800px) {
         order: 2;

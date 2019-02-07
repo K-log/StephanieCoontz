@@ -23,9 +23,11 @@ body {
 
 h1 {
     font-family: $display;
-    color: $offwhite;
+    color: $dark-grey;
+    font-size: initial;
     font-style: italic;
     font-weight: 700;
+    line-height: 1;
 
     @media screen and (min-width: 320px) {
         font-size: 32px;
@@ -94,9 +96,7 @@ h4 a {
  * its $text font-family from the body, so you don't need to declare it
  * here, and it will be harder to track down when the inevitable bug crops
  * up. -jkm
+ *
+ * I removed the li properties. List items will receive their properties
+ * from the body. The menu items are addressed in _navbar. --fev
  */
-li {
-    font-family: $text;
-    color: $dark-grey;
-    font-style: italic;
-}
