@@ -385,7 +385,7 @@ ul.menu {
 }
 
 /* line 36, ../scss/_navbar.scss */
-.menu-item {
+.sytem-main-menu .menu-item {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -393,13 +393,13 @@ ul.menu {
 }
 @media screen and (min-width: 600px) {
   /* line 36, ../scss/_navbar.scss */
-  .menu-item {
+  .sytem-main-menu .menu-item {
     font-size: 23.256px;
   }
 }
 
 /* line 50, ../scss/_navbar.scss */
-.menu-item > a {
+.sytem-main-menu .menu-item > a {
   padding: 0.15em 1ch;
   display: block;
   font-family: "Playfair Display", serif;
@@ -410,12 +410,12 @@ ul.menu {
 }
 @media all and (min-width: 800px) {
   /* line 50, ../scss/_navbar.scss */
-  .menu-item > a {
+  .sytem-main-menu .menu-item > a {
     padding: 0.33333em 1ch;
   }
 }
 /* line 67, ../scss/_navbar.scss */
-.menu-item > a:hover {
+.sytem-main-menu .menu-item > a:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
 }
@@ -583,6 +583,11 @@ article h2 {
 ** All titles in the book list page are set to h2.
 ** They are modified through CSS to make them fit better.
 */
+/* line 151, ../scss/_content.scss */
+.row-books h2 a {
+  font-size: 18px;
+}
+
 /**
  * FOOTER
  *
