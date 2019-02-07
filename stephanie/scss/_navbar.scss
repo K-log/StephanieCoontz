@@ -33,7 +33,7 @@ ul.menu {  // Scoped to ul to override core theme CSS
     }
 }
 
-.menu-item {
+.sytem-main-menu .menu-item {
     // box model
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ ul.menu {  // Scoped to ul to override core theme CSS
     }
 }
 
-.menu-item > a {
+.sytem-main-menu .menu-item > a {
     // box model
     padding: 0.15em 1ch;
     // layout

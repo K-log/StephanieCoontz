@@ -34,30 +34,6 @@ button {
     width: auto;
 }
 
-/* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
-just the main articles on the website. I've simplified your layout styles, so these can all be deleted -jkm */
-/*article {
-    display: flex;
-    flex-direction: column;
-    // Global container widths at breakpoints
-    @media all and (min-width: 320px){
-        margin-left: auto; 
-        margin-right: auto;
-        width: calc(100% - 3em);
-        max-width: 540px;
-        }
-    @media all and (min-width: 800px){
-        width: calc(100% - 4em);
-        max-width: 738px;
-        }
-}*/
-
-// This isn't doing anything without display:flex, but you don't want this anyway, so just delete it. -jkm
-/*article p {
-    flex-direction: column;
-}*/
-
-
 .tabs {
     display: flex;
     justify-content: space-evenly;
@@ -164,4 +140,14 @@ article h2 {
     // Do you need these properties? -jkm
     margin-left: auto;
     margin-right: auto;
+}
+
+/*
+** Fonts for book section.
+** All titles in the book list page are set to h2.
+** They are modified through CSS to make them fit better.
+*/
+
+.row-books h2 a {
+    font-size: 18px;
 }
