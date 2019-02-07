@@ -141,22 +141,6 @@ h4 a {
 }
 
 /**
- * Do you REALLY want to change the font for every link inside a list? -jkm
- *
- * I made changes to the list style. I changed font to text/italic. --FEV
- *
- * I don't think this is a good idea, either. List items could be a generic
- * bulleted or numbered list. Unless you have a VERY compelling reason to
- * make ALL lists italic, you should tread lightly here. If your navbar
- * menu needs to be italic, declare that there. Also, your li will inherit
- * its $text font-family from the body, so you don't need to declare it
- * here, and it will be harder to track down when the inevitable bug crops
- * up. -jkm
- *
- * I removed the li properties. List items will receive their properties
- * from the body. The menu items are addressed in _navbar. --fev
- */
-/**
  * "Layout" is a Sass partial, should the filename have an underscore? -jkm
  *
  * When I initially placed the files with the underscores it would not be read properlly.
@@ -474,27 +458,7 @@ button {
   width: auto;
 }
 
-/* It's dangerous to make these kind of sweeping changes on an article element, which could show up in places that aren't 
-just the main articles on the website. I've simplified your layout styles, so these can all be deleted -jkm */
-/*article {
-    display: flex;
-    flex-direction: column;
-    // Global container widths at breakpoints
-    @media all and (min-width: 320px){
-        margin-left: auto; 
-        margin-right: auto;
-        width: calc(100% - 3em);
-        max-width: 540px;
-        }
-    @media all and (min-width: 800px){
-        width: calc(100% - 4em);
-        max-width: 738px;
-        }
-}*/
-/*article p {
-    flex-direction: column;
-}*/
-/* line 61, ../scss/_content.scss */
+/* line 37, ../scss/_content.scss */
 .tabs {
   display: flex;
   justify-content: space-evenly;
@@ -502,7 +466,7 @@ just the main articles on the website. I've simplified your layout styles, so th
   max-width: 100vw;
 }
 
-/* line 69, ../scss/_content.scss */
+/* line 45, ../scss/_content.scss */
 article h2 {
   /**
    * It's pretty dangerous to scope this so generally unless it's what you really want.
@@ -520,20 +484,20 @@ article h2 {
    */
 }
 @media screen and (min-width: 320px) {
-  /* line 69, ../scss/_content.scss */
+  /* line 45, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 69, ../scss/_content.scss */
+  /* line 45, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 94, ../scss/_content.scss */
+  /* line 70, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -543,7 +507,7 @@ article h2 {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 94, ../scss/_content.scss */
+  /* line 70, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -551,26 +515,26 @@ article h2 {
   }
 }
 
-/* line 115, ../scss/_content.scss */
+/* line 91, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 115, ../scss/_content.scss */
+  /* line 91, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 115, ../scss/_content.scss */
+  /* line 91, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 130, ../scss/_content.scss */
+/* line 106, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
@@ -580,7 +544,7 @@ article h2 {
     We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 139, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -588,32 +552,37 @@ article h2 {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 139, ../scss/_content.scss */
+  /* line 115, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 151, ../scss/_content.scss */
+/* line 127, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 151, ../scss/_content.scss */
+  /* line 127, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 163, ../scss/_content.scss */
+/* line 139, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
 }
 
+/*
+** Fonts for book section.
+** All titles in the book list page are set to h2.
+** They are modified through CSS to make them fit better.
+*/
 /**
  * FOOTER
  *
