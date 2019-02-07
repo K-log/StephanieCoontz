@@ -467,6 +467,15 @@ button {
 }
 
 /* line 45, ../scss/_content.scss */
+.view-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: baseline;
+}
+
+/* line 54, ../scss/_content.scss */
 article h2 {
   /**
    * It's pretty dangerous to scope this so generally unless it's what you really want.
@@ -484,20 +493,20 @@ article h2 {
    */
 }
 @media screen and (min-width: 320px) {
-  /* line 45, ../scss/_content.scss */
+  /* line 54, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 45, ../scss/_content.scss */
+  /* line 54, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 70, ../scss/_content.scss */
+  /* line 79, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -507,7 +516,7 @@ article h2 {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 70, ../scss/_content.scss */
+  /* line 79, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -515,26 +524,26 @@ article h2 {
   }
 }
 
-/* line 91, ../scss/_content.scss */
+/* line 100, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 91, ../scss/_content.scss */
+  /* line 100, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 91, ../scss/_content.scss */
+  /* line 100, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 106, ../scss/_content.scss */
+/* line 115, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
@@ -544,7 +553,7 @@ article h2 {
     We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 115, ../scss/_content.scss */
+  /* line 124, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
@@ -552,30 +561,44 @@ article h2 {
   }
 }
 @media all and (min-width: 800px) {
-  /* line 115, ../scss/_content.scss */
+  /* line 124, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 127, ../scss/_content.scss */
+/* line 136, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 127, ../scss/_content.scss */
+  /* line 136, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 139, ../scss/_content.scss */
+/* line 148, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* line 155, ../scss/_content.scss */
+.row-books {
+  display: block;
+  max-width: 220px;
+}
+
+/* Book cover image */
+/* line 162, ../scss/_content.scss */
+figure img {
+  height: auto;
+  max-width: 100%;
+  border: 3px solid #289ec4;
 }
 
 /*
@@ -583,9 +606,27 @@ article h2 {
 ** All titles in the book list page are set to h2.
 ** They are modified through CSS to make them fit better.
 */
-/* line 151, ../scss/_content.scss */
+/* line 174, ../scss/_content.scss */
+.row-books h2 {
+  justify-content: center;
+  align-content: center;
+  line-height: 0.7;
+  margin-top: 0.1em;
+  margin-bottom: 7px;
+}
+
+/* line 184, ../scss/_content.scss */
 .row-books h2 a {
-  font-size: 18px;
+  font-size: 21px;
+  margin: 0 auto;
+  justify-content: center;
+  width: 220px;
+}
+
+/* line 193, ../scss/_content.scss */
+time {
+  display: block;
+  padding-bottom: 15px;
 }
 
 /**
