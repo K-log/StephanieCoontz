@@ -385,6 +385,11 @@ ul.menu {
 }
 
 /* line 36, ../scss/_navbar.scss */
+ul.menu a:is-active {
+  color: #f1f1f1;
+}
+
+/* line 40, ../scss/_navbar.scss */
 .menu .menu-item {
   margin: 0;
   padding: 0;
@@ -392,13 +397,13 @@ ul.menu {
   text-align: center;
 }
 @media screen and (min-width: 600px) {
-  /* line 36, ../scss/_navbar.scss */
+  /* line 40, ../scss/_navbar.scss */
   .menu .menu-item {
     font-size: 23.256px;
   }
 }
 
-/* line 50, ../scss/_navbar.scss */
+/* line 54, ../scss/_navbar.scss */
 .menu .menu-item > a {
   padding: 0.15em 1ch;
   display: block;
@@ -409,12 +414,12 @@ ul.menu {
   transition: background-color 0.15s ease-in-out;
 }
 @media all and (min-width: 800px) {
-  /* line 50, ../scss/_navbar.scss */
+  /* line 54, ../scss/_navbar.scss */
   .menu .menu-item > a {
     padding: 0.33333em 1ch;
   }
 }
-/* line 67, ../scss/_navbar.scss */
+/* line 71, ../scss/_navbar.scss */
 .menu .menu-item > a:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
