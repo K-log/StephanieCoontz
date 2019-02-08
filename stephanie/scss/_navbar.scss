@@ -33,6 +33,10 @@ ul.menu {  // Scoped to ul to override core theme CSS
     }
 }
 
+ul.menu a:is-active {
+    color: #f1f1f1;
+}
+
 .menu .menu-item {
     // box model
     margin: 0;
