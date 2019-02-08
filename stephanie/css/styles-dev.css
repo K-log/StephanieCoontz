@@ -112,29 +112,30 @@ h6 a {
   line-height: 1.3;
   font-weight: 700;
   font-style: italic;
+  text-decoration: none;
 }
 
-/* line 67, ../scss/_fonts.scss */
+/* line 68, ../scss/_fonts.scss */
 h2,
 h2 a {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 67, ../scss/_fonts.scss */
+  /* line 68, ../scss/_fonts.scss */
   h2,
   h2 a {
     font-size: 45px;
   }
 }
 
-/* line 76, ../scss/_fonts.scss */
+/* line 77, ../scss/_fonts.scss */
 h3,
 h3 a {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 82, ../scss/_fonts.scss */
+/* line 83, ../scss/_fonts.scss */
 h4,
 h4 a {
   font-size: 17px;
