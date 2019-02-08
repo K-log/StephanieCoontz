@@ -385,7 +385,7 @@ ul.menu {
 }
 
 /* line 36, ../scss/_navbar.scss */
-ul.menu a:is-active {
+ul.menu a:active {
   color: #f1f1f1;
 }
 

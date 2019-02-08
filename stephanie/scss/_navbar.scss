@@ -33,7 +33,7 @@ ul.menu {  // Scoped to ul to override core theme CSS
     }
 }
 
-ul.menu a:is-active {
+ul.menu a:active {
     color: #f1f1f1;
 }
 
