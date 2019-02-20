@@ -4,7 +4,7 @@
 
 **Note:** There are two different ways to setup the site. The first requires there be a database dump available on gitlab. The second requires performing the migration by hand using drush.
 
-
+**Note:** The most recent database dump file can be found on stephanies hosting site. Just scp or download the `devsitedump_<date>.sql` with the most recent date. 
 
 # Temporary instructions for setting up the Devsite (Acquia Dev Desktop)
 
