@@ -172,22 +172,10 @@ figure img {
 ** They are modified through CSS to make them fit better.
 */
 .row-books h2 {
-    justify-content: center;
-    align-content: center;
-
-    line-height: 0.3;
+    font-size: 21px;
 
     margin-top: 0.1em;
     margin-bottom: 7px;
-}
-
-.row-books h2 a {
-    font-size: 21px;
-
-    margin: 0 auto;
-
-    justify-content: center;
-    width: 220px;
 }
 
 time {
