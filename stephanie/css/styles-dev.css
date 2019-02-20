@@ -605,31 +605,38 @@ figure img {
   border: 3px solid #289ec4;
 }
 
+/* Book cover for content page */
+/* line 170, ../scss/_content.scss */
+.field--name-field-book-cover img {
+  height: auto;
+  max-width: 100%;
+}
+
 /*
 ** Fonts for book section.
 ** All titles in the book list page are set to h2.
 ** They are modified through CSS to make them fit better.
 */
-/* line 174, ../scss/_content.scss */
+/* line 180, ../scss/_content.scss */
 .row-books h2 {
   font-size: 21px;
   margin-top: 0.1em;
   margin-bottom: 7px;
 }
 
-/* line 181, ../scss/_content.scss */
+/* line 187, ../scss/_content.scss */
 time {
   display: block;
   padding-bottom: 15px;
 }
 
-/* line 188, ../scss/_content.scss */
+/* line 194, ../scss/_content.scss */
 .view-filters {
   display: flex;
   flex-direction: column;
 }
 
-/* line 200, ../scss/_content.scss */
+/* line 199, ../scss/_content.scss */
 .form--inline {
   display: flex;
   flex-flow: row wrap;
@@ -638,17 +645,17 @@ time {
   align-items: flex-end;
 }
 
-/* line 210, ../scss/_content.scss */
+/* line 208, ../scss/_content.scss */
 .views-exposed-form label {
   font-family: "Playfair Display", serif;
 }
 
-/* line 214, ../scss/_content.scss */
+/* line 212, ../scss/_content.scss */
 .form-select {
   font-family: "PT Serif", serif;
 }
 
-/* line 218, ../scss/_content.scss */
+/* line 216, ../scss/_content.scss */
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 21px;

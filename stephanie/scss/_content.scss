@@ -166,6 +166,12 @@ figure img {
     border: 3px solid $turquoise;
 }
 
+/* Book cover for content page */
+.field--name-field-book-cover img {
+    height: auto;
+    max-width: 100%;
+}
+
 /*
 ** Fonts for book section.
 ** All titles in the book list page are set to h2.
@@ -190,13 +196,6 @@ time {
     flex-direction: column;
 }
 
-// .views-exposed-form {
-//     display: flex;
-//     flex-flow: row wrap;
-
-//     width: 100vw;
-// }
-
 .form--inline {
     display: flex;
     flex-flow: row wrap;
@@ -204,7 +203,6 @@ time {
     justify-content: space-evenly;
     align-content: space-evenly;
     align-items: flex-end;
-
 }
 
 .views-exposed-form label {
