@@ -180,6 +180,7 @@ body {
   flex-direction: column;
   border-left: 2px solid #289ec4;
   border-right: 2px solid #289ec4;
+  min-height: 100vh;
 }
 @media all and (min-width: 320px) {
   /* line 25, ../scss/_layout.scss */
@@ -197,37 +198,36 @@ body {
   }
 }
 
-/* line 45, ../scss/_layout.scss */
+/* line 47, ../scss/_layout.scss */
 .global-container > * {
   margin: 0;
   padding: 0;
 }
 
-/* line 50, ../scss/_layout.scss */
+/* line 52, ../scss/_layout.scss */
 .region-content {
   background-color: white;
   flex: 1;
-  min-height: 100vh;
 }
 @media all and (min-width: 800px) {
-  /* line 50, ../scss/_layout.scss */
+  /* line 52, ../scss/_layout.scss */
   .region-content {
     order: 1;
   }
 }
 
-/* line 61, ../scss/_layout.scss */
+/* line 62, ../scss/_layout.scss */
 .content-content {
   margin: 0 2ch;
 }
 @media all and (min-width: 800px) {
-  /* line 61, ../scss/_layout.scss */
+  /* line 62, ../scss/_layout.scss */
   .content-content {
     margin: 0 4ch;
   }
 }
 
-/* line 69, ../scss/_layout.scss */
+/* line 70, ../scss/_layout.scss */
 .region-footer {
   background-color: #1b6a83;
   padding: 0.5em;
@@ -251,13 +251,13 @@ body {
   width: 100%;
 }
 @media all and (min-width: 800px) {
-  /* line 69, ../scss/_layout.scss */
+  /* line 70, ../scss/_layout.scss */
   .region-footer {
     order: 2;
   }
 }
 
-/* line 98, ../scss/_layout.scss */
+/* line 99, ../scss/_layout.scss */
 .views-row {
   display: flex;
   flex-direction: column;
@@ -265,7 +265,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* line 106, ../scss/_layout.scss */
+/* line 107, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
