@@ -196,6 +196,9 @@ time {
 .view-filters {
     display: flex;
     flex-direction: column;
+
+    border-top: 2px solid $turquoise-dark;
+    border-bottom: 2px solid $turquoise-dark;
 }
 
 .form--inline {
