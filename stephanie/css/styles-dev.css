@@ -664,11 +664,12 @@ time {
   font-size: 21px;
   color: #f1f1f1;
   background-color: #1b6a83;
+  align-self: flex-end;
   border-radius: 1ch;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-/* line 233, ../scss/_content.scss */
+/* line 235, ../scss/_content.scss */
 .button:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
