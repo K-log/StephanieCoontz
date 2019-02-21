@@ -196,6 +196,9 @@ time {
 .view-filters {
     display: flex;
     flex-direction: column;
+
+    border-top: 2px solid $turquoise-dark;
+    border-bottom: 2px solid $turquoise-dark;
 }
 
 .form--inline {
@@ -226,4 +229,9 @@ time {
 
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+
+    &:hover {
+        background-color: $dark-grey;
+        transition: background-color 0.05s ease-in-out;
+    }
 }
