@@ -144,6 +144,11 @@ article h2 {
     }
 }
 
+// Images in articles
+.article-img {
+    border: 1px solid $dark-grey;
+}
+
 // Article content
 .field--name-body {
     // Do you need these properties? -jkm
