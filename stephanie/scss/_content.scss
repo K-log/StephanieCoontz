@@ -215,17 +215,22 @@ time {
 }
 
 .form-select {
-    font-family: $text;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    text-align: center;
+
+    height: 1.8em;
 }
 
 .button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 21px;
+    text-align: center;
 
     color: $offwhite;
     background-color: $turquoise-dark;
 
-    align-self: flex-end;
+    align-self: flex-end; //trying self to see if the button can fit closer in the style
 
     border-radius: 1ch;
 
