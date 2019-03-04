@@ -68,7 +68,6 @@ h1 {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
   font-size: initial;
-  font-style: italic;
   font-weight: 700;
   line-height: 1;
 }
@@ -91,12 +90,12 @@ h1 {
   }
 }
 
-/* line 45, ../scss/_fonts.scss */
+/* line 44, ../scss/_fonts.scss */
 .page-title {
   color: #3c3c3c;
 }
 
-/* line 50, ../scss/_fonts.scss */
+/* line 49, ../scss/_fonts.scss */
 h2,
 h3,
 h4,
@@ -105,32 +104,31 @@ h6 {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
   font-weight: 700;
-  font-style: italic;
 }
 
-/* line 61, ../scss/_fonts.scss */
+/* line 59, ../scss/_fonts.scss */
 h2 {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 61, ../scss/_fonts.scss */
+  /* line 59, ../scss/_fonts.scss */
   h2 {
     font-size: 45px;
   }
 }
 
-/* line 69, ../scss/_fonts.scss */
+/* line 67, ../scss/_fonts.scss */
 h3 {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 74, ../scss/_fonts.scss */
+/* line 72, ../scss/_fonts.scss */
 h4 {
   font-size: 17px;
 }
 
-/* line 78, ../scss/_fonts.scss */
+/* line 76, ../scss/_fonts.scss */
 h1 a,
 h2 a,
 h3 a,
@@ -561,7 +559,6 @@ article h2 {
   .views-field-field-publication {
     display: block;
     float: left;
-    font-style: italic;
   }
 }
 @media all and (min-width: 800px) {
@@ -571,39 +568,39 @@ article h2 {
   }
 }
 
-/* line 136, ../scss/_content.scss */
+/* line 135, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 136, ../scss/_content.scss */
+  /* line 135, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 148, ../scss/_content.scss */
+/* line 147, ../scss/_content.scss */
 .article-img {
   border: 1px solid #3c3c3c;
 }
 
-/* line 153, ../scss/_content.scss */
+/* line 152, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 160, ../scss/_content.scss */
+/* line 159, ../scss/_content.scss */
 .row-books {
   display: block;
   max-width: 220px;
 }
 
 /* Book cover image */
-/* line 167, ../scss/_content.scss */
+/* line 166, ../scss/_content.scss */
 figure img {
   height: auto;
   max-width: 100%;
@@ -611,7 +608,7 @@ figure img {
 }
 
 /* Book cover for content page */
-/* line 175, ../scss/_content.scss */
+/* line 174, ../scss/_content.scss */
 .field--name-field-book-cover img {
   height: auto;
   max-width: 100%;
@@ -623,20 +620,20 @@ figure img {
 ** All titles in the book list page are set to h2.
 ** They are modified through CSS to make them fit better.
 */
-/* line 187, ../scss/_content.scss */
+/* line 186, ../scss/_content.scss */
 .row-books h2 {
   font-size: 21px;
   margin-top: 0.1em;
   margin-bottom: 7px;
 }
 
-/* line 194, ../scss/_content.scss */
+/* line 193, ../scss/_content.scss */
 time {
   display: block;
   padding-bottom: 15px;
 }
 
-/* line 201, ../scss/_content.scss */
+/* line 200, ../scss/_content.scss */
 .view-filters {
   display: flex;
   flex-direction: column;
@@ -644,7 +641,7 @@ time {
   border-bottom: 2px solid #1b6a83;
 }
 
-/* line 209, ../scss/_content.scss */
+/* line 208, ../scss/_content.scss */
 .form--inline {
   display: flex;
   flex-flow: row wrap;
@@ -653,12 +650,12 @@ time {
   align-items: flex-end;
 }
 
-/* line 218, ../scss/_content.scss */
+/* line 217, ../scss/_content.scss */
 .views-exposed-form label {
   font-family: "Playfair Display", serif;
 }
 
-/* line 222, ../scss/_content.scss */
+/* line 221, ../scss/_content.scss */
 .form-select {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
@@ -666,7 +663,7 @@ time {
   height: 1.8em;
 }
 
-/* line 230, ../scss/_content.scss */
+/* line 229, ../scss/_content.scss */
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 21px;
@@ -678,7 +675,7 @@ time {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-/* line 245, ../scss/_content.scss */
+/* line 244, ../scss/_content.scss */
 .button:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
