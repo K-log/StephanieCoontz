@@ -21,7 +21,7 @@
  * $constants in your fonts import before you had set them. Putting them in
  * this order makes it work perfectly. -jkm
  */
-@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700i");
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700");
 /**
  * Is this font imported twice? -jkm
  *
