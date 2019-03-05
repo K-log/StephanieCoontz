@@ -261,9 +261,10 @@ body {
   flex-direction: column;
   margin-top: 1em;
   margin-bottom: 0.5em;
+  width: 100%;
 }
 
-/* line 107, ../scss/_layout.scss */
+/* line 109, ../scss/_layout.scss */
 .views-field-title {
   justify-content: flex-start;
   align-content: space-evenly;
