@@ -104,31 +104,32 @@ h6 {
   font-family: "Playfair Display", serif;
   color: #3c3c3c;
   font-weight: 700;
+  margin-bottom: 0.3em;
 }
 
-/* line 59, ../scss/_fonts.scss */
+/* line 61, ../scss/_fonts.scss */
 h2 {
   font-size: 31.25px;
 }
 @media screen and (min-width: 1385px) {
-  /* line 59, ../scss/_fonts.scss */
+  /* line 61, ../scss/_fonts.scss */
   h2 {
     font-size: 45px;
   }
 }
 
-/* line 67, ../scss/_fonts.scss */
+/* line 69, ../scss/_fonts.scss */
 h3 {
   font-size: 17px;
   text-transform: uppercase;
 }
 
-/* line 72, ../scss/_fonts.scss */
+/* line 74, ../scss/_fonts.scss */
 h4 {
   font-size: 17px;
 }
 
-/* line 76, ../scss/_fonts.scss */
+/* line 78, ../scss/_fonts.scss */
 h1 a,
 h2 a,
 h3 a,
