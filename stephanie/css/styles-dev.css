@@ -424,7 +424,7 @@ ul.menu a:active {
   transition: background-color 0.05s ease-in-out;
 }
 /* line 76, ../scss/_navbar.scss */
-.menu .menu-item > a:active {
+.menu .menu-item > a:visited {
   color: #f1f1f1;
 }
 

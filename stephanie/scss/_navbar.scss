@@ -73,7 +73,7 @@ ul.menu a:active {
         transition: background-color 0.05s ease-in-out;
     }
 
-    &:active {
+    &:visited {
         color: $offwhite;
     }
 }
