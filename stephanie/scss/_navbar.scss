@@ -72,4 +72,8 @@ ul.menu a:active {
         background-color: $dark-grey;
         transition: background-color 0.05s ease-in-out;
     }
+
+    &:active {
+        color: $offwhite;
+    }
 }
