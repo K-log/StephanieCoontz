@@ -226,9 +226,14 @@ time {
     height: 1.8em;
 }
 
+.form-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 18px;
+}
+
 .button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     text-align: center;
 
     color: $offwhite;
