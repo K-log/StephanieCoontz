@@ -1,14 +1,20 @@
-//###########################
-// Colors
-//All website colors should be stored here as variables and included into other files.
-// Use use a variable name that matches the color. Example: #ffffff would be $white.
+/**
+ * Colors
+ *
+ * All website colors should be stored here as constamts and may be freely
+ * used in other files.
+ * 
+ * Note: Use use a variable name that matches the color. (Example: #ffffff
+ * would be $white.)
+ */
 
 // Body
 $light-white: #edeae0;
 
-
 // Border covers
 $turquoise: #289ec4;
+$turquoise-light: mix(white, $turquoise, 85%);
+$turquoise-dark: mix(black, $turquoise, 33%);
 
 // Header, Footer, Content Text color
 $dark-grey: #3c3c3c;
@@ -25,7 +31,3 @@ $mid-grey: #bfbfbf;
 $form-submit: #4caf50;
 $form-input: #ccc;
 $form-container: #f2f2f2;
-
-
-// End Colors
-//###########################

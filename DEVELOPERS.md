@@ -4,9 +4,9 @@
 
 **Note:** There are two different ways to setup the site. The first requires there be a database dump available on gitlab. The second requires performing the migration by hand using drush.
 
+**Note:** The most recent database dump file can be found on stephanies hosting site. Just scp or download the `devsitedump_<date>.sql` with the most recent date. 
 
-
-# Temporary instructions for setting up the Devsite.
+# Temporary instructions for setting up the Devsite (Acquia Dev Desktop)
 
 Go into Acquia DevDesktop and click the small plus (+) button in the bottom left and select `New Drupal Site ...`.
 
@@ -37,7 +37,6 @@ To access the admin area, just go to the base site url and add `/admin` to the e
 If you are not logged in you will need to go to `/user` and login using the same username and password for devsite.stephaniecoontz.org.
 
 
-Untested past this point!
 ---
 
 # Installing from a database dump (Recommended)
@@ -83,11 +82,11 @@ sh comp.sh
 Running `comp.sh` should compile the sass source files and run a `drush cr` so when you navigate to your site you should see it updated with the theme.
 
 
-
-
 ---
 
-# Installing from a CSV Migration
+# Installing from a CSV Migration (Advanced)
+
+This will produce a clean installation of only the data.
 
 ## Step 1: Installing Prerequisites
 
