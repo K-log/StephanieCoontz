@@ -670,7 +670,7 @@ time {
 }
 
 /* line 229, ../scss/_content.scss */
-.button {
+.form-actions {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 21px;
   text-align: center;
@@ -682,7 +682,7 @@ time {
   padding-bottom: 0.5rem;
 }
 /* line 244, ../scss/_content.scss */
-.button:hover {
+.form-actions:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
 }
