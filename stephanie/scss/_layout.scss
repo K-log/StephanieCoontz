@@ -111,3 +111,8 @@ body {
     align-content: space-evenly;
     margin-top: 1em;
 }
+
+.spotlight-rows {
+    display: flex;
+    flex-direction: column;
+}

@@ -272,6 +272,12 @@ body {
   margin-top: 1em;
 }
 
+/* line 115, ../scss/_layout.scss */
+.spotlight-rows {
+  display: flex;
+  flex-direction: column;
+}
+
 /**
  * HEADER
  *
@@ -483,7 +489,12 @@ button {
   align-items: baseline;
 }
 
-/* line 54, ../scss/_content.scss */
+/* line 55, ../scss/_content.scss */
+.view-spotlight > .view-content {
+  justify-content: flex-start;
+}
+
+/* line 59, ../scss/_content.scss */
 article h2 {
   /**
    * It's pretty dangerous to scope this so generally unless it's what you really want.
@@ -501,20 +512,20 @@ article h2 {
    */
 }
 @media screen and (min-width: 320px) {
-  /* line 54, ../scss/_content.scss */
+  /* line 59, ../scss/_content.scss */
   article h2 {
     text-align: center;
   }
 }
 @media screen and (min-width: 760px) {
-  /* line 54, ../scss/_content.scss */
+  /* line 59, ../scss/_content.scss */
   article h2 {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 320px) {
-  /* line 79, ../scss/_content.scss */
+  /* line 84, ../scss/_content.scss */
   .align-right {
     display: block;
     float: none;
@@ -524,7 +535,7 @@ article h2 {
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 79, ../scss/_content.scss */
+  /* line 84, ../scss/_content.scss */
   .align-right {
     float: right;
     width: 220px;
@@ -532,26 +543,26 @@ article h2 {
   }
 }
 
-/* line 100, ../scss/_content.scss */
+/* line 105, ../scss/_content.scss */
 .views-field-title {
   display: block;
   float: left;
 }
 @media all and (min-width: 320px) {
-  /* line 100, ../scss/_content.scss */
+  /* line 105, ../scss/_content.scss */
   .views-field-title {
     font-family: "Playfair Display", serif;
     font-size: 26px;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 100, ../scss/_content.scss */
+  /* line 105, ../scss/_content.scss */
   .views-field-title {
     font-size: 35px;
   }
 }
 
-/* line 115, ../scss/_content.scss */
+/* line 120, ../scss/_content.scss */
 .field-content {
   display: block;
   float: left;
@@ -561,52 +572,52 @@ article h2 {
     We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
 }*/
 @media all and (min-width: 320px) {
-  /* line 124, ../scss/_content.scss */
+  /* line 129, ../scss/_content.scss */
   .views-field-field-publication {
     display: block;
     float: left;
   }
 }
 @media all and (min-width: 800px) {
-  /* line 124, ../scss/_content.scss */
+  /* line 129, ../scss/_content.scss */
   .views-field-field-publication {
     float: left;
   }
 }
 
-/* line 135, ../scss/_content.scss */
+/* line 140, ../scss/_content.scss */
 .views-field-body {
   display: block;
   float: left;
   font-family: "PT Serif", serif;
 }
 @media all and (min-width: 320px) {
-  /* line 135, ../scss/_content.scss */
+  /* line 140, ../scss/_content.scss */
   .views-field-body {
     margin-top: 1em;
     margin-bottom: 1em;
   }
 }
 
-/* line 147, ../scss/_content.scss */
+/* line 152, ../scss/_content.scss */
 .article-img {
   border: 1px solid #3c3c3c;
 }
 
-/* line 152, ../scss/_content.scss */
+/* line 157, ../scss/_content.scss */
 .field--name-body {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 159, ../scss/_content.scss */
+/* line 164, ../scss/_content.scss */
 .row-books {
   display: block;
   max-width: 220px;
 }
 
 /* Book cover image */
-/* line 166, ../scss/_content.scss */
+/* line 171, ../scss/_content.scss */
 figure img {
   height: auto;
   max-width: 100%;
@@ -614,7 +625,7 @@ figure img {
 }
 
 /* Book cover for content page */
-/* line 174, ../scss/_content.scss */
+/* line 179, ../scss/_content.scss */
 .field--name-field-book-cover img {
   height: auto;
   max-width: 100%;
@@ -626,20 +637,20 @@ figure img {
 ** All titles in the book list page are set to h2.
 ** They are modified through CSS to make them fit better.
 */
-/* line 186, ../scss/_content.scss */
+/* line 191, ../scss/_content.scss */
 .row-books h2 {
   font-size: 21px;
   margin-top: 0.1em;
   margin-bottom: 7px;
 }
 
-/* line 193, ../scss/_content.scss */
+/* line 198, ../scss/_content.scss */
 time {
   display: block;
   padding-bottom: 15px;
 }
 
-/* line 200, ../scss/_content.scss */
+/* line 205, ../scss/_content.scss */
 .view-filters {
   display: flex;
   flex-direction: column;
@@ -647,7 +658,7 @@ time {
   border-bottom: 2px solid #1b6a83;
 }
 
-/* line 208, ../scss/_content.scss */
+/* line 213, ../scss/_content.scss */
 .form--inline {
   display: flex;
   flex-flow: row wrap;
@@ -656,12 +667,12 @@ time {
   align-items: flex-end;
 }
 
-/* line 217, ../scss/_content.scss */
+/* line 222, ../scss/_content.scss */
 .views-exposed-form label {
   font-family: "Playfair Display", serif;
 }
 
-/* line 221, ../scss/_content.scss */
+/* line 226, ../scss/_content.scss */
 .form-select {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
@@ -669,14 +680,14 @@ time {
   height: 1.8em;
 }
 
-/* line 229, ../scss/_content.scss */
+/* line 234, ../scss/_content.scss */
 .form-text {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
   margin-bottom: 0.5em;
 }
 
-/* line 236, ../scss/_content.scss */
+/* line 241, ../scss/_content.scss */
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 18px;
@@ -690,7 +701,7 @@ time {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-/* line 254, ../scss/_content.scss */
+/* line 259, ../scss/_content.scss */
 .button:hover {
   background-color: #3c3c3c;
   transition: background-color 0.05s ease-in-out;
