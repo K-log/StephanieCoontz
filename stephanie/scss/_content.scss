@@ -51,6 +51,11 @@ button {
     align-items: baseline;
 }
 
+//Specific to Spotlight block on front page
+.view-spotlight > .view-content {
+    justify-content: flex-start;
+}
+
 article h2 {
     /**
      * It's pretty dangerous to scope this so generally unless it's what you really want.
