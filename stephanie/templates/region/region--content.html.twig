@@ -4,4 +4,8 @@
         {{ content }}
     </div>
     {% endif %}
+    {% set url = url('<current>') %}
+    {% if 'archives' in url|render|render %}
+        {{ include('form-element.html.twig') }}
+    {% endif %}
 </div>
