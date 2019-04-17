@@ -12,8 +12,8 @@
 /* Heading and body properties */
 
 body {
-	font-family: $text;
 	color: $dark-grey;
+	font-family: $text;
 	line-height: 1.4;
 
 	@media screen and (min-width: 800px) {
@@ -38,15 +38,14 @@ h6 {
 }
 
 h1 {
-	color: $dark-grey;
 	font-size: 32px;
 	font-weight: 700;
 	line-height: 1;
-	
+
 	@media screen and (min-width: 800px) {
 		font-size: 44.422px;
 	}
-	
+
 	@media screen and (min-width: 1385px) {
 		font-size: 56.832px;
 	}
@@ -56,7 +55,6 @@ h1 {
 	color: $dark-grey;
 }
 
-// Link text size will inherit from its parent (and if it's not, you've done something wrong), so you don't need to set the heading size AND the link size within the heading. -jkm
 h2,
 h3,
 h4,

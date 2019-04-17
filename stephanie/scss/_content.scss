@@ -1,125 +1,129 @@
 /**
- * CONTENT
+ * Content
  *
- * Any styling that effects the blocks with the Content regions should go here.
- * Content is things such as articles, books, interviews. Anything that fills most of the page.
+ * Any styling that effects the blocks with the Content regions should
+ * go here.  Content is things such as articles, books, interviews.
+ * Anything that fills most of the page.
+ *
  * For global styling see layout.css
  */
 
 a {
-    color: $turquoise-dark;
-    text-decoration-skip: ink;
+	color: $turquoise-dark;
+	text-decoration-skip: ink;
 }
 
 input,
 select,
 textarea {
-    // box model
-    border: 1px solid $grey;
-    margin-bottom: 1em;
-    padding: 0.25em 1ch;
-    max-width: 100%;
-    width: 100%;
-    // decoration
-    border-radius: 2px;
+	// box model
+	border: 1px solid $grey;
+	margin-bottom: 1em;
+	padding: 0.25em 1ch;
+	width: 100%;
+	max-width: 100%;
+	// decoration
+	border-radius: 2px;
 
-    &:focus {
-        border-color: $turquoise;
-    }
+	&:focus {
+		border-color: $turquoise;
+	}
 }
 
 input[type="button"],
 input[type="submit"],
 button {
-    width: auto;
+	width: auto;
 }
 
 .tabs {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-
-    max-width: 100vw;
+	// box model
+	max-width: 100vw;
+	// layout
+	align-content: center;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .view-content {
-    display: flex;
-    flex-flow: row wrap;
-
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: baseline;
+	align-content: flex-start;
+	align-items: baseline;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
 }
 
 //Specific to Spotlight block on front page
 .view-spotlight > .view-content {
-    justify-content: flex-start;
+	justify-content: flex-start;
 }
 
+/**
+ * It's pretty dangerous to scope this so generally unless it's what you really want.
+ * Article elements could show up in places that aren't just the main articles on the website. 
+ * Consider scoping it to a class name instead. -jkm
+ * Should there be a default style for screens smaller than 320px? -jkm
+ * Are screens smaller than 320px going to access the site? --FEV
+ *
+ * On the web, it's not up to you to dictate what screen size people
+ * use, and there is at least one reason beyond physical screen size
+ * why someone might get a layout for a smaller breakpoint. Generally,
+ * if it doesn't need to be explicitly declared to work some way at a
+ * minimum of 320px, you should just remove the breakpoint and set its
+ * contents as the default. -jkm
+ */
 article h2 {
-    /**
-     * It's pretty dangerous to scope this so generally unless it's what you really want.
-     * Article elements could show up in places that aren't just the main articles on the website. 
-     * Consider scoping it to a class name instead. -jkm
-     * Should there be a default style for screens smaller than 320px? -jkm
-     * Are screens smaller than 320px going to access the site? --FEV
-     *
-     * On the web, it's not up to you to dictate what screen size people
-     * use, and there is at least one reason beyond physical screen size
-     * why someone might get a layout for a smaller breakpoint. Generally,
-     * if it doesn't need to be explicitly declared to work some way at a
-     * minimum of 320px, you should just remove the breakpoint and set its
-     * contents as the default. -jkm
-     */
 
-    @media screen and (min-width: 320px) {
-        text-align: center;
-    }
+	@media screen and (min-width: 320px) {
+		text-align: center;
+	}
 
-    @media screen and (min-width: 760px) {
-        text-align: left;
-    }
+	@media screen and (min-width: 760px) {
+		text-align: left;
+	}
 }
 
 .align-right {
-    // What happens to these elements below 320px? -jkm
+	// What happens to these elements below 320px? -jkm
 
-    @media screen and (min-width: 320px) {
-        display: block;
-        float: none;
-        justify-content: center;
+	@media screen and (min-width: 320px) {
+		// box model
+		margin: 0 auto;
+		width: 230px;
+		// layout
+		display: block;
+		float: none;
+		justify-content: center;
+	}
 
-        width: 230px;
-        margin: 0 auto;
-    }
-
-    @media screen and (min-width: 700px) {
-        float: right;
-
-        width: 220px;
-        margin-left: 15px;
-    }
+	@media screen and (min-width: 700px) {
+		// box model
+		margin-left: 15px;
+		width: 220px;
+		// layout
+		float: right;
+	}
 }
 
 // Article headings on list page
 .views-field-title {
-    display: block;
-    float: left;
+	display: block;
+	float: left;
 
-    @media all and (min-width: 320px) {
-        font-family: $display;
-        font-size: 26px;
-    }
+	@media all and (min-width: 320px) {
+		font-family: $display;
+		font-size: 26px;
+	}
 
-    @media all and (min-width: 800px) {
-        font-size: 35px;
-    }
+	@media all and (min-width: 800px) {
+		font-size: 35px;
+	}
 }
 
 // Field content -- Cointains Author Name and Publisher
 .field-content {
-    display: block;
-    float: left;
+	display: block;
+	float: left;
 }
 
 /*.field--name-field-author {
@@ -127,60 +131,62 @@ article h2 {
 }*/
 
 .views-field-field-publication {
-    @media all and (min-width: 320px) {
-        display: block;
-        float: left;
-    }
+	@media all and (min-width: 320px) {
+		display: block;
+		float: left;
+	}
 
-    @media all and (min-width: 800px) {
-        float: left;
-    }
+	@media all and (min-width: 800px) {
+		float: left;
+	}
 }
 
 .views-field-body {
-    display: block;
-    float: left;
-    font-family: $text;
+	// layout
+	display: block;
+	float: left;
+	// typography
+	font-family: $text;
 
-    @media all and (min-width: 320px) {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
+	@media all and (min-width: 320px) {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 }
 
 // Images in articles
 .article-img {
-    border: 1px solid $dark-grey;
+	border: 1px solid $dark-grey;
 }
 
 // Article content
 .field--name-body {
-    // Do you need these properties? -jkm
-    margin-left: auto;
-    margin-right: auto;
+	// Do you need these properties? -jkm
+	margin-right: auto;
+	margin-left: auto;
 }
 
 // Books content
 .row-books {
-    display: block;
-
-    max-width: 220px;
+	// box model
+	max-width: 220px;
+	// layout
+	display: block;
 }
 
 /* Book cover image */
 figure img {
-    height: auto;
-    max-width: 100%;
-
-    border: 3px solid $turquoise;
+	// box model
+	border: 3px solid $turquoise;
+	height: auto;
+	max-width: 100%;
 }
 
 /* Book cover for content page */
 .field--name-field-book-cover img {
-    height: auto;
-    max-width: 100%;
-
-    border: 2px solid $turquoise;
+	border: 2px solid $turquoise;
+	height: auto;
+	max-width: 100%;
 }
 
 /*
@@ -189,75 +195,79 @@ figure img {
 ** They are modified through CSS to make them fit better.
 */
 .row-books h2 {
-    font-size: 21px;
-
-    margin-top: 0.1em;
-    margin-bottom: 7px;
+	// box model
+	margin-top: 0.1em;
+	margin-bottom: 7px;
+	// typography
+	font-size: 21px;
 }
 
 time {
-    display: block;
-    padding-bottom: 15px;
+	// box model
+	padding-bottom: 15px;
+	// layout
+	display: block;
 }
 
 // Search form in Articles page.
 
 .view-filters {
-    display: flex;
-    flex-direction: column;
-
-    border-top: 2px solid $turquoise-dark;
-    border-bottom: 2px solid $turquoise-dark;
+	// box model
+	border-top: 2px solid $turquoise-dark;
+	border-bottom: 2px solid $turquoise-dark;
+	// layout
+	display: flex;
+	flex-direction: column;
 }
 
 .form--inline {
-    display: flex;
-    flex-flow: row wrap;
-
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    align-items: flex-end;
+	align-content: space-evenly;
+	align-items: flex-end;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
 }
 
 .views-exposed-form label {
-    font-family: $display;
+	font-family: $display;
 }
 
 .form-select {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    text-align: center;
-
-    height: 1.8em;
+	// box model
+	height: 1.8em;
+	// typography
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 18px;
+	text-align: center;
 }
 
 .form-text {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: 18px;
-
-    margin-bottom: 0.5em;
+	// box model
+	margin-bottom: 0.5em;
+	// typography
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 18px;
 }
 
 .button {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    text-align: center;
+	// box model
+	margin-top: 0;
+	margin-bottom: 0.5em;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	// layout
+	align-self: flex-end; //trying self to see if the button can fit closer in the style
+	// typography
+	color: $offwhite;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 18px;
+	text-align: center;
+	// decoration
+	background-color: $turquoise-dark;
+	border-radius: 1ch;
 
-    color: $offwhite;
-    background-color: $turquoise-dark;
-
-    align-self: flex-end; //trying self to see if the button can fit closer in the style
-
-    border-radius: 1ch;
-
-    margin-top: 0;
-    margin-bottom: 0.5em;
-
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-
-    &:hover {
-        background-color: $dark-grey;
-        transition: background-color 0.05s ease-in-out;
-    }
+	&:hover {
+		background-color: $dark-grey;
+		transition: background-color 0.05s ease-in-out;
+	}
 }

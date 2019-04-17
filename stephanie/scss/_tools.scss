@@ -16,13 +16,16 @@
  * would be $white.)
  */
 
+$tint: white;
+$shade: black;
+
 // Body
 $light-white: #edeae0;
 
 // Border covers
 $turquoise: #289ec4;
-$turquoise-light: mix(white, $turquoise, 85%);
-$turquoise-dark: mix(black, $turquoise, 33%);
+$turquoise-light: mix($tint, $turquoise, 85%);
+$turquoise-dark: mix($shade, $turquoise, 33%);
 
 // Header, Footer, Content Text color
 $dark-grey: #3c3c3c;
