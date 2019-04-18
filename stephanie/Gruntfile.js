@@ -95,7 +95,7 @@ module.exports = function(grunt) {
 				tasks: ['copy:to_banner_themes']
 			},*/
 			css: {  // Process Sass into CSS.
-				files: ['css/styles.css', 'scss/styles.scss',],
+				files: ['scss/**/*.scss',],
 				//files: ['css/src/style.scss', 'css/src/print.scss', 'css/src/smacss/**/*.scss', 'css/src/custom-css/*.scss'],
 				tasks: ['sass', 'sasslint'],
 			},
