@@ -7,73 +7,78 @@
  */
 
 .system-main-menu {
-    width: 100%;
+	width: 100%;
 }
 
 .region-navbar {
-    background-color: $turquoise-dark;
-    border-bottom: 2px solid $turquoise;
+	// box model
+	border-bottom: 2px solid $turquoise;
+	// decoration
+	background-color: $turquoise-dark;
 }
 
-ul.menu {  // Scoped to ul to override core theme CSS
-    // box model
-    margin: 5px 1ch;
-    padding: 0;
-    // layout
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    // list
-    list-style-type: none;
+ul.menu {	 // Scoped to ul to override core theme CSS
+	// box model
+	margin: 5px 1ch;
+	padding: 0;
+	// layout
+	align-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// list
+	list-style-type: none;
 
-    @media screen and (min-width: 320px) {
-        justify-content: space-evenly;
-        flex-direction: row;
-    }
+	@media screen and (min-width: 320px) {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
 }
 
 ul.menu a:active {
-    color: #f1f1f1;
+	color: $offwhite;
 }
 
 .menu .menu-item {
-    // box model
-    margin: 0;
-    padding: 0;
-    // typography
-    font-size: 16px;
-    // line-height: 1.3;
-    text-align: center;
+	// box model
+	margin: 0;
+	padding: 0;
+	// typography
+	font-size: 16px;
+	//line-height: 1.3;
+	text-align: center;
 
-    @media screen and (min-width: 600px) {
-        font-size: 23.256px;
-    }
+	@media screen and (min-width: 600px) {
+		font-size: 23.256px;
+	}
 }
 
 .menu .menu-item > a {
-    // box model
-    padding: 0.15em 1ch;
-    // layout
-    display: block;
-    // typography
-    font-family: $display;
-    color: $offwhite;
-    text-decoration: none;
-    // decoration
-    border-radius: 1ch;
-    transition: background-color 0.15s ease-in-out;
+	// box model
+	padding: 0.15em 1ch;
+	// layout
+	display: block;
+	// typography
+	color: $offwhite;
+	font-family: $display;
+	// decoration
+	border-radius: 1ch;
+	text-decoration: none;
+	// behavior
+	transition: background-color 0.15s ease-in-out;
 
-    @media all and (min-width: 800px) {
-        padding: 0.33333em 1ch;
-    }
+	@media all and (min-width: 800px) {
+		padding: 0.33333em 1ch;
+	}
 
-    &:hover {
-        background-color: $dark-grey;
-        transition: background-color 0.05s ease-in-out;
-    }
+	&:hover {
+		// decoration
+		background-color: $dark-grey;
+		// behavior
+		transition: background-color 0.05s ease-in-out;
+	}
 
-    &:visited {
-        color: $offwhite;
-    }
+	&:visited {
+		color: $offwhite;
+	}
 }

@@ -12,6 +12,7 @@ stephanie/css/styles-dev.css
 #Sass files
 #stephanie/.sass-cache/
 stephanie/\.sass-cache/
+*.css.map
 
 #Node modules
 node_modules/
