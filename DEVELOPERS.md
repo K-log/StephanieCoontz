@@ -1,6 +1,63 @@
-# Instructions for setup
+# Instructions for setup and deployment
 
 **Note:** These instructions may not work for all cases. Please read through them thoroughly before preceding with setup.
+
+## Update the theme
+
+1. Open a terminal and ssh into the hosting server
+```bash
+ssh <user>@stephaniecoontz.org
+```
+
+2. Navigate to the site directory
+```bash
+# Devsite
+cd ~/public_html/devsite/
+
+# Live site
+cd ~/public_html/
+```
+
+3. Check which git branch you're on and change it if necessary. Devsite should be on the developer branch and live should be on master.
+```bash
+# Prints out current branch name
+git branch
+
+# Changes the working branch
+git checkout <branch name>
+```
+
+4. Pull all the changes from the repo
+```bash
+git pull
+```
+
+5. Setup npm and grunt and compile the theme source
+```bash
+npm install
+
+grunt
+```
+
+6. Go to the site as an administrator and run a cache rebuild if the changes are not showing up.
+
+
+### Here is an example with devsite
+```bash
+ssh <user>@stephaniecoontz.org
+
+cd ~/public_html/devsite/
+
+git branch
+
+git checkout developer
+
+git pull
+
+npm install
+
+grunt
+```
 
 ## Setup with Lando (Recommened)
 
