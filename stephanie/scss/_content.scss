@@ -8,9 +8,35 @@
  * For global styling see layout.css
  */
 
-a {
+a,
+a:visited {
+	// typography
 	color: $turquoise-dark;
+	// decoration
+	text-decoration-color: $turquoise;
 	text-decoration-skip: ink;
+
+	&:hover {
+		// typography
+		color: $rust;
+		// decoration
+		text-decoration-color: currentcolor;
+	}
+
+	&:focus {
+		// typography
+		color: $azure;
+		// decoration
+		text-decoration: none;
+	}
+
+	&:active {
+		// typography
+		color: $azure;
+		// decoration
+		text-decoration: underline;
+		text-decoration-color: $turquoise-light;
+	}
 }
 
 input,
@@ -81,6 +107,18 @@ article h2 {
 	@media screen and (min-width: 760px) {
 		text-align: left;
 	}
+}
+
+article p {
+	hanging-punctuation: first allow-end last;  // Safari, experimental
+	hyphens: auto;
+	-webkit-hyphenate-limit-before: 3;
+	-webkit-hyphenate-limit-after: 2;
+	/**/-ms-hyphenate-limit-chars: 6 3 2;
+	hyphenate-limit-last: always;  // Edge
+	-webkit-hyphenate-limit-lines: 2;
+	/**/-ms-hyphenate-limit-lines: 2;
+	-ms-hyphenate-limit-zone: 8%;
 }
 
 .align-right {
