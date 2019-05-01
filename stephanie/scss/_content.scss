@@ -8,9 +8,35 @@
  * For global styling see layout.css
  */
 
-a {
+a,
+a:visited {
+	// typography
 	color: $turquoise-dark;
+	// decoration
+	text-decoration-color: $turquoise;
 	text-decoration-skip: ink;
+
+	&:hover {
+		// typography
+		color: $rust;
+		// decoration
+		text-decoration-color: currentcolor;
+	}
+
+	&:focus {
+		// typography
+		color: $azure;
+		// decoration
+		text-decoration: none;
+	}
+
+	&:active {
+		// typography
+		color: $azure;
+		// decoration
+		text-decoration: underline;
+		text-decoration-color: $turquoise-light;
+	}
 }
 
 input,
