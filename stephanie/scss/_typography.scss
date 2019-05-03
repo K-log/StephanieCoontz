@@ -90,3 +90,9 @@ h4 a {
 	color: $dark-grey;
 	text-decoration: none;
 }
+
+ol,
+ul {
+	margin-left: 2ch;
+	padding-left: 0;
+}
