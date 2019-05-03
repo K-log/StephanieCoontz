@@ -8,6 +8,11 @@
  * For global styling see layout.css
  */
 
+img {
+	height: auto;
+	max-width: 100%;
+}
+
 a,
 a:visited {
 	// typography
@@ -216,15 +221,11 @@ article p {
 figure img {
 	// box model
 	border: 3px solid $turquoise;
-	height: auto;
-	max-width: 100%;
 }
 
 /* Book cover for content page */
 .field--name-field-book-cover img {
 	border: 2px solid $turquoise;
-	height: auto;
-	max-width: 100%;
 }
 
 /*
