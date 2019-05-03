@@ -212,8 +212,20 @@ figure img {
 }
 
 /* Book cover for content page */
-.field--name-field-book-cover img {
+.field--name-field-book-cover > img {
+	// box model
 	border: 2px solid $turquoise;
+	margin: 0 auto 2em;
+	// layout
+	display: block;
+}
+
+.field--name-field-authors {
+	// box model
+	margin: 0 0 1em 2ch;
+	max-width: calc(50% - 1ch);
+	// layout
+	float: right;
 }
 
 /*
