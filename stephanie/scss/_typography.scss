@@ -24,6 +24,7 @@ body {
 p {
 	font-variant-ligatures: common-ligatures;
 	font-variant-numeric: oldstyle-nums;
+	-webkit-hyphens: auto;
 	hyphens: auto;
 }
 
@@ -89,4 +90,10 @@ h3 a,
 h4 a {
 	color: $dark-grey;
 	text-decoration: none;
+}
+
+ol,
+ul {
+	margin-left: 2ch;
+	padding-left: 0;
 }

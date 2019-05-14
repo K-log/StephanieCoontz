@@ -8,6 +8,11 @@
  * For global styling see layout.css
  */
 
+img {
+	height: auto;
+	max-width: 100%;
+}
+
 a,
 a:visited {
 	// typography
@@ -82,43 +87,6 @@ button {
 //Specific to Spotlight block on front page
 .view-spotlight > .view-content {
 	justify-content: flex-start;
-}
-
-/**
- * It's pretty dangerous to scope this so generally unless it's what you really want.
- * Article elements could show up in places that aren't just the main articles on the website. 
- * Consider scoping it to a class name instead. -jkm
- * Should there be a default style for screens smaller than 320px? -jkm
- * Are screens smaller than 320px going to access the site? --FEV
- *
- * On the web, it's not up to you to dictate what screen size people
- * use, and there is at least one reason beyond physical screen size
- * why someone might get a layout for a smaller breakpoint. Generally,
- * if it doesn't need to be explicitly declared to work some way at a
- * minimum of 320px, you should just remove the breakpoint and set its
- * contents as the default. -jkm
- */
-article h2 {
-
-	@media screen and (min-width: 320px) {
-		text-align: center;
-	}
-
-	@media screen and (min-width: 760px) {
-		text-align: left;
-	}
-}
-
-article p {
-	hanging-punctuation: first allow-end last;  // Safari, experimental
-	hyphens: auto;
-	-webkit-hyphenate-limit-before: 3;
-	-webkit-hyphenate-limit-after: 2;
-	/**/-ms-hyphenate-limit-chars: 6 3 2;
-	hyphenate-limit-last: always;  // Edge
-	-webkit-hyphenate-limit-lines: 2;
-	/**/-ms-hyphenate-limit-lines: 2;
-	-ms-hyphenate-limit-zone: 8%;
 }
 
 .align-right {
@@ -197,13 +165,6 @@ article p {
 	border: 1px solid $dark-grey;
 }
 
-// Article content
-.field--name-body {
-	// Do you need these properties? -jkm
-	margin-right: auto;
-	margin-left: auto;
-}
-
 // Books content
 .row-books {
 	// box model
@@ -216,15 +177,23 @@ article p {
 figure img {
 	// box model
 	border: 3px solid $turquoise;
-	height: auto;
-	max-width: 100%;
 }
 
 /* Book cover for content page */
-.field--name-field-book-cover img {
+.field--name-field-book-cover > img {
+	// box model
 	border: 2px solid $turquoise;
-	height: auto;
-	max-width: 100%;
+	margin: 0 auto 2em;
+	// layout
+	display: block;
+}
+
+.field--name-field-authors {
+	// box model
+	margin: 0 0 1em 2ch;
+	max-width: calc(50% - 1ch);
+	// layout
+	float: right;
 }
 
 /*
