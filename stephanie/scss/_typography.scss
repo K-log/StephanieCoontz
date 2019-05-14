@@ -24,6 +24,7 @@ body {
 p {
 	font-variant-ligatures: common-ligatures;
 	font-variant-numeric: oldstyle-nums;
+	-webkit-hyphens: auto;
 	hyphens: auto;
 }
 
