@@ -107,3 +107,18 @@ ul {
 	margin-left: 2ch;
 	padding-left: 0;
 }
+
+blockquote {
+	// box model
+	margin: 2em 2ch 2em 4ch;
+	// typography
+	@include large-type;
+	color: $azure;
+}
+
+cite {
+	@include small-type;
+	font-style: normal;
+	letter-spacing: 0.1ch;
+	text-transform: uppercase;
+}
