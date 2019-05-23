@@ -1,23 +1,36 @@
 /**
- * Fonts
+ * Typography
  *
  * Fonts on this website follow a modular scale.
  * Mobile font size: 16px
- * Desktop font size: 21px
- * --Where does the 31px number come from? -jkm
- * Size ratio: 1.333 (perfect 4th)
- * https://www.modularscale.com/?16,31&px&1.333
+ * Desktop font size: 22px
+ * Cadence: 26px
+ * Size ratio: 1.25
+ * https://www.modularscale.com/?16,22&px&1.25
  */
 
-/* Heading and body properties */
+/**
+ * Fonts
+ *
+ * Import fonts from Google Fonts
+ *
+ * Playfair Display - used primarily for headings and other display
+ * needs
+ * PT Serif - used for body text
+ * PT Serif 400i - used for italic body text
+ *
+ * Can these be combined into a single import? -jkm
+ */
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700");  // sass-lint:disable-line no-url-protocols
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");  // sass-lint:disable-line no-url-protocols
 
 body {
+	@include base-type--mobile;
 	color: $dark-grey;
 	font-family: $text;
-	line-height: 1.4;
 
 	@media screen and (min-width: 800px) {
-		font-size: 21px;
+		@include base-type--desktop;
 	}
 }
 
@@ -39,16 +52,15 @@ h6 {
 }
 
 h1 {
-	font-size: 32px;
+	@include xxlarge-type;
 	font-weight: 700;
-	line-height: 1;
 
 	@media screen and (min-width: 800px) {
-		font-size: 44.422px;
+		@include huge-type;
 	}
 
 	@media screen and (min-width: 1385px) {
-		font-size: 56.832px;
+		@include xhuge-type;
 	}
 }
 
@@ -68,20 +80,20 @@ h6 {
 }
 
 h2 {
-	font-size: 31.25px;
+	@include xlarge-type;
 
 	@media screen and (min-width: 1385px) {
-		font-size: 45px;
+		@include huge-type;
 	}
 }
 
 h3 {
-	font-size: 17px;
+	@include small-type;
 	text-transform: uppercase;
 }
 
 h4 {
-	font-size: 17px;
+	@include small-type;
 }
 
 h1 a,

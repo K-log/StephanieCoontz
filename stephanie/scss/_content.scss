@@ -113,16 +113,15 @@ button {
 
 // Article headings on list page
 .views-field-title {
+	// layout
 	display: block;
 	float: left;
-
-	@media all and (min-width: 320px) {
-		font-family: $display;
-		font-size: 26px;
-	}
+	// typography
+	@include large-type;
+	font-family: $display;
 
 	@media all and (min-width: 800px) {
-		font-size: 35px;
+		@include xxlarge-type;
 	}
 }
 
@@ -196,17 +195,18 @@ figure img {
 	float: right;
 }
 
-/*
-** Fonts for book section.
-** All titles in the book list page are set to h2.
-** They are modified through CSS to make them fit better.
-*/
+/**
+ * Fonts for book section.
+ *
+ * All titles in the book list page are set to h2.
+ * They are modified through CSS to make them fit better.
+ */
 .row-books h2 {
 	// box model
 	margin-top: 0.1em;
 	margin-bottom: 7px;
 	// typography
-	font-size: 21px;
+	@include base-type--desktop;
 }
 
 // Search form in Articles page.
@@ -236,8 +236,8 @@ figure img {
 	// box model
 	height: 1.8em;
 	// typography
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	@include small-type;
+	font-family: $ui-face;
 	text-align: center;
 }
 
@@ -245,8 +245,8 @@ figure img {
 	// box model
 	margin-bottom: 0.5em;
 	// typography
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	@include small-type;
+	font-family: $ui-face;
 }
 
 .button {
@@ -256,11 +256,11 @@ figure img {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	// layout
-	align-self: flex-end; //trying self to see if the button can fit closer in the style
+	align-self: flex-end; // trying self to see if the button can fit closer in the style
 	// typography
+	@include small-type;
 	color: $offwhite;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 18px;
+	font-family: $ui-face;
 	text-align: center;
 	// decoration
 	background-color: $turquoise-dark;
