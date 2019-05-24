@@ -6,43 +6,111 @@
 
 */
 
-//Fonts and colors were moved in on 28 Jan, 2019
-@import "colors";
-
 /**
- * Fonts for headers and text
+ * Colors
  *
- * I'm guessing the reason this had an error is you were calling the
- * $constants in your fonts import before you had set them. Putting them in
- * this order makes it work perfectly. -jkm
+ * All website colors should be stored here as constamts and may be freely
+ * used in other files.
+ * 
+ * Note: Use use a variable name that matches the color. (Example: #ffffff
+ * would be $white.)
  */
 
-// Import fonts from Google Fonts
-// Playfair Display - used primarily for headings and other display needs
-// PT Serif - used for body text
-@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700");
+$tint: white;
+$shade: black;
 
-/**
- * Is this font imported twice? -jkm
- *
- * This font is imported as needed. This is the italic font for PT Serif. By importing
- * as needed, I hope that this will keep the loading time down for these fonts. -- FEV
- *
- * CSS unfortunately isn't that sophisticated, and will download everything
- * as it comes to it, whether it's present on the page or not, so it's just
- * something we have to deal with. Feel free to delete this comment. -jkm
- */
+// Body
+$light-white: #edeae0;
 
-// PT Serif 400i - used for italic body text
-@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
+// Border covers
+$turquoise: #289ec4;
+$turquoise-light: mix($tint, $turquoise, 85%);
+$turquoise-dark: mix($shade, $turquoise, 33%);
+
+// Header, Footer, Content Text color
+$dark-grey: #3c3c3c;
+
+// Navbar
+$grey: #c3c3c3;
+
+// H1 color
+$offwhite: #f1f1f1;
+
+// Other colors
+$rust: #c44e28;  // Turquoise's complement
+$aqua: #28c49c;  // Analagous color
+$azure: #2850c4;  // Analagous color
+
+// Unused //
+$mid-grey: #bfbfbf;
+
+$form-submit: #4caf50;
+$form-input: #ccc;
+$form-container: #f2f2f2;
 
 $display: "Playfair Display", serif;
 $text: "PT Serif", serif;
+$ui-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 /**
- * This is a minor semantic thing, but since "fonts" is no longer dealing
- * with downloading and declaring fonts, you ought to rename the file to
- * "typography", because it's about typographic style of your headings.
- * (You can put other typographic styles in it, too.) -jkm
+ * Modular Scale
+ *
+ * Fonts on this website follow a modular scale.
+ * Mobile font size: 16px
+ * Desktop font size: 22px
+ * Cadence: 26px
+ * Size ratio: 1.25
+ * https://www.modularscale.com/?16,22&px&1.25
  */
-@import "fonts";
+
+@mixin base-type--mobile {
+	font-size: 1rem;  // 16px
+	line-height: 1.625;  // 26px
+}
+
+@mixin xxsmall-type {
+	font-size: 0.88rem;  // 14.08px
+	line-height: 1.84659091;  // 26px
+}
+
+@mixin xsmall-type {
+	font-size: 1rem;  // 16px
+	line-height: 1.625; // 26px
+}
+
+@mixin small-type {
+	font-size: 1.1rem;  // 17.6px
+	line-height: 1.47727273;  // 26px
+}
+
+@mixin base-type--desktop {
+	font-size: 1.375rem;  // 22px
+	line-height: 1.47727273;  // 32.5px
+}
+
+@mixin large-type {
+	font-size: 1.563rem;  // 25px
+	//line-height: 1.33333333;  // 48 / 36
+}
+
+@mixin xlarge-type {
+	font-size: 1.719rem;  // 27.5px
+	//line-height: 1.23076923;  // 48 / 39
+}
+
+@mixin xxlarge-type {
+	font-size: 1.953rem;  // 31.25px
+	line-height: 1.04;  // 32.5px
+}
+
+@mixin huge-type {
+	font-size: 2.686rem;  // 42.969px
+	line-height: 1.05890293;  // 45.5px
+}
+
+@mixin xhuge-type {
+	font-size: 3.357rem;  // 53.711px
+	line-height: 1.08916237;  // 58.5px
+}
+
+@import "typography";

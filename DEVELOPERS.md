@@ -1,96 +1,109 @@
-# Instructions for setup
+# Instructions for setup and deployment
 
 **Note:** These instructions may not work for all cases. Please read through them thoroughly before preceding with setup.
 
-**Note:** There are two different ways to setup the site. The first requires there be a database dump available on gitlab. The second requires performing the migration by hand using drush.
+## Update the theme
 
-**Note:** The most recent database dump file can be found on stephanies hosting site. Just scp or download the `devsitedump_<date>.sql` with the most recent date. 
-
-# Temporary instructions for setting up the Devsite (Acquia Dev Desktop)
-
-Go into Acquia DevDesktop and click the small plus (+) button in the bottom left and select `New Drupal Site ...`.
-
-- Select Drupal 8.
-
-- Change the PHP version to the latest and change the site name to whatever you want it to be.
-
-- Select `Start with MySQL Database dump file` from the Database option and find the database dump file on your local machine after downloading it from the Docs & Files section of the Stephanie Website Revamp project on Basecamp.
-
-- Hit finish.
-
-Now navigate to where the site was install. On Mac this defaults to `~/Sites/devdesktop/SITE-NAME`.
-
-In the themes folder clone the following git repository: `http://github.com/k-log/StephanieCoontz-Theme.git`
-
-- Make sure your are on the development branch or have created a new branch from the development branch.
-
-In the `/SITE-NAME/themes/StephanieCoontz/stephanie/` directory run the following commands from a terminal.
-
-- `npm install`
-
-- `sh comp.sh`
-
-Now the site should be fully functional.
-
-To access the admin area, just go to the base site url and add `/admin` to the end. 
-
-If you are not logged in you will need to go to `/user` and login using the same username and password for devsite.stephaniecoontz.org.
-
-
----
-
-# Installing from a database dump (Recommended)
-
-## Step 1: Getting the source
-
-1. Make sure you have the most recent version of [Drupal 8](https://www.drupal.org/8) setup. Either on Acquia DevDesktop, Lando, or some other dev stack.
-
-2. Clone the SQL dump files, and the theme from the sources below:
-
-     - Clone the SQL dump from the SQL-Dump branch: [Gitlab](http://git.evergreen.edu/web-team/coontz)
-
-      - Clone the theme from the development branch: [Github](http://www.github.com/k-log/StephanieCoontz-Theme)
-
-
-**Note:** Due to Github being publicly available, the database dump file is being stored on [Gitlab](http://git.evergreen.edu/web-team/coontz) and the actual theme along with these instructions are stored on [Github](http://www.github.com/k-log/StephanieCoontz-Theme).
-
-
-## Step 2: Setup with A SQL dump file
-
-Once you have made sure your site and database are up and running, perform the following database import:
-
-Using drush, navigate to your installation of Drupal 8 and run the following commands.
-
-**Note:** Make sure to change the path to the SQL dump file before running the command. 
-
+1. Open a terminal and ssh into the hosting server
 ```bash
-drush sql-drop
-drush sql-cli < /PATH/TO/coontz-sql-dump-DATE.sql
+ssh <user>@stephaniecoontz.org
 ```
 
-## Step 3: Setup the theme
+2. Navigate to the site directory
+```bash
+# Devsite
+cd ~/public_html/devsite/
 
-Move the `StephanieCoontz-Theme` directory to the theme directory of your Drupal installation and run the following commands:
+# Live site
+cd ~/public_html/
+```
 
-**Note:** Make sure to have the most recent version of node installed on your system.
+3. Check which git branch you're on and change it if necessary. Devsite should be on the developer branch and live should be on master.
+```bash
+# Prints out current branch name
+git branch
 
+# Changes the working branch
+git checkout <branch name>
+```
+
+4. Pull all the changes from the repo
+```bash
+git pull
+```
+
+5. Setup npm and grunt and compile the theme source
 ```bash
 npm install
-sh comp.sh
+
+grunt
 ```
 
-Running `comp.sh` should compile the sass source files and run a `drush cr` so when you navigate to your site you should see it updated with the theme.
+6. Go to the site as an administrator and run a cache rebuild if the changes are not showing up.
 
+
+### Here is an example with devsite
+```bash
+ssh <user>@stephaniecoontz.org
+
+cd ~/public_html/devsite/
+
+git branch
+
+git checkout developer
+
+git pull
+
+npm install
+
+grunt
+```
+
+## Setup with Lando (Recommened)
+
+1. Use the setup instructions on the Lando documentation to setup a new Drupal 8 Lando site. https://docs.devwithlando.io/tutorials/drupal8.html#getting-started
+   1. You should be able to set this up with a single command on the command line but check the official documentation just in case.
+   ```bash
+      lando init \
+          --source remote \
+          --remote-url https://www.drupal.org/download-latest/tar.gz \
+          --remote-options="--strip-components 1" \
+          --recipe drupal8 \
+          --webroot . \
+          --name my-first-drupal8-app
+
+      lando start
+    ```
+2. Next, clone the GitLab or GitHub repositories somewhere onto your local machine.
+   1. The SQL dump file is only available on the GitLab repo.
+   ```bash
+      git clone https://github.com/k-log/StephanieCoontz.git
+      # Or
+      git clone https://git.evergreen.edu/web-team/coontz
+   ```
+3. Move the `devsitedump_MM-DD-YY.sql` to a safe directory somewhere else.
+4. Move the `StephanieCoontz` or `coontz` directory to you lando site's theme folder.
+5. Run `lando db-import PATH/TO/devsitedump_MM-DD-YY.sql`. This will import the database.
+6. Run the following to clear the cache and restart the server.
+ 
+      ```bash
+        lando drush cr
+        lando restart
+      ```
+7. Done! The server should be up and running. You can now push all you theme changes to the github/gitlab repo.
+  
+You will need to setup/install npm and node along with all the dependencies in order to use grunt for front end development.
 
 ---
 
-# Installing from a CSV Migration (Advanced)
+# The instructions beyond this point are old and no longer relevant! Don't use these unless it's the end of the world...
 
-This will produce a clean installation of only the data.
 
-## Step 1: Installing Prerequisites
+## Installing from a CSV Migration (NOT Recommended/BAD Idea)
 
-### The following three modules are used to import from a CSV format and provide the command line tools relevant to the migration.
+### Step 1: Installing Prerequisites
+
+#### The following three modules are used to import from a CSV format and provide the command line tools relevant to the migration.
 Choose the newest stable version that matches your Drupal version.
 
 [Migrate Source CSV](https://www.drupal.org/project/migrate_source_csv)

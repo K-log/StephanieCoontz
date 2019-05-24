@@ -8,8 +8,9 @@
 
 /* Footer content */
 .footer-content .menu {
-    justify-content: space-evenly;
-    flex-flow: column wrap;
-
-    padding: 0.5em;
+	// box model
+	padding: 0.5em;
+	// layout
+	flex-flow: column wrap;
+	justify-content: space-evenly;
  }

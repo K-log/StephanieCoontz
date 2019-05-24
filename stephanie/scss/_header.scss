@@ -9,61 +9,41 @@
  */
 
 .region-header {
-    background-color: $offwhite;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+	// box model
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	// typography
+	text-align: center;
+	// decoration
+	background-color: $offwhite;
 }
 
 .site-branding {
 
-    @media all and (min-width: 1385px) {
-        flex-flow: row;
-        align-items: center;
-    }
-}
-
-.site-name {
-    // Inherits styles from h1
-
-    @media all and (min-width: 1385px) {
-        font-size: 55px;
-    }
-}
-
-.site-name a {
-    text-decoration: none;
+	@media all and (min-width: 1385px) {
+		align-items: center;
+		flex-flow: row;
+	}
 }
 
 /* Header logo */
 .site-logo {
-    display: block;
+	display: block;
 
-    @media all and (min-width: 1385px) {
-        flex-direction: row;
-    }
-}
-
-/**
- * These responsive images styles should be applied to all img elements by
- * default, not scoped to the .site-logo only. This will make all of your
- * images responsive automatically. -jkm
- */
-.site-logo img {
-    height: auto;
-    max-width: 100%;
+	@media all and (min-width: 1385px) {
+		flex-direction: row;
+	}
 }
 
 .site-logo > img {
-    // box model
-    margin: 0.33333em auto;
-    width: 50%;
-    // layout
-    display: block;
+	// box model
+	margin: 0.33333em auto;
+	width: 66.66667%;
+	// layout
+	display: block;
 
-    @media all and (min-width: 800px) {
-        margin: 0.5em auto;
-        width: 66.66667%;
-    }
+	@media all and (min-width: 800px) {
+		margin: 0.5em auto;
+	}
 }
