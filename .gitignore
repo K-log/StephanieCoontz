@@ -11,8 +11,8 @@ stephanie/css/styles-dev.css
 
 #Sass files
 #stephanie/.sass-cache/
-stephanie/\.sass-cache/
-*.css.map
+#stephanie/\.sass-cache/
+#*.css.map
 
 #Node modules
 node_modules/
@@ -36,7 +36,7 @@ stephanie/node_modules/
 ##
 
 # General
-*/*.DS_Store
+**/**.DS_Store
 */*.AppleDouble
 */*.LSOverride
 
@@ -92,3 +92,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+\.DS_Store
