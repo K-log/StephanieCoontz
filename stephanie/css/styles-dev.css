@@ -1,0 +1,705 @@
+/*
+** Breakpoints
+
+** Main breakpoints: 320px, 800px, 1385px
+** Breakpoints calc widths for Article: (min)320px - (max)540px, (min)800px - (max)738px.
+
+*/
+/**
+ * Colors
+ *
+ * All website colors should be stored here as constamts and may be freely
+ * used in other files.
+ * 
+ * Note: Use use a variable name that matches the color. (Example: #ffffff
+ * would be $white.)
+ */
+/**
+ * Modular Scale
+ *
+ * Fonts on this website follow a modular scale.
+ * Mobile font size: 16px
+ * Desktop font size: 22px
+ * Cadence: 26px
+ * Size ratio: 1.25
+ * https://www.modularscale.com/?16,22&px&1.25
+ */
+/**
+ * Typography
+ *
+ * Fonts on this website follow a modular scale.
+ * Mobile font size: 16px
+ * Desktop font size: 22px
+ * Cadence: 26px
+ * Size ratio: 1.25
+ * https://www.modularscale.com/?16,22&px&1.25
+ */
+/**
+ * Fonts
+ *
+ * Import fonts from Google Fonts
+ *
+ * Playfair Display - used primarily for headings and other display
+ * needs
+ * PT Serif - used for body text
+ * PT Serif 400i - used for italic body text
+ *
+ * Can these be combined into a single import? -jkm
+ */
+@import url("//fonts.googleapis.com/css?family=PT+Serif|Playfair+Display:700");
+@import url("//fonts.googleapis.com/css?family=PT+Serif:400i");
+/* line 27, ../scss/_typography.scss */
+body {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #3c3c3c;
+  font-family: "PT Serif", serif;
+}
+@media screen and (min-width: 800px) {
+  /* line 27, ../scss/_typography.scss */
+  body {
+    font-size: 1.375rem;
+    line-height: 1.47727273;
+  }
+}
+
+/* line 37, ../scss/_typography.scss */
+p {
+  font-variant-ligatures: common-ligatures;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* line 42, ../scss/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3c3c3c;
+  font-family: "Playfair Display", serif;
+}
+
+/* line 52, ../scss/_typography.scss */
+h1 {
+  font-size: 1.953rem;
+  line-height: 1.04;
+  font-weight: 700;
+}
+@media screen and (min-width: 800px) {
+  /* line 52, ../scss/_typography.scss */
+  h1 {
+    font-size: 2.686rem;
+    line-height: 1.05890293;
+  }
+}
+@media screen and (min-width: 1385px) {
+  /* line 52, ../scss/_typography.scss */
+  h1 {
+    font-size: 3.357rem;
+    line-height: 1.08916237;
+  }
+}
+
+/* line 65, ../scss/_typography.scss */
+.page-title {
+  color: #3c3c3c;
+}
+
+/* line 69, ../scss/_typography.scss */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.1em;
+  font-weight: 700;
+}
+
+/* line 80, ../scss/_typography.scss */
+h2 {
+  font-size: 1.719rem;
+}
+@media screen and (min-width: 1385px) {
+  /* line 80, ../scss/_typography.scss */
+  h2 {
+    font-size: 2.686rem;
+    line-height: 1.05890293;
+  }
+}
+
+/* line 88, ../scss/_typography.scss */
+h3 {
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+  text-transform: uppercase;
+}
+
+/* line 93, ../scss/_typography.scss */
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+}
+
+/* line 97, ../scss/_typography.scss */
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+  text-decoration: none;
+}
+
+/* line 104, ../scss/_typography.scss */
+ol,
+ul {
+  margin-left: 2ch;
+  padding-left: 0;
+}
+
+/* line 110, ../scss/_typography.scss */
+blockquote {
+  margin: 2em 2ch 2em 4ch;
+  font-size: 1.563rem;
+  color: #2850c4;
+}
+
+/* line 118, ../scss/_typography.scss */
+cite {
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+  font-style: normal;
+  letter-spacing: 0.1ch;
+  text-transform: uppercase;
+}
+
+/**
+ * LAYOUT
+ *
+ * This file contains the style for the site's layout structure. Here is
+ * where you put anything that effects all the blocks that hold the content.
+ *
+ * Example: Global grid layout for the whole site.
+ * DO NOT add CSS that only affects a specific page, region, or block.
+ */
+/* line 11, ../scss/_layout.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* line 17, ../scss/_layout.scss */
+* > * {
+  box-sizing: inherit;
+}
+
+/* line 21, ../scss/_layout.scss */
+body {
+  background-color: #dff0f6;
+}
+
+/* line 25, ../scss/_layout.scss */
+.global-container {
+  border-right: 2px solid #289ec4;
+  border-left: 2px solid #289ec4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@media all and (min-width: 320px) {
+  /* line 25, ../scss/_layout.scss */
+  .global-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 540px;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 25, ../scss/_layout.scss */
+  .global-container {
+    width: calc(100% - 10em);
+    max-width: 738px;
+  }
+}
+
+/* line 47, ../scss/_layout.scss */
+.global-container > * {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 52, ../scss/_layout.scss */
+.region-content {
+  flex: 1;
+  background-color: white;
+}
+@media all and (min-width: 800px) {
+  /* line 52, ../scss/_layout.scss */
+  .region-content {
+    order: 1;
+  }
+}
+
+/* line 63, ../scss/_layout.scss */
+.content-content {
+  margin: 2em 2ch;
+}
+@media all and (min-width: 800px) {
+  /* line 63, ../scss/_layout.scss */
+  .content-content {
+    margin: 0 4ch;
+  }
+}
+
+/* line 71, ../scss/_layout.scss */
+.region-footer {
+  padding: 0.5em;
+  width: 100%;
+  background-color: #1b6a83;
+}
+@media all and (min-width: 800px) {
+  /* line 71, ../scss/_layout.scss */
+  .region-footer {
+    order: 2;
+  }
+}
+
+/* line 83, ../scss/_layout.scss */
+.views-row {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 93, ../scss/_layout.scss */
+.views-field-title {
+  margin-top: 1em;
+  align-content: space-evenly;
+  justify-content: flex-start;
+}
+
+/* line 101, ../scss/_layout.scss */
+.spotlight-rows {
+  border-bottom: 2px solid #bfbfbf;
+  margin: 0;
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * HEADER
+ *
+ * Put in any header specific styling.
+ * Anything that effect elements INSIDE the header region.
+ *
+ * Note: this will not effect the actual header region, only the blocks inside it.
+ * See layout.css for global styling options.
+ */
+/* line 11, ../scss/_header.scss */
+.region-header {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media all and (min-width: 1385px) {
+  /* line 22, ../scss/_header.scss */
+  .site-branding {
+    align-items: center;
+    flex-flow: row;
+  }
+}
+
+/* Header logo */
+/* line 31, ../scss/_header.scss */
+.site-logo {
+  display: block;
+}
+@media all and (min-width: 1385px) {
+  /* line 31, ../scss/_header.scss */
+  .site-logo {
+    flex-direction: row;
+  }
+}
+
+/* line 39, ../scss/_header.scss */
+.site-logo > img {
+  margin: 0.33333em auto;
+  width: 66.66667%;
+  display: block;
+}
+@media all and (min-width: 800px) {
+  /* line 39, ../scss/_header.scss */
+  .site-logo > img {
+    margin: 0.5em auto;
+  }
+}
+
+/**
+ * NAVBAR
+ *
+ * Any styling that effects the blocks within the Navbar regions should go here.
+ *
+ * For global styling see layout.css
+ */
+/* line 9, ../scss/_navbar.scss */
+.system-main-menu {
+  width: 100%;
+}
+
+/* line 13, ../scss/_navbar.scss */
+.region-navbar {
+  border-bottom: 2px solid #289ec4;
+  background-color: #1b6a83;
+}
+
+/* line 20, ../scss/_navbar.scss */
+ul.menu {
+  margin: 5px 1ch;
+  padding: 0;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+}
+@media screen and (min-width: 320px) {
+  /* line 20, ../scss/_navbar.scss */
+  ul.menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* line 38, ../scss/_navbar.scss */
+ul.menu a:active {
+  color: #f1f1f1;
+}
+
+/* line 42, ../scss/_navbar.scss */
+.menu .menu-item {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.625;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  /* line 42, ../scss/_navbar.scss */
+  .menu .menu-item {
+    font-size: 1.563rem;
+  }
+}
+
+/* line 55, ../scss/_navbar.scss */
+.menu .menu-item > a {
+  padding: 0.15em 1ch;
+  display: block;
+  color: #f1f1f1;
+  font-family: "Playfair Display", serif;
+  border-radius: 1ch;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out;
+}
+@media all and (min-width: 800px) {
+  /* line 55, ../scss/_navbar.scss */
+  .menu .menu-item > a {
+    padding: 0.33333em 1ch;
+  }
+}
+/* line 73, ../scss/_navbar.scss */
+.menu .menu-item > a:hover {
+  background-color: #3c3c3c;
+  transition: background-color 0.05s ease-in-out;
+}
+/* line 80, ../scss/_navbar.scss */
+.menu .menu-item > a:visited {
+  color: #f1f1f1;
+}
+
+/**
+ * Content
+ *
+ * Any styling that effects the blocks with the Content regions should
+ * go here.  Content is things such as articles, books, interviews.
+ * Anything that fills most of the page.
+ *
+ * For global styling see layout.css
+ */
+/* line 11, ../scss/_content.scss */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 16, ../scss/_content.scss */
+a,
+a:visited {
+  color: #1b6a83;
+  text-decoration-color: #289ec4;
+  text-decoration-skip: ink;
+}
+/* line 24, ../scss/_content.scss */
+a:hover,
+a:visited:hover {
+  color: #c44e28;
+  text-decoration-color: currentcolor;
+}
+/* line 31, ../scss/_content.scss */
+a:focus,
+a:visited:focus {
+  color: #2850c4;
+  text-decoration: none;
+}
+/* line 38, ../scss/_content.scss */
+a:active,
+a:visited:active {
+  color: #2850c4;
+  text-decoration: underline;
+  text-decoration-color: #dff0f6;
+}
+
+/* line 47, ../scss/_content.scss */
+input,
+select,
+textarea {
+  border: 1px solid #c3c3c3;
+  margin-bottom: 1em;
+  padding: 0.25em 1ch;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2px;
+}
+/* line 59, ../scss/_content.scss */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #289ec4;
+}
+
+/* line 64, ../scss/_content.scss */
+input[type="button"],
+input[type="submit"],
+button {
+  width: auto;
+}
+
+/* line 70, ../scss/_content.scss */
+.tabs {
+  max-width: 100vw;
+  align-content: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* line 79, ../scss/_content.scss */
+.view-content {
+  align-content: flex-start;
+  align-items: baseline;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* line 88, ../scss/_content.scss */
+.view-spotlight > .view-content {
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 320px) {
+  /* line 92, ../scss/_content.scss */
+  .align-right {
+    margin: 0 auto;
+    width: 230px;
+    display: block;
+    float: none;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 700px) {
+  /* line 92, ../scss/_content.scss */
+  .align-right {
+    margin-left: 15px;
+    width: 220px;
+    float: right;
+  }
+}
+
+/* line 115, ../scss/_content.scss */
+.views-field-title {
+  display: block;
+  float: left;
+  font-size: 1.563rem;
+  font-family: "Playfair Display", serif;
+}
+@media all and (min-width: 800px) {
+  /* line 115, ../scss/_content.scss */
+  .views-field-title {
+    font-size: 1.953rem;
+    line-height: 1.04;
+  }
+}
+
+/* line 130, ../scss/_content.scss */
+.field-content {
+  display: block;
+  float: left;
+}
+
+/*.field--name-field-author {
+    We might want to give this field a nice custom style. It's the author byline on an article. Leave this here, commented out, for now (or give it a custom style). -jkm
+}*/
+@media all and (min-width: 320px) {
+  /* line 139, ../scss/_content.scss */
+  .views-field-field-publication {
+    display: block;
+    float: left;
+  }
+}
+@media all and (min-width: 800px) {
+  /* line 139, ../scss/_content.scss */
+  .views-field-field-publication {
+    float: left;
+  }
+}
+
+/* line 150, ../scss/_content.scss */
+.views-field-body {
+  display: block;
+  float: left;
+  font-family: "PT Serif", serif;
+}
+@media all and (min-width: 320px) {
+  /* line 150, ../scss/_content.scss */
+  .views-field-body {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* line 164, ../scss/_content.scss */
+.article-img {
+  border: 1px solid #3c3c3c;
+}
+
+/* line 169, ../scss/_content.scss */
+.row-books {
+  max-width: 220px;
+  display: block;
+}
+
+/* Book cover image */
+/* line 177, ../scss/_content.scss */
+figure img {
+  border: 3px solid #289ec4;
+}
+
+/* Book cover for content page */
+/* line 183, ../scss/_content.scss */
+.field--name-field-book-cover > img {
+  border: 2px solid #289ec4;
+  margin: 0 auto 2em;
+  display: block;
+}
+
+/* line 191, ../scss/_content.scss */
+.field--name-field-authors {
+  margin: 0 0 1em 2ch;
+  max-width: calc(50% - 1ch);
+  float: right;
+}
+
+/**
+ * Fonts for book section.
+ *
+ * All titles in the book list page are set to h2.
+ * They are modified through CSS to make them fit better.
+ */
+/* line 205, ../scss/_content.scss */
+.row-books h2 {
+  margin-top: 0.1em;
+  margin-bottom: 7px;
+  font-size: 1.375rem;
+  line-height: 1.47727273;
+}
+
+/* line 215, ../scss/_content.scss */
+.view-filters {
+  border-top: 2px solid #1b6a83;
+  border-bottom: 2px solid #1b6a83;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 224, ../scss/_content.scss */
+.form--inline {
+  align-content: space-evenly;
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+/* line 232, ../scss/_content.scss */
+.views-exposed-form label {
+  font-family: "Playfair Display", serif;
+}
+
+/* line 236, ../scss/_content.scss */
+.form-select {
+  height: 1.8em;
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+/* line 245, ../scss/_content.scss */
+.form-text {
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* line 253, ../scss/_content.scss */
+.button {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  align-self: flex-end;
+  font-size: 1.1rem;
+  line-height: 1.47727273;
+  color: #f1f1f1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-align: center;
+  background-color: #1b6a83;
+  border-radius: 1ch;
+}
+/* line 270, ../scss/_content.scss */
+.button:hover {
+  background-color: #3c3c3c;
+  transition: background-color 0.05s ease-in-out;
+}
+
+/**
+ * FOOTER
+ *
+ * Any styling that effects the blocks with the Footer regions should go here.
+ *
+ * For global styling see layout.css
+ */
+/* Footer content */
+/* line 10, ../scss/_footer.scss */
+.footer-content .menu {
+  padding: 0.5em;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
