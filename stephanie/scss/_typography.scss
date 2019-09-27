@@ -109,14 +109,17 @@ ul {
 
 blockquote {
 	// box model
-	margin: 2em 2ch 2em 4ch;
+	border-left: 2px solid $azure;
+	margin: 2em 2ch 2em 1ch;
+	padding-left: 2ch;
 	// typography
 	@include large-type;
-	color: $azure;
+	color: $dark-grey;
 }
 
 cite {
 	@include small-type;
+	color: $azure;
 	font-style: normal;
 	letter-spacing: 0.1ch;
 	text-transform: uppercase;
